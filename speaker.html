@@ -1,0 +1,195 @@
+---
+layout: page
+title: Conferenze e altri interventi
+---
+
+<h2>Speaker invitati</h2>
+<p>
+{{ site.data.speaker.description }}
+</p>
+
+<ul class="collection id=speakerinvitati">
+	{% for item in site.data.speaker.content %}
+  <li class="collection-item avatar" id="{{ item.id }}">
+		{% if item.img != nil %}
+		<img src="{{ site.url }}/img/speaker/{{ item.img }}" alt="" class="circle">
+		{% endif %}
+		{% if item.group != nil %}
+			{% for foto in item.group %}
+    		<img src="{{ site.url }}/{{ foto.foto }}" alt="" style="width:8%">
+			{% endfor %}
+			<br>
+		{% endif %}
+		<span class="title">
+    	{{ item.nome }}
+    </span>
+    <br>
+    <span>
+      <i>{{ item.uni }}</i>
+    </span>
+  	<br>
+		{% if item.bio != nihil %}
+		<p style="text-align:justify">
+      {{ item.bio }}
+    </p>
+		{% endif %}
+		<br>
+		{% if item.title != nil %}
+    <p style="color:{{site.data.generic.color1}}"><b>{{item.title}}</b></p>
+		<p style="text-align:justify">{{ item.abstract }}</p>
+		{% endif %}
+
+		{% if item.slides != nil %}
+		<br><p><a href="{{site.url}}/files/Slides/{{item.slides}}" target="_blank" class ="blue-text" > <i class="fa fa-download" aria-hidden="true"></i> Scarica</a> le slides dell'intervento<br><br></p>
+	    </li>
+		{% endif %}
+	{% endfor %}
+</ul>
+<!-- <p><i>Sono in via di definizione altre possibili conferenze.</i></p> -->
+
+<h2>Talk studenti</h2>
+<p>
+{{ site.data.talk_studenti.description }}
+</p>
+
+
+<!--
+<ul class="collection" id="talkstudenti">
+	{% for item in site.data.talk_studenti %}
+	<li class="collection-item">
+		<b>{{ item.name }} - <i>{{item.title}}</i></b>
+		<br>
+		<p style="text-align:justify">{{item.abstract}}</p>
+	</li>
+	{% endfor %}
+</ul>
+-->
+
+
+<!--
+      <ul class="collapsible" data-collapsible="expandable" id="talkstudenti">
+      {% for item in site.data.talk_studenti %}
+        <li>
+          <div class="collapsible-header">
+
+           	 <div class="center">
+                <b>{{item.name}}, {{item.uni}}</b>:  {{item.title}}
+            </div>
+          </div>
+          <div class="collapsible-body">
+              <p>{{item.abstract}}</p>
+       </div>
+        </li>
+      {% endfor %}
+      </ul>
+-->
+
+      {% for item in site.data.talk_studenti.rooms %}
+   	<h4> <div class="center"><b>  {{item.room}} </b> </div> </h3>
+		
+      <ul class="collapsible" data-collapsible="expandable" id="talkstudenti">
+      {% for item2 in site.data.talk_studenti.content %}
+	{% if item2.room == item.room %}
+        <li>
+          <div class="collapsible-header">
+           	 <div class="center">
+                <b>{{item2.name}}</b>,  <cite>{{item2.uni}}</cite> : <br> {{item2.title}}
+            </div>
+          </div>
+	{% if item2.abstract != null %}
+          <div class="collapsible-body">
+              <p>{{item2.abstract}}		
+		{% if item2.slides != nil %}
+		<br><br><a href="{{site.url}}/files/Slides/Studenti/{{item2.slides}}" target="_blank" class ="blue-text" > <i class="fa fa-download" aria-hidden="true"></i> Scarica</a> le slides dell'intervento</p>
+	    {% endif %}
+
+		{% if item2.link != nil %}
+		<br><br><a href="{{item2.link}}" target="_blank" class ="blue-text" > <i class="fa fa-link" aria-hidden="true"></i> Collegamento</a> all'articolo da cui è tratto l'intervento</p>
+	    {% endif %}
+
+     	  </div>
+      	{% endif %}
+        </li>
+      {% endif %}
+      {% endfor %}
+      </ul>
+      {% endfor %}
+
+
+
+
+<h2>Sessione poster</h2>
+<p>
+{{ site.data.poster.description }}
+</p>
+
+<!--
+<ul class="collection" id="poster">
+	{% for item in site.data.poster %}
+	<li class="collection-item">
+		<b>{{ item.name }}</b> - <i>{{ item.uni }}</i>
+		<p style="text-align:justify">{{ item.poster }}</p>
+	</li>
+	{% endfor %}
+</ul>
+-->
+
+      <ul class="collapsible" data-collapsible="expandable" id="talkstudenti">
+      {% for item in site.data.poster.content %}
+        <li>
+          <div class="collapsible-header">
+           	 <div class="center">
+                <b>{{item.name}}</b>,  <cite>{{item.uni}}</cite> :<br>  {{item.poster}}
+            </div>
+          </div>
+	{% if item.abstract != null %}
+          <div class="collapsible-body">
+              <p>{{item.abstract}}</p>
+     	  </div>
+      	{% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+
+
+
+<h2>Workshop aziende</h2>
+<p>
+{{ site.data.workshopaziende.description }}
+</p>
+
+
+<ul class="collection" id="workshopaziende">
+	{% for item in site.data.workshopaziende.content %}
+	<li class="collection-item">
+		<b> {{ item.company }}: </b> <br>
+		{{ item.name }}: <br><i>{{item.title}}</i>
+		
+		<!-- <p style="text-align:justify">{{item.abstract}}</p> -->
+	</li>
+	{% endfor %}
+</ul>
+
+
+<h2>Workshop AISF</h2>
+<p>
+{{ site.data.workshopaisf.description }}
+</p>
+
+
+<ul class="collection" id="workshopaisf">
+	{% for item in site.data.workshopaisf.content %}
+	<li class="collection-item">
+		<b>{{ item.name }}</b> {{ item.uni }}: <i>{{item.title}}</i>
+		<br>
+		<p style="text-align:justify">{{item.abstract}}
+		
+		{% if item.slides != nil %}
+		<br><br><a href="{{site.url}}/files/Slides/WorkshopAISF/{{item.slides}}" target="_blank" class ="blue-text" > <i class="fa fa-download" aria-hidden="true"></i> Scarica</a> le slides dell'intervento</p>
+	    {% endif %}
+</p>
+		
+
+	</li>
+	{% endfor %}
+</ul>

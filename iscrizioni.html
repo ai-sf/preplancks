@@ -1,0 +1,114 @@
+---
+layout: page
+title: Registrazione all'evento
+---
+
+<div class="section">
+  <h2>Informazioni generali</h2>
+  <p>{{ site.data.iscrizioni.deadlines.info }}</p>
+  <ul class="collection">
+  {% for item in site.data.iscrizioni.deadlines.specs %}
+    <li
+      class="collection-item black-text">
+      {{ item.text }}
+    </li>
+    {% for item2 in item.subpoints %}
+      <li class="collection-item black-text custom1 lighten-5">
+        {{ item2.text }}
+        {% if item.url != "#!" %}
+          <span class="badge custom1 white-text">{{ item2.button }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+  </div>
+
+{% if site.data.iscrizioni.posters? %}
+  <div class="section">
+    <h2>Posters and Talks</h2>
+    <p>
+      {{ site.data.iscrizioni.posters }}
+    </p>
+  </div>
+{% endif %}
+
+<div class="section">
+  <h2>Quota di iscrizione</h2>
+  <p>{{ site.data.iscrizioni.few_info.info }}<p>
+  <ul class="collection">
+  {% for item in site.data.iscrizioni.few_info.specs %}
+    <li
+      {% if item.url contains "http://" %}
+         href="{{ item.url }}"
+      {% else %}
+         href="{{ site.url }}/{{ item.url }}"
+      {% endif %}
+      class="collection-item black-text">
+      {{ item.text }}
+      {% if item.url != "#!" %}
+        <span class="badge custom1 white-text">{{ item.button }}</span>
+      {% endif %}
+    </li>
+    {% for item2 in item.subpoints %}
+      <li class="collection-item black-text custom1 lighten-5">
+        {{ item2.text }}
+
+      </li>
+    {% endfor %}
+  {% endfor %}
+  </ul>
+</div>
+
+
+
+
+<div class="section">
+  <h2>Termini e condizioni</h2>
+  <p>{{ site.data.iscrizioni.terms.info }}<p>
+  <ul class="collection">
+  {% for item in site.data.iscrizioni.terms.specs %}
+    <li class="collection-item black-text">
+      {{ item.text }}
+      {% if item.url contains "IAPS" %}
+        <span class="badge white-text"><a {% if item.url contains "http://" %}
+           href="{{ item.url }}" target='_blank'
+        {% else %}
+           href="{{ site.url }}/{{ item.url }}" target='_blank'
+        {% endif %}>{{ item.button }}</a></span>
+      {% endif %}
+    </li>
+    {% for item2 in item.subpoints %}
+      <li
+        class="collection-item black-text custom1 lighten-5">
+        {{ item2.text }}
+        {% if item.url != "#!" %}
+          <span class="badge custom1 white-text">{{ item2.button }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  {% endfor %}
+
+  </ul>
+  <p>{{ site.data.iscrizioni.deadlines.lastinfo }}</p>
+</div>
+
+<!--
+<div class="row center">
+    <a href="" target="_blank" id="download-button" class="btn-large waves-effect waves-light blue">Registrazione (iscrizioni non ancora aperte)</a><br>
+</div>
+-->
+
+<!--
+<div class="row center">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSciTju26KV-EtAN7f9kr290lVvXoYHLEp-ClQGLgUKG8Bqs7A/viewform" target="_blank" id="download-button" class="btn-large waves-effect waves-light blue">Registrazione</a><br>
+</div>
+-->
+
+<div class="row center">
+    <a href="" target="_blank" id="download-button" class="btn-large waves-effect waves-light blue">Iscrizioni chiuse</a><br>
+</div>
+
+
+</div>
+

@@ -1,0 +1,104 @@
+- title: "Sponsor"
+#- title: "Con il sostegno di:"
+  format: "m4"
+  subitems:
+    - text: Accenture
+      img: accenture.jpg
+      link: https://accenture.it
+      fb: https://it-it.facebook.com/AccentureinItalia/
+      linkedin: https://it.linkedin.com/company/accenture-italia
+    - text: Eni
+      img: ENI_r.png
+      link: https://eni.it
+      fb: https://it-it.facebook.com/Eni/
+      linkedin: https://it.linkedin.com/company/eni
+    - text: GNR - Analytical Instruments Group
+      img: GNR_q.png
+      link: http://www.gnr.it/
+      linkedin: https://www.linkedin.com/company/gnrsrl/
+    - text: GP Batteries
+      img: GP.png
+      link: http://www.gpbmitaly.it/
+      linkedin: https://www.linkedin.com/company/gpbm-nordic-ab
+    - text: INAF
+      img: INAF_q_r.png
+      link: http://www.inaf.it/
+      fb: https://it-it.facebook.com/media.inaf/
+      linkedin: https://it.linkedin.com/company/inaf---istituto-nazionale-di-astrofisica
+    - text: Istituto Nazionale di Fisica Nucleare (INFN)
+      img: logo_INFN.png
+      link: http://home.infn.it/it/
+      fb: https://www.facebook.com/IstitutoFisicaNucleare/
+    - text: Jasco
+      img: jasco.png
+      link: http://jasco-europe.businesscatalyst.com/
+      linkedin: https://it.linkedin.com/company/jasco-europe-s-r-l-
+    - text: ST Microelectronics
+      img: ST_b.png
+      link: https://www.st.com/
+      fb: https://it-it.facebook.com/STMicroelectronics.NV/
+      linkedin: https://it.linkedin.com/company/stmicroelectronics
+    - text:  101 Caffè - Caffè di qualità in cialde, capsule, grani, macinati
+      img: logo_101caffe.png
+      link: https://www.101caffe.it/
+      fb: https://www.facebook.com/101Caffe/
+      linkedin: https://www.linkedin.com/company/101-caff%C3%A8-srl/
+
+- title: "Patrocini"
+#- title: "Con il patrocinio di:"
+  format: "m3"
+  subitems:
+    - text: Università degli Studi di Milano 
+      img: logo_unimi.png
+      link: http://www.unimi.it/
+      fb: https://it-it.facebook.com/LaStatale/
+    - text: Università degli Studi di Milano Bicocca
+      img: Bicocca.png
+      link: http://www.unimib.it/
+      fb: https://it-it.facebook.com/bicocca/
+#    - text: Civico Planetario <i>Ulrico Hoepli</i> <br> e associazione L'Officina del Planetario
+    - text: Associazione LOfficina del Planetario
+      img: planetario_q.png
+      link: https://lofficina.eu/
+      fb: https://www.facebook.com/LOfficinadelplanetario/
+    - text: "Comune di Milano <br/><br/>"
+      img: comune_milano_q.png
+      link: https://www.comune.milano.it/
+      fb: https://www.facebook.com/comunemilano/
+    - text: "CIMaINa - Centro Interdisciplinare Materiali e Interfacce Nanostrutturate"
+      img: Cimaina.png
+      link: http://cimaina.unimi.it/
+      fb: https://it-it.facebook.com/milano.university/
+    - text: "Fondazione Unimi (ex Fond. Filarete) <br>"
+      img: fond_unimi_q.png
+      link: http://www.fondazionefilarete.com/
+      fb: https://it-it.facebook.com/FondazioneFilarete/
+    - text: Istituto Europeo di Oncologia (IEO) <br> <br> 
+      img: IEO.png 
+      link: https://www.ieo.it/
+      fb: https://www.facebook.com/IstitutoEuropeoDiOncologia/
+    - text: Istituto FIRC di Oncologia Molecolare <br> <br>
+      img: IFOM_q.png
+      link: https://www.ifom.eu/it/
+      fb: https://www.facebook.com/ifomyouscientist/
+      linkedin: https://www.linkedin.com/company/ifom/
+    - text: Istituto di Fisica del Plasma IFP-CNR
+      img: IFP.png
+      link: https://www.ifp.cnr.it/
+      fb: https://it-it.facebook.com/IFPCNR/
+    - text: INAF - Osservatorio di Brera <br><br>
+      img: brera.png
+      link: http://www.brera.inaf.it/
+      fb: https://www.facebook.com/astrobrera/
+    - text: Museo Nazionale Scienza e Tecnologia
+      img: MNST.jpg
+      link: http://www.museoscienza.org/
+      fb: https://www.facebook.com/museoscienza
+    - text: Società Astronomica Italiana <br> <br>
+      img: SAI.jpg
+      link: http://sait.interlandia.net/
+      fb: https://it-it.facebook.com/SocietaAstronomicaItalianaSaIt/
+    - text: WISE
+      img: wise.png
+      link: http://www.wiseneuro.com/
+      linkedin: https://it.linkedin.com/company/wise-s-r-l-

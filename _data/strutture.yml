@@ -1,0 +1,164 @@
+intro: "Le visite mirano a dare ai partecipanti la possibilità di visitare centri di ricerca di grande rilievo, che costituiscono eccellenze all'interno del panorama nazionale ed internazionale, e diverse aziende attive a Milano, nonché i laboratori attivi presso i due atenei."
+ 
+milano:
+
+  - img: Accenture.jpg
+    title: Accenture
+    descr: "Accenture è la società di consulenza aziendale più grande al mondo. La multinazionale, con sede principale negli Stati Uniti, fornisce servizi consulenza nel campo dell'organizzazione e della strategia e servizi tecnologici, finanziari e legali ad aziende in più di 120 Paesi. <br> Accenture fa dell'innovazione la sua bandiera, svolgendo attività di ricerca e sviluppo applicate. La azienda possiede 6000 tra brevetti e domande di brevetto in 44 paesi."
+    site: https://accenture.it
+    id: accenture
+    map: 
+
+  - img: IEO.jpg
+    title: Istituto Europeo di Oncologia (IEO)
+    descr: "L'Istituto Europeo di Oncologia (IEO), voluto da Umberto Veronesi, è stato inaugurato nel maggio 1994. Nel 1996 ha assunto il ruolo di Istituto di Ricovero e Cura a Carattere Scientifico (IRCCS). Si tratta di un centro comprensivo per i tumori senza fine di lucro, ed è impegnato in tre settori (Clinica, Ricerca e Formazione). Alcuni dei valori e dei principi a cui si ispira l'Istituto sono: la centralità della persona assistita, il miglioramento continuo della qualità assistenziale, l'eccellenza del servizio, l'approccio multidisciplinare agli aspetti clinici, lo sviluppo della ricerca sperimentale con rapido trasferimento ai pazienti, la valorizzazione delle risorse umane e lo spirito europeo, con apertura a collaborazioni internazionali."
+    site: https://www.ieo.it/
+    id: ieo
+    map: https://goo.gl/maps/DQjG2MS3zsG2
+
+
+  - img: Cimaina.jpg
+    title: "CIMaINa"
+    descr: "Il Centro Interdisciplinare di Materiali e Interfacce Nanostrutturati (CIMaINa) è stato istituito nel 2004 presso l'Università di Milano, grazie a un finanziamento del Ministero dell'Istruzione Italiano, per essere centro di integrazione e fusione di attività di ricerca rilevanti per le nanotecnologie provenienti da discipline come Fisica, Chimica, Biologia, Farmacologia e Medicina. <br> CIMaINa opera in laboratori e strutture dedicati, oltre che in strutture già esistenti, per promuovere una più intensa collaborazione tra scienziati con background diversi tramite la condivisione di infrastrutture comuni. <br> CIMaINa si impegna a sviluppare una profonda comprensione dei fenomeni che regolano l'interazione tra superfici inorganiche e organiche, a scala nano- e micrometrica. Questa conoscenza fondamentale viene sfruttata per lo sviluppo di nuovi processi, dispositivi e sistemi di fabbricazione per una varietà di applicazioni tra cui catalisi, optoelettronica, rilevamento chimico, biomateriali, somministrazione di farmaci, terapie polimeriche, biologia cellulare e postgenomica."
+    site: http://cimaina.unimi.it/
+    id: cimaina
+    map: 
+
+  - img: Fondazione UniMi.jpg
+    title: Fondazione UniMi
+    descr: "Fondazione UniMi è un centro di eccellenza per il trasferimento di conoscenza e tecnologia dall'accademia al mercato, e per la creazione di startup tecnologiche ed innovative. <br> 
+Essa attinge alle competenze e alle conoscenze di 3.000 professori, ricercatori e tecnici dell'Università degli Studi di Milano, afferenti a 34 dipartimenti, dotati di strutture e strumentazioni di eccellenza, appartenenti a tutte le aree disciplinari. <br>
+
+Precedentemente nota come Fondazione Filarete, nel 2016 riceve dall'Ateneo il mandato di valorizzare e gestire i risultati della ricerca accademica e il portafoglio brevettuale, e aiutare gli spin-off universitari (aziende nate dall'idea di dare ricadute tecnologiche ai risultati della ricerca universitaria) ad affermarsi sul mercato. <br>
+
+Nello stesso anno viene trasformata in Fondazione Universitaria con funzioni di struttura operativa per il trasferimento tecnologico, inclusiva e aperta alle istanze dell'intero Ateneo. <br> <br>"
+    site: http://www.fondazionefilarete.com/
+    id: filarete
+    map: https://goo.gl/maps/H5BcbHfbFgR2
+
+  - img: ENI.jpg
+    title: Eni
+    descr: "Eni è una compagnia integrata dell'energia e impiega circa 33.000 persone in 71 Paesi del mondo. Svolge attività di esplorazione, sviluppo ed estrazione di olio e gas naturale in 46 Paesi, è attiva nel trading di olio, gas naturale, GNL ed energia elettrica in 30 Paesi e commercializza carburanti e lubrificanti di qualità in 32 Paesi. Grazie a un forte interesse per l'innovazione e la ricerca, Eni ha tessuto una rete di collaborazioni virtuose con centri di eccellenza in Italia e all'estero tra cui Università e Politecnici italiani, ENEA, CNR, MIT e Stanford University.<br>
+La Ricerca e Sviluppo rappresenta un elemento chiave per la trasformazione di Eni in una società integrata dell'energia per un futuro a bassa impronta di carbonio. La disponibilità e lo sviluppo di competenze tecnologiche d'avanguardia al servizio dell'innovazione e della sostenibilità e il continuo impegno a moltiplicare gli ambiti di applicazione delle soluzioni energetiche individuate sono il comune denominatore dei nostri laboratori di ricerca.<br>
+Inaugurato nel 1985, il <i>Centro Ricerche Upstream e Downstream</i> di Eni a San Donato Milanese ha integrato le storiche strutture di ricerca di Metanopoli in un unico complesso che si estende su 76 mila metri quadri e impiega circa 370 addetti fra ricercatori, tecnici e staff. Tecniche chimico-fisiche d'avanguardia, sofisticate analisi geologiche e geochimiche, ingegneria del petrolio, analisi e modellistica del greggio, modelli di ingegneria di processo, tecnologie dei materiali: queste le competenze che Eni mette al servizio della Ricerca e dell'Innovazione. <br>
+I progetti di ricerca riguardano ogni aspetto del settore <i>Oil&Gas</i>, con l'obiettivo di ridurre i rischi e aumentare l'efficienza, consolidare la <i>leadership</i> tecnologica e in generale ottenere maggiore qualità, efficienza e sostenibilità nei prodotti, negli impianti e nei processi. In particolare le attività puntano all'ampliamento degli utilizzi del gas naturale per concorrere alla decarbonizzazione l'intera filiera produttiva, alla ridefinizione dei cicli industriali di raffinazione orientandoli verso prodotti a minor impatto ambientale e di origine bio anche con l'impiego di tecnologie in linea con la <i>Circular Economy</i>."
+
+
+#"Eni, nata a Milano nel 1953 come Ente Nazionale Idrocarburi, è oggi una multinazionale italiana con sedi in 73 paesi, attiva nei settori degli idrocarburi, della chimica e dell'energia elettrica, e l'ottavo gruppo petrolifero a livello mondiale. <br>
+#Con un forte interesse per l'innovazione e la ricerca, ha tessuto una rete di collaborazioni virtuose con centri di ricerca di eccellenza in Italia e all'estero tra cui Università e Politecnici italiani, ENEA, CNR, MIT e Stanford University. <br> Il laboratorio di San Donato Milanese, che più ci interessa, è stato inaugurato nel 1985 e ha integrato le storiche strutture di ricerca di Metanopoli in un complesso innovativo, dotato di strumentazioni scientifiche all'avanguardia. Si estende su 34 mila metri quadri e impiega circa 290 addetti, fra ricercatori, tecnici e staff. I progetti di ricerca riguardano ogni aspetto dei segmenti <i>Upstream</i> e <i>Downstream</i> del settore <i>Oil & Gas</i>, con l'obiettivo di ridurre i rischi e aumentare l'efficienza, consolidare la leadership tecnologica e in generale ottenere maggiore qualità, efficienza e sostenibilità nei prodotti, negli impianti e nei processi. <br>
+#I principali ambiti di ricerca di cui si occupa questo laboratorio spaziano dalla Geologia e la Geochimica all'Ingegneria del petrolio, dall'Analisi e modelli del greggio (<i>Crude Oil Analysis and Modelling</i>) ai Modelli di ingegneria di processo (<i>Process Engineering ScaleUp Modelling</i>), alle Tecnologie dei materiali e alla Chimica fisica."
+    site: https://eni.it
+    id: eni
+    map: 
+
+  - img: LASA.jpg
+    title: INFN-LASA
+    descr: "Il Laboratorio Acceleratori e Superconduttività Applicata (LASA) dell'INFN, a Segrate nei dintorni di Milano, è un centro di eccellenza di fama internazionale nell'ambito dello studio degli acceleratori di particelle che opera da quasi trent'anni. <br>
+
+Le attività LASA si estendono ad un ampio spettro di settori, tra cui spicca lo sviluppo di cavità risonanti a superconduttori-radio frequenza (SRF) per acceleratori di particelle. Con lo sviluppo di tecnologie avanzate per la superconduttività, la criogenia e la produzione di campi elettromagnetici DC e RF ad alta intensità, il laboratorio ha sviluppato competenze uniche che hanno consentito di contribuire a componenti innovativi per grandi progetti internazionali di accelerazione per l'alta energia e la fisica applicata. <br>
+LASA, ad esempio, ha contribuito al successo di LHC con i primi prototipi dei magneti a dipolo per l'acceleratore e con il magnete toroidale per ATLAS; attualmente, sta gestendo la progettazione e lo sviluppo delle cavità SRF per l'accelerazione del fascio di protoni dell'ESS, (EuropeanSpallation Source), che nel 2019 diventerà la più intensa sorgente pulsata di neutroni a livello mondiale per la fisica di base e applicata, a Lund (Svezia). <br>
+Il gruppo LASA SRF è anche un riferimento mondiale per lo sviluppo di fotocatodi per sorgenti di elettroni ad alta luminosità."
+    site: http://wwwlasa.mi.infn.it/ 
+    id: lasa
+    map: https://goo.gl/maps/yankpX7VA5A2
+
+  - img: SThr_bb.jpg
+    title: STMicroelectronics
+    descr: "STMicroelectronics (ST) è fra le maggiori società di semiconduttori al mondo e leader fra gli IDM (<i>Integrated Device Manufacturer</i>). È inoltre leader nell'innovazione tecnologica, con circa 7.400 persone impegnate in attività di R&S e circa 17.000 brevetti, con 500 nuove domande di brevetto depositate solo nel 2017. <br>
+La sede principale di ST è a Ginevra, Svizzera, ma sono presenti sedi in tutto il mondo, tra le quali quella di Agrate Brianza, nei dintorni di Milano. <br>
+Il sito di Agrate Brianza ha giocato un ruolo chiave durante la storia dell'azienda, fornendo, fin dalla nascita dell'industria dei circuiti integrati, tecnologie all'avanguardia nel settore dei semiconduttori. Molte sono le collaborazioni in atto  con le principali università locali ed europee e con istituti di ricerca di tutto il mondo. <br>
+Il sito ospita la produzione <i>front-end</i>, il design dei prodotti, il settore R&S tecnologico, svariati laboratori, il collaudo, la qualità e il marketing, con più di 4600 impiegati. Oggi, il sito di Agrate è tra i principali di ST, con la presenza di aree produttive in <i>camere bianche</i> che si estendono su una superficie di 27000 m2."
+    site: https://www.st.com/
+    id: stmicro
+    map: https://goo.gl/maps/oigQqEpoFv52
+
+  - img: IFOM.jpg
+    title: Istituto FIRC di Oncologia Molecolare (IFOM)
+    descr: "Fondato nel 1998 dalla Fondazione Italiana Ricerca Cancro (FIRC), l'Istituto FIRC di Oncologia Molecolare (IFOM) è un centro di ricerca dedicato allo studio dei meccanismi molecolari alla base della formazione e dello sviluppo dei tumori. L'IFOM lavora nell'ottica di un rapido trasferimento dei risultati dal laboratorio alla pratica diagnostica e terapeutica, collaborando con centri clinici e di ricerca sul territorio così come a livello internazionale. <br> Presso la sede dell'IFOM è possibile visitare i laboratori dove è svolta l'attività di ricerca dell'istituto ed incontrare i ricercatori che vi lavorano. Al fine di integrare competenze tecnologiche e scientifiche complementari ed aprire nuovi orizzonti nella ricerca sul cancro, l'IFOM punta fortemente sull'interdisciplinarietà: presso l'istituto lavorano biologi, chimici e medici, ma anche ingegneri, economisti e fisici, di provenienza nazionale ed internazionale."
+#Fondato nel 1998 da FIRC-AIRC, IFOM (Istituto FIRC di Oncologia Molecolare) è un centro di ricerca dedicato allo studio della formazione e dello sviluppo dei tumori a livello molecolare, nell'ottica di un rapido trasferimento dei risultati dal laboratorio alla pratica diagnostica e terapeutica.
+    site: https://www.ifom.eu/it/
+    id: ifom
+    map: https://goo.gl/maps/THTmYTmDNGn
+
+  - img: wise.jpg
+    title: WISE
+    descr: "WISE Srl è un'azienda biomedicale con sede a Milano e Berlino che sviluppa una vera e propria nuova generazione di contatti impiantabili per neuro-modulazione e neuro-monitoraggio. <br>
+
+Gli elettrodi di WISE sono altamente biocompatibili, pieghevoli, estensibili e minimamente invasivi rispetto ai limiti della tecnologia odierna. Permetteranno di migliorare il trattamento dei pazienti che stanno già approfittando della neuro-modulazione, mentre allo stesso tempo estendono l'uso della neuro-modulazione a campi e indicazioni cliniche in cui le complesse richieste tecniche non possono essere soddisfatte dalla tecnologia attuale. <br>
+Gli elettrodi sono prodotti attraverso una tecnologia innovativa e proprietaria: il <i>Supersonic Cluster Beam Implantation</i> (SCBI), che consente la metallizzazione di polimeri estensibili. SCBI consiste di incorporare nanoparticelle metalliche all'interno di una base polimerica preformata al fine di formare uno stato metallico conduttivo sulla superficie del polimero. <br> <br>
+
+La tecnologia SCBI è stata protetta da brevetti in Europa, Stati Uniti, Israele, Canada, India, Giappone e Corea. Oltre al brevetto, WISE possiede una forte conoscenza della tecnologia e sulla sua implementazione. <br>
+Grazie a questa tecnologia innovativa, WISE sta anche sviluppando una nuova generazione di cavi senza fili per il trattamento del dolore cronico e per il monitoraggio pre-chirurgico dell'epilessia."
+    site: http://www.wiseneuro.com/
+    id: wise
+    map: https://goo.gl/maps/6kdzrEYREJT2
+
+  - img: IFP.jpg
+    title: "Istituto di Fisica del Plasma <i> Piero Caldirola</i> (IFP-CNR)"	
+    descr: "L'Istituto venne costituito come Laboratorio di Fisica del Plasma ed Elettronica Quantistica nel 1970 sotto la direzione del Prof. Piero Caldirola. Missione dell'Istituto consiste nella ricerca scientifica e tecnologica nel campo della Fisica del Plasma, con particolare riguardo alle sue applicazioni finalizzate alla realizzazione della Fusione Termonucleare Controllata come una delle opzioni più valide per una sorgente di energia sicura, sostenibile per l'ambiente, praticamente inesauribile per le generazioni future. <br> <br>
+Le attività di ricerca si articolano in: <br>
+- partecipazione a campagne sperimentali su macchine per il confinamento magnetico dei plasmi da fusione (principalmente su tokamak), <br>
+- studi teorici e di modellizzazione di plasmi termonucleari, <br>
+- sviluppo di sistemi diagnostici per plasmi da fusione, <br>
+- studi sperimentali sull'interazione dei plasmi con materiali solidi anche utilizzando installazioni sperimentali presenti in Istituto. <br> <br>
+Le principali competenze che sono state sviluppate negli anni in IFP riguardano la fisica e le tecnologie delle onde elettromagnetiche millimetriche, sia di potenza per il riscaldamento dei plasmi da fusione, sia di segnale per applicazioni in campo diagnostico di plasmi da laboratorio e astrofisico; lo sviluppo di diagnostiche di plasmi termonucleari basate sulla raccolta e l'analisi degli spettri di neutroni e raggi gamma e di radiazione millimetrica emessi dal plasma; la formulazione di modelli teorici dell'interazione di onde elettromagnetiche con plasmi magnetizzati, l'analisi interpretativa di dati sperimentali sui processi di trasporto di energia e particelle del plasma mediante codici numerici fluidi e cinetici, e la modellizzazione di instabilità magnetoidrodinamiche; lo studio sperimentale dei processi di interazione di plasmi di laboratorio con superfici materiali, il trattamento di queste ultime mediante esposizione al plasma e la loro diagnostica. <br> 
+Nei laboratori di IFP operano diverse installazioni sperimentali a plasma, tra cui la macchina lineare <i>GyM</i> per la ricerca di base sui plasmi e per lo studio dell'interazione plasma-materiali, alcuni reattori capacitivi a radiofrequenza per il trattamento al plasma di superfici e una micro-torcia al plasma per deposizioni di film sottili di carbonio. "
+    site: https://www.ifp.cnr.it/
+    id: ifp
+    map: https://goo.gl/maps/nendywRG9Ny
+
+  - img: 
+    title: Laboratori UniMiB
+    descr: "<b>Laboratorio di radioattività</b> <br>
+Nel laboratorio di Radioattività Ambientale di Milano Bicocca sono presenti rivelatori a semiconduttore (Germanio ad alta purezza intrinseca e Silici a barriera superficiale) per misure di spettrometria gamma e alfa ad alta risoluzione e sensibilità. Con queste tipologie di strumentazione si effettuano misure per la determinazione di elementi radioattivi naturali e antropogenici emettitori di radiazioni ionizzanti di tipo “gamma” e “alfa” su matrici solide e liquide. Nel caso della spettrometria alfa sono previsti anche trattamenti radiochimici (elettrodeposizione, utilizzo resine a scambio ionico….) per la separazione degli elementi radioattivi di interesse della matrice oggetto di analisi. <br> <br>
+
+<b>Laboratorio di criogenia </b><br> 
+Il laboratorio di criogenia presente nell'Università di Milano Bicocca lavora in collaborazione con l'Istituto Nazionale di Fisica Nucleare (Sezione di Milano-Bicocca).
+Sta attualmente sviluppando rilevatori di particelle operanti a basse temperature principalmente per esperimenti di fisica del neutrino (misura diretta della massa del neutrino, ricerca di decadimenti doppio-beta senza emissione di neutrini, ...). Il suo obiettivo è di ideare, sviluppare e portare avanti esperimenti per rispondere ad alcune delle domande irrisolte riguardanti i neutrini. Le tecnologie all'avanguardia che sviluppa possono anche avere un impatto in altri settori di ricerca quali l'astrofisica, l'analisi dei materiali, la sicurezza e la diagnostica nucleare, l'archeometria e la comunicazione quantistica. <br> La sua ricerca è altamente interdisciplinare e combina competenze in fisica della materia condensata, atomica, nucleare e sub-nucleare, tecnologie di film sottili, micro-fabbricazione di dispositivi elettronici, tecniche a basse temperature, elettronica a superconduttori, elaborazione digitale dei segnali ed estesi sistemi criogenici. <br><br>
+
+<b>Laboratorio di spettroscopia e microscopia ottica (biofisica) </b><br>
+Nel Laboratorio di spettroscopia e microscopia ottica si svolgono diverse attività: <br>
+La caratterizzazione spettroscopica di base di campioni proteici comprende spettri di assorbimento nella regione UV-VIS, spettri di emissione ed eccitazione in fluorescenza, spettri di dicroismo circolare nel vicino e nel lontano UV. <br>
+La determinazione della dimensione e dello stato di aggregazione di nanoparticelle e proteine avviene tramite misure di <i>light scattering</i> polarizzato (90 gradi) e/o depolarizzato (diversi angoli).
+La caratterizzazione spettroscopica di molecole fluorescenti e nanoparticelle con eccitazione non lineare prevede per le molecole in esame la possibilità' di misurare lo spettro di eccitazione a due fotoni (da 700 nm a 980 nm), gli spettri di emissione mediante CCD, e la diffusione e la fotodinamica mediante spettroscopia di correlazione di fluorescenza.<br>
+Lo studio della veicolazione di nanoparticelle e nano-costrutti in cellule avviene mediante esperimenti di microscopia ad eccitazione non lineare (700-980 nm) e prevede esperimenti di <i>imaging</i> in funzione del tempo a diverse concentrazioni di nano-sistemi, per analizzare sia la veicolazione che la tossicità. Sono possibili anche esperimenti di FRAP (fluorescence recovery after photobleaching) per studiare la diffusione intracellulare.<br>
+Lo imaging confocale e in super-risoluzione sfrutta un microscopio confocale Leica TCS CW STED: lunghezze d'onda di eccitazione 458 nm, 476 nm, 488 nm, 514 nm, 561 nm, 633 nm. Rivelatori: 2 PMT + 2 Hybrid detectors. Velocità di scansione da 200 a 1400 Hz, 8000 Hz in modalità resonant. Immagini acquisibili in modalità: xyz, xyt, xyzt, linescan, mosaic, spettrale. <br><br>
+
+<b>Laboratorio di Archeometria (Scienza dei Materiali)</b><br>
+Dal 1980 il laboratorio si dedica allo sviluppo ed all'applicazione di tecniche fisiche in archeologia, geologia ed ai beni culturali. In particolare, ci siamo specializzati nelle tecniche di datazione e caratterizzazione non distruttiva dei materiali archeologici. <br>
+Le tecniche di datazione disponibili sono la termoluminescenza (TL) e la luminescenza stimolata otticamente (OSL) per la datazione di materiale ceramico e di sedimenti; il radiocarbonio consente la datazione di materiale organico (in laboratorio ci occupiamo della preparazione dei campioni per datazione con AMS), la dendrocronologia permette di datare il periodo del taglio dell'albero. Una tecnica proposta di recente, la Reidrossilazione, permette di datare il materiale ceramico misurando la percentuale d'acqua assorbita a partire dalla cottura in fornace; anche questa tecnica è attualmente disponibile in laboratorio. Il laboratorio è membro del CUDAM (Centro Universitario Datazioni Università di Milano Bicocca, http://cudam.mater.unimib.it), di EURADOS (<i>European Radiation Dosimetry Group, Working Group 10</i>), di MODIS (<i>Mortar Dating Intercomparison Study</i>) e del RHX International Research. Dal 2012 è un <i>first level hub</i> del network italiano CH_NET E-RIHS. <br>
+Nel campo della caratterizzazione dei materiali antichi, le nostre ricerche sono incentrate sulle tecniche spettroscopiche non invasive, utilizzando in particolare strumentazione portatile (dipinti, tavole, smalti, ceramiche decorate e lustrate, oggetti metallici....). <br>
+I principali temi di ricerca sono:
+<ul>
+<li> - Dosimetria del picco a bassa temperatura del quarzo e studio dell'effetto Pre-dose</li>
+<li> - Proprietà ottiche e dosimetriche dei vetri musivi</li>
+<li> - Fenomeni di charge transfer nell'emissione luminescente di quarzo e feldspati naturali</li>
+<li> - Nuove procedure di estrazione del collagene dalle ossa per datazione 14C</li>
+<li> - Datazione TL, OSL e 14C delle malte archeologiche e architettoniche</li>
+<li> - Surface dating</li>
+<li> - Dosimetria di incidenti nucleari utilizzando materiali presenti nell'ambiente</li>
+<li> - Datazione con tecnica di reidrossilazione (RHX) di ceramiche archeologiche</li>
+<li> - Tecniche non invasive (EDXRF, FORS, Raman) per la caratterizzazione dei beni culturali</li>
+</ul>
+
+<b>Laboratorio OMBE (Epitassia da fasci molecolari organici)</b><br>
+Il laboratorio OMBE è dedicato alla crescita in alto e ultra-alto vuoto di film sottili ed eterostrutture di materiali molecolari organici, in particolare realizzati sfruttando l'epitassia organica. Ospita quindi apparati per la crescita da fasci molecolari organici (<i>Organic Molecular Beam Epitaxy</i> - OMBE) e strumenti per la caratterizzazione ottica e morfologica dei campioni: uno spettrofotometro UV-vis-NIR, un ellissometro, un apparato per spettroscopia di riflettanza anisotropa e un microscopio a forza atomica. <br>
+L'apparato OMBE è costituito da una camera di introduzione, una camera di metallizzazione e la camera di crescita, con sei sorgenti per diversi materiali, completa di microbilancia al quarzo per il controllo in-situ dello spessore dei film. Il vuoto limite che può essere raggiunto in camera di crescita è di circa 5x10^(-10) mbar grazie a una criopompa. Un sistema di raffreddamento e di riscaldamento del substrato permettono di variare la temperatura del substrato in un range compreso tra 77 K e 900 K. La camera di crescita è inoltre dotata di una finestra BOMCO di quarzo per misure ottiche in-situ e in tempo reale.
+E' disponibile inoltre un secondo apparato OMBE  costituito da due camere di crescita separate, entrambe dotate di microbilancia al quarzo per il controllo in-situ dello spessore dei film. Una delle due camere può alloggiare una sola cella di Knudsen, mentre la seconda può alloggiare fino a tre celle di Knudsen. Il vuoto limite che entrambe le camere possono raggiungere è di circa 1 x10^(-7) torr. <br><br>
+
+<b>Laboratorio di Elettronica (INFN-MiB, UniMiB)</b><br>
+Il laboratorio di Elettronica della Sezione INFN (Istituto Nazionale di Fisica Nucleare) di Milano Bicocca, e Dipartimento di Fisica di Milano Bicocca, ha la missione di sviluppare front-end e rivelatori di particelle sia per esperimenti con acceleratori che senza acceleratori, in ambienti altamente radioattivi e volutamente debolmente radioattivi. Copre svariati settori tecnologici: elettronica criogenica in Silicio, GaAs e SiGe, Elettronica monolitica in GaAs, Silicio, Bipolare-CMOS, SiGe e HEMT. L'esperienza coi rivelatori riguarda rivelatori criogenici, principalmente bolometri, rivelatori a gas, rilevatori al Germanio e Silicio, Foto moltiplicatori e SiPM (<i>Silicon Photomultiplier</i>). Al momento il laboratorio ha la responsabilità di diversi esperimenti in presa dati, o in procinto di iniziare la presa dati (esempi sono CUORE, CUPID-0, il RICH di LHCb)."
+
+    site: https://www.fisica.unimib.it/it 
+    id: labounimib
+    map: https://goo.gl/maps/WGBkMvdB79t
+    double: yes
+
+
+#  - img: Planetario.jpg
+#    title: Civico Planetario <i>Ulrico Hoepli</i>
+#    descr: "Il Civico Planetario <i>Ulrico Hoepli</i> è stato donato nel 1929 alla città di Milano dall'editore omonimo. <br> Inaugurato nel 1930, svolge da allora un'attività importante nel campo didattico e divulgativo dell'astronomia e delle scienze inerenti, ospitando circa 120.000 visitatori l'anno. <br> È tuttora il maggior planetario italiano, con la sua cupola di 19,6 metri di diametro e una capienza di oltre 300 posti. <br> La macchina <i>planetario</i> serve a riprodurre l'aspetto del cielo stellato e i suoi movimenti; quella in uso attualmente, installata nel 1968, è della casa tedesca Zeiss."
+#    site: https://lofficina.eu/
+#    id: planetario
+#    map: https://goo.gl/maps/MBeocWTwdhG2
+

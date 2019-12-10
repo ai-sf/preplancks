@@ -1,0 +1,20 @@
+description: "Membri dell'associazione organizzeranno alcuni workshop in cui si discuteranno le migliori pratiche per organizzare attività ed eventi, consigli sulla gestione di un Comitato Locale e si illustreranno alcune iniziative intraprese dall'Associazione."
+
+content:
+- name: "Elisa Garabello, Chiara Signorile Signorile"
+  #uni: Università degli Studi di Torino
+  title: "Eventi fantastici e dove trovarli"
+  abstract: "Una panoramica sugli eventi che caratterizzano e animano la vita dell'Associazione e dei suoi Comitati, in cui verranno illustrate idee, suggerimenti e linee guida da seguire per realizzare un'iniziativa di successo. <br> Si andrà dagli eventi locali fino a quelli nazionali e internazionali, per arrivare a un simulation game, in cui dovranno essere gli stessi partecipanti a collaborare come un Comitato Organizzatore, nella stesura del progetto di un nuovo evento AISF."
+  slides: Eventi.pdf
+
+- name: "Sergio Picella, Giovanni Stagnitto"
+  #uni: Università degli Studi di Torino
+  title: "Comitato Locale: Istruzioni per l’uso"
+  abstract: "Come si fonda un Comitato Locale? Cosa significa gestire e far cresce un LC? Come dare colore alla vostra vita AISF durante l’anno? Come affrontare le (prime) difficoltà? Un workshop per capire come affrontare le dinamiche tipiche e discutere possibili soluzioni."
+  slides: LC.pptx
+
+- name: "Matteo Barbetti, Andrea Barresi"
+  #uni: Università degli Studi di Torino
+  title: "Sistemi Di Riferimento"
+  abstract: "Come si scrive un articolo? Quali sono i retroscena dietro al lavoro di redazione? In questo simpatico workshop Andrea e Matteo vi spiegheranno come scrivere di scienza senza annoiare il vostro pubblico."
+  slides: SdR.pdf

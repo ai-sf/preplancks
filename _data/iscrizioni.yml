@@ -1,0 +1,55 @@
+posters?: false
+
+few_info:
+  info: ""
+  specs:
+    - text: "Sono disponibili in totale 132 posti:"
+      subpoints:
+        - text: "<b>100</b> con alloggio, con quota di <b>100</b> euro;"
+        - text: "<b>32</b> senza alloggio, con quota di <b>50</b> euro."
+    - text: "Entrambe le quote di partecipazione comprendono:"
+      subpoints:
+        - text: "pranzo di giovedì, venerdì, sabato, cena sociale di venerdì e i coffee break;"
+        - text: "trasporti dentro e fuori Milano nel corso dell'evento;"
+        - text: "sacchetto con i gadget dell'evento."
+    - text:  "La quota di partecipazione con alloggio comprende inoltre il soggiorno presso l'ostello per le 4 notti dell'evento, comprensivo di colazioni e cene (nei giorni di mercoledì, giovedì e sabato). Maggiori dettagli sono disponibili alla pagina <a href='../strutture#alloggio'>Strutture</a>."
+    - text: "Entrambe le quote di partecipazione <b>non comprendono</b>:"
+      subpoints:
+        - text: "spese di viaggio per raggiungere la conferenza;"
+        - text: "assicurazione;"
+        - text: "pranzo di mercoledì e di domenica."
+    - text: "Per chi non è ancora membro AISF la registrazione all'evento comprenderà, al costo di 5 euro (10 euro per gli studenti di dottorato), l'iscrizione all'Associazione per l'anno 2018/2019. Per info consultare <a href='http://ai-sf.it/iscrizione/' target='_blank'>questa pagina</a>. La quota di iscrizione all'AISF include la membership IAPS (International Association of Physics Students) di cui AISF è National Committee per l'Italia."
+    
+deadlines: 
+  info:
+  specs:
+    - text: "Le iscrizioni apriranno giovedì 13 dicembre 2018 alle ore 12:00 e chiuderanno sabato 12 gennaio 2019 alle ore 24:00."
+    - text: "La selezione dei partecipanti sarà effettuata dal Comitato Organizzatore della CISF 2019 in collaborazione con il Comitato Esecutivo AISF. La lettera di motivazione, da inserire nel form di registrazione, pur rimanendo facoltativa, sarà un importante elemento di valutazione e la proposta di un contenuto scientifico (talk e/o poster) costituirà titolo preferenziale."
+    - text: "Entro 3 giorni dalla chiusura delle registrazioni, i partecipanti selezionati saranno avvisati tramite l'indirizzo e-mail indicato in fase di registrazione. Si prega a tal proposito di controllare quotidianamente la casella di posta. Sarà quindi richiesto il pagamento della quota di iscrizione entro e non oltre 10 giorni dalla ricezione della e-mail, pena l'esclusione dalla partecipazione all'evento."
+    - text: "Una volta definiti i partecipanti all'evento verrà pianificato il calendario delle sezioni talk studenti in base ai contributi pervenuti. Non è garantito che tutti i contributi scientifici (colloqui e poster) potranno essere accettati."
+  lastinfo: "Per procedere con la registrazione, cliccare sul seguente link. "
+
+terms:
+  info: "Prima della registrazione leggere con attenzione quanto segue."
+  specs:
+    - text: "Tutti i dati personali raccolti saranno trattati con riservatezza. Non saranno forniti a terze parti eccetto dove necessario ai fini della conferenza. Si rende noto che, per ragioni di sicurezza, inoltreremo alcuni dei dati da voi forniti alle università e ai centri di ricerca coinvolti. I dati come nome e università di provenienza saranno utilizzati per verificare l'effettivo status di membro AISF."
+      url: "#!"
+    - text: "Possono partecipare alla CISF 2019 solamente studenti iscritti ad un corso di laurea in fisica, oppure ad un dottorato in fisica, o affine alla fisica, in Italia o italiani all'estero, così come coloro che hanno ottenuto una laurea o un dottorato in fisica o affine negli ultimi 12 mesi. La partecipazione alla CISF 2019 è riservata a studenti che abbiano compiuto 18 anni entro il 05/03/2019."
+      url: "#!"
+    - text: "Accettando i presenti Termini dichiari di accettare che il Comitato Organizzatore, l'Associazione Italiana Studenti di Fisica, gli enti e i luoghi i luoghi ospitanti l’evento in ogni sua parte non hanno qualsivoglia responsabilità per danni a cose e/o persone inclusi smarrimento o danneggiamento di qualsiasi oggetto che avvengano durante la CISF 2019."
+      url: "#!"
+    - text: "Accettando questi termini dichiari di accettare il codice di condotta IAPS in ogni sua parte."
+      url: "files/IAPS_Code_of_Conduct.pdf"
+      button: "PDF"
+    - text: "Accettando i presenti Termini dichiari di accettare che il Comitato Organizzatore, l'Associazione Italiana Studenti di Fisica, gli enti e i luoghi i luoghi ospitanti l’evento in ogni sua parte non sono responsabili del contenuto di nessuna delle talk, poster, workshop, visita o simili attività."
+      url: "#!"
+    - text: "Accetti di essere filmato, fotografato e/o soggetto a qualsiasi altro tipo di registrazione multimediale durante la CISF 2019 e concedi al Comitato Organizzatore, all'Associazione Italiana Studenti di Fisica e all'International Association of Physics Students il diritto di usare la tua immagine, un tuo filmato o qualsiasi altra forma di registrazione multimediale che ti renda riconoscibile in contesti quali sito internet e social media, brochure, locandine, documenti informativi e pubblicitari.
+"
+      url: "#!"
+#    - text: "Accettando questi termini dichiari che le informazioni contenute nella tua domanda di
+#            iscrizione sono vere e corrette."
+#      url: "#!"
+    - text: "Accettando i presenti Termini accetti che, in caso di rinuncia alla partecipazione, il Comitato Organizzatore provvederà al risarcimento della quota di partecipazione solo ed esclusivamente nel caso in cui si riesca a trovare uno studente sostitutivo e solamente entro e non oltre il 27/02/2019. Non è previsto alcun risarcimento della quota associativa AISF sotto qualsiasi circostanza. Nel caso in cui fosse approvato un eventuale rimborso il Comitato Organizzatore tratterà un totale di 20 € dalla quota come contributo per le spese dell'evento."
+      url: "#!"
+    - text: "I presenti Termini sono governati dalle leggi della Repubblica Italiana e dagli Statuto, Regolamento Interno e Privacy Policy AISF."
+      url: "#!"

@@ -1,0 +1,103 @@
+---
+layout: page
+title: Programma
+---
+
+<!--	SEZIONE BOOKLET
+
+<div class="row center">
+  <h5 class="header col s12 light">Scarica il booklet dell'evento!</h5>
+</div>
+<div class="row center">
+  <a href="{{site.url}}/files/booklet.pdf" target="_blank" id="download-button" class="btn-large waves-effect waves-light {{ site.data.generic.color1 }}">Booklet</a>
+</div>
+  <img src="{{site.url}}/img/picchi.svg">
+-->
+
+
+  <img class="responsive-img" src="{{ site.url }}/img/aulaA_crop.jpg">
+
+  <div class="section">
+      <h2>Informazioni generali</h2>
+      <p style='text-align:justify'>
+        {{ site.data.programma.info }}
+      </p>
+    </div>
+
+<div class="section">
+      <!--<h2>Programma dettagliato</h2>-->
+      <p style="color:{{site.data.generic.color1}}"> <i class="fa fa-exclamation-triangle" style="color:{{site.data.generic.color1}}" aria-hidden="true"></i> Sono possibili integrazioni al programma attuale </p>
+      <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+      {% for item in site.data.programma.schedule %}
+            <li class="tab col m3 s12" style="width: 20%;"><a style="color:{{ site.data.generic.color1 }}" href="#{{ item.date }}">{{ item.day }}</a></li>
+    {% endfor %}
+    <div class="indicator color:{{ site.data.generic.color1 }}" style="z-index:1"></div>
+      </ul>
+    </div>
+
+   {% for item in site.data.programma.schedule %}
+    <div id="{{item.date}}" class="col s12">
+      <br>
+      <h5>{{ item.day_ex }}</h5>
+      <h5><b>{{ item.short_descr }}</b></h5>
+      <table>
+        <thread>
+          <tr>
+        <th data-field="time">Orario</th>
+        <th data-field="where">Dove</th>
+        <th data-field="what" style="text-align:center">Descrizione</th>
+        <th>Link</th>
+          </tr>
+        </thread>
+        <tbody>
+        {% for act in item.activity %}
+          {% if act.tag == nil %}
+            {% assign bg = "rgba(0,0,0,0)" %}
+            {% assign tc = "black" %}
+          {% elsif act.tag == "conf" %}
+            {% assign bg = "rgba(0,0,0,0)" %}
+            {% assign tc = "#0091EA" %}
+          {% elsif act.tag == "sera" %}
+            {% assign bg = "#eeeeee" %}
+            {% assign tc = "#000000" %}
+          {% elsif act.tag == "visit" %}
+            {% assign bg = "#rgba(0,0,0,0)" %}
+            {% assign tc = "#00C853" %}
+          {% elsif act.tag == "svago" %}
+            {% assign bg = "#eeeeee" %}
+            {% assign tc = "#000000" %}
+          {% elsif act.tag == "studenti" %}
+            {% assign bg = "rgba(0,0,0,0)" %}
+            {% assign tc = "#C51162" %}
+          {% elsif act.tag == "firstlast" %}
+            {% assign bg = "#eeeeee" %}
+            {% assign tc = "#000000" %}
+          {% endif %}
+        <!-- {% if act.line != nil %}
+        <tr style="border-bottom:1px solid black">
+        {% else %}
+        <tr>
+        {% endif %} -->
+        <td style="background-color:{{bg}}">{{ act.hour }}</td>
+        {% if act.map != nil %}
+        <td style="background-color:{{bg}}">{{ act.where }} <a href='{{act.map}}' target='_blank'><i class="fa fa-globe fa-lg" aria-hidden="true" style="color:{{site.data.generic.color1}}"></i></a></td>
+        {% else %}
+        <td style="background-color:{{bg}}">{{ act.where }}</td>
+        {% endif %}
+        <td style="background-color:{{bg}}; color:{{tc}}; text-align:center">{{ act.descr }}</td>
+        {% if act.id != nil %}
+        <td style="background-color:{{bg}}"><a href="{{site.url}}/{{act.id}}" target='_blank'><i class="fa fa-arrow-right fa-lg" style="color:{{site.data.generic.color1}}" aria-hidden="true"></i></a></td>
+        {% else %}
+        <td style="background-color:{{bg}}"></td>
+        {% endif %}
+        </tr>
+         {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+{% endfor %}
+    </div>
+</div>

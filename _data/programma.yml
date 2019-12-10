@@ -1,0 +1,242 @@
+info: "L'evento si terrà da mercoledì 6 marzo a domenica 10 marzo 2019 a Milano. La registrazione partecipanti comincerà nella mattina di mercoledì 6 marzo presso il Dipartimento di Fisica dell'Università degli Studi di Milano (UniMi), seguita dalla cerimonia di apertura e da prime conferenze. <br> La giornata successiva si terrà al Dipartimento di Fisica dell'Università degli Studi di Milano-Bicocca (UniMiB) mentre le successive si terranno ancora al Dipartimento di Fisica dell'Università degli studi di Milano (UniMi). Oltre alle conferenze e alle visite, ai workshop dell'Associazione e all'Assemblea Generale Annuale, sono organizzati anche alcuni momenti di svago, come il quiz scientifico 'Botta di Coulomb' di mercoledì sera, la serata al Planetario Civico di giovedì sera, la cena sociale di venerdì sera. L'evento si concluderà nel primo pomeriggio di domenica 10 marzo presso il Dipartimento di Fisica dell'Università degli Studi di Milano."
+
+last_update: 26/11/18
+
+schedule:
+  - day: Mer 6
+    date: "060319"
+    day_ex: Mercoledì 6 marzo 
+    short_descr: "Inaugurazione, Università degli Studi di Milano (UniMi)"
+    activity:
+      - hour: "9:00 - 14:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Registrazione partecipanti"
+        tag: firstlast
+      - hour: "14:15 - 17:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Cerimonia di apertura <br> 
+<b>Prof. Giovanni Onida</b>, Direttore del Dip. di Fisica<br> 
+<b>Mattia Ivaldi</b>, Presidente AISF <br> 
+<b> Prof.ssa Luisa Cifarelli</b>, Presidente SIF <br>
+<b>Dott. Stefano Sandrelli</b>, INAF <br>
+<b>Prof.ssa Ginevra Trinchieri</b>, Presidente SAIt <br>
+<b>Dott. Luca Solari</b>, Presidente di Fondazione UniMi"
+        tag:
+#      - hour: "16:00 - 17:30"
+#        where: "Dipartimento di Fisica UniMi"
+#        descr: "<b>Dott.ssa Gabriella Greison</b>, <i>Monologo Quantistico</i>"
+#        tag: conf
+#        id: speaker/#greison
+      - hour: "17:00 - 17:30"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Coffee Break"
+        tag: svago
+      - hour: "17:30 - 18:30"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "<b>Prof. Stefano Forte</b>, <i>Dalle particelle elementari all'intelligenza artificiale e ritorno</i>"
+        tag: conf
+        id: speaker/#forte
+      - hour: "19:00 - 20:00"
+        where: ""
+        descr: "Cena libera"
+        tag: sera
+      - hour: "20:30 - 23:30"
+        where: "Auditorium Cerri"
+        descr: "Quiz scientifico: Botta di Coulomb"
+        tag: sera
+        map: https://goo.gl/maps/zg4VjNWLVRM2
+        id: serate/#bdc
+
+
+
+  - day: Gio 7
+    date: "070319"
+    day_ex: Giovedì 7 marzo
+    short_descr: "Visite e conferenze, Università degli Studi di Milano-Bicocca (UniMiB)"
+    activity:
+      - hour: "9:30 - 10:00"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "Presentazione e benvenuto ai partecipanti"
+        tag: firstlast
+      - hour: "10:00 - 13:00"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "Visite a laboratori e CNR"
+        tag: visit
+        id: strutture/#labounimib
+      - hour: "13:30 - 14:45"
+        where: "Mensa"
+        descr: "Pausa pranzo"
+        tag: svago
+      - hour: "15:00 - 16:00"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "<b>Dott. Fabio Pezzoli</b>, <br> <i>La fisica dello spin in nanostrutture a semiconduttore: spettroscopia ottica e applicazioni</i>"
+        id: speaker/#pezzoli
+        tag: conf
+      - hour: "16:00 - 17:00"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "<b>Prof. Maddalena Collini</b>, <i>Microscopia a scansione laser per lo studio dei sistemi biologici e applicazioni di nanomedicina</i>"
+        tag: conf
+        id: speaker/#collini
+        tag: conf
+      - hour: "17:00 - 17:30"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "Coffee Break"
+        tag: svago
+      - hour: "17:30 - 18:30"
+        where: "Dipartimento di Fisica UniMiB"
+        descr: "Parallel session: <b>Eni, Accenture, GP Battery </b> <br>"
+        id: speaker/#workshopaziende
+        tag: conf
+      - hour: "19:30 - 21:00"
+        where: ""
+        descr: "Cena libera"
+        tag: sera
+      - hour: "21:00 - 22:30"
+        where: "Civico Planetario di Milano"
+        descr: "<b>Prof. Marco Giulio Giammarchi</b>, <i>Cosmo e Antimateria</i>"
+#        descr: "<b>Dr. Lorenzo Caccianiga</b>, <i>TBA</i>"
+        map: https://goo.gl/maps/5YsmAVd5cTo
+        tag: conf
+#        id: serate/#planetario
+        id: speaker/#giammarchi
+
+
+  - day: Ven 8
+    date: "080319"
+    day_ex: Venerdì 8 marzo
+    short_descr: "Visite centri esterni e conferenze, Università degli Studi di Milano (UniMi)"
+    activity:
+      - hour: "8:30 - 12:30"
+        where: "LASA-INFN, Cascina Gobba"
+        descr: "Visita <b>Laboratorio Acceleratori e Superconduttività Applicata (LASA-INFN)</b> <br> [Gruppo 1]"
+        tag: visit
+        id: strutture/#lasa
+        map: https://goo.gl/maps/NMQKivvn11H2
+      - hour: "8:30 - 12:30"
+        where: Accenture
+        descr: "Visita <b>Accenture</b> <br> [Gruppo 2]"
+        tag: visit
+        id: strutture/#accenture
+        map: https://goo.gl/maps/nm7Ve8Wrof32
+      - hour: "8:30 - 12:30"
+        where: "Istituto FIRC di Oncologia Molecolare"
+        descr: "Visita <b>Istituto FIRC di Oncologia Molecolare (IFOM)</b> <br> [Gruppo 3]"
+        tag: visit
+        id: strutture/#ifom
+        map: https://goo.gl/maps/THTmYTmDNGn
+      - hour: "8:30 - 12:30"
+        where: "Istituto Europeo di Oncologia"
+        descr: "Visita <b>Istituto Europeo di Oncologia (IEO)</b> <br> [Gruppo 4]"
+        tag: visit
+        id: strutture/#ieo
+        map: https://goo.gl/maps/DQjG2MS3zsG2
+      - hour: "8:30 - 12:30"
+        where: "STMicroelectronics"
+        descr: "Visita <b>STMicroelectronics</b> <br> [Gruppo 5]"
+        tag: visit
+        id: strutture/#stmicro
+        map: https://goo.gl/maps/83KABvAye4z
+      - hour: "8:30 - 12:30"
+        where: Wise, sede di Cologno Monzese
+        descr: "Visita <b>WISE</b> <br> [Gruppo 6]"
+        tag: visit
+        id: strutture/#wise
+        map: 
+      - hour: "8:30 - 12:30"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Visita <b>CIMaINa</b> <br> [Gruppo 7]"
+        tag: visit
+        id: strutture/#cimaina
+      - hour: "8:30 - 12:30"
+        where: "Eni, sede di San Donato"
+        descr: "Visita <b>Eni</b> <br> [Gruppo 8]"
+        tag: visit
+        id: strutture/#eni
+        map: 
+      - hour: "8:30 - 12:30"
+        where: "Fondazione Unimi"
+        descr: "Visita <b>Fondazione UniMi</b> <br> [Gruppo 9]"
+        tag: visit
+        id: strutture/#filarete
+        map: 
+      - hour: "13:00 - 14:30"
+        where: "Mensa"
+        descr: "Pausa pranzo"
+        tag: svago
+        map: https://goo.gl/maps/YuicfFaWwbF2
+      - hour: "14:30 - 16:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Poster session: presentazione Comitati Locali <br>"
+        id: speaker/#poster
+        tag: studenti
+      - hour: "16:00 - 16:30"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Coffee Break"
+        tag: svago
+      - hour: "16:30 - 18:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "<b>Prof. Lucio Rossi</b>, <br><i>L’avventura del fisico tra scienza e tecnologia: LHC, l’upgrade ad Alta Luminosità e i futuri <i>megascience projects</i> per acceleratori</i>"
+        id: speaker/#rossi
+        tag: conf
+      - hour: "19:45 - 21:30"
+        where: "Carlsberg Øl"
+        descr: "Cena sociale"
+        tag: sera
+        map: https://goo.gl/maps/36GL3rnC6hm
+        id: serate/#cenasociale
+
+
+
+  - day: Sab 9
+    date: "09319"
+    day_ex: Sabato 9 marzo
+    short_descr: "Talk studenti e conferenze, Università degli Studi di Milano (UniMi)"
+    activity:
+      - hour: "9:15 - 11:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "<b>Prof. Michele Parrinello</b>, <i>Atomi e computer</i>"
+        id: speaker/#parrinello
+        tag: conf
+      - hour: "11:00 - 12:15"
+        where: "Dipartimento di Fisica"
+        descr: "Talk studenti"
+        tag: studenti
+        id: speaker/#talkstudenti
+      - hour: "12:30 - 14:00"
+        where: "Mensa"
+        descr: "Pausa pranzo"
+        tag: svago
+        map: https://goo.gl/maps/YuicfFaWwbF2
+      - hour: "14:00 - 18:30"
+        where: "Dipartimento di Fisica"
+        descr: "Assemblea Generale Annuale"
+        tag: 
+      - hour:
+        where:
+        descr: "Cena e serata libera"
+        tag: sera
+
+  - day: Dom 10
+    date: "100319"
+    day_ex: Domenica 10 marzo
+    short_descr: "Conferenze, poster session e chiusura lavori, Università degli Studi di Milano (UniMi)"
+    activity:
+      - hour: "9:30 - 11:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "<b>Prof. Patrizia Caraveo</b>, <i>L'Universo invisibile svelato da fotoni, neutrini e onde gravitazionali</i>"
+        id: speaker/#caraveo
+        tag: conf
+      - hour: "11:00 - 11:45"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Poster session e coffee break"
+        tag: studenti
+        id: speaker/#poster
+      - hour: "11:45 - 13:00"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Workshop AISF"
+        tag: studenti
+        id: speaker/#workshopaisf
+      - hour: "13:00 - 13:30"
+        where: "Dipartimento di Fisica UniMi"
+        descr: "Cerimonia di chiusura"
+        tag:

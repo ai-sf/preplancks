@@ -1,0 +1,34 @@
+---
+layout: page
+title: Sponsor e patrocini
+---
+
+{% for sezione in site.data.sponsor %}
+<h3>{{ sezione.title}}</h3>
+<div class="row">
+  {% for item in sezione.subitems %}
+  <div class="col {{sezione.format}}">
+      <div class="card">
+	{% if item.img != nihil %}		
+      <div class="card-image" >
+	<img src="{{site.url}}/img/sponsor/reduced/{{item.img}}">
+      </div>
+	{% endif %}
+      <div class="card-content">
+        <p style='font-size: large'>{{item.text}}</p>
+      </div>
+      <div class="card-action">
+        <a href="{{item.link}}" target="_blank">WEBSITE</a>
+        {% if item.fb != nihil %}
+        <a href="{{item.fb}}" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+      	{% endif %}
+        {% if item.linkedin != nihil %}
+        <a href="{{item.linkedin}}" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+      	{% endif %}
+	</div>	
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<br>
+{% endfor %}

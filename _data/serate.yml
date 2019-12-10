@@ -1,0 +1,33 @@
+#intro:
+ 
+  - img: bdc.jpg
+    title: Quiz scientifico
+    descr: "Nella serata di apertura dell'evento si terrà l'ormai celebre quiz scientifico interattivo a squadre <i>Botta di Coulomb</i>, ideato e realizzato interamente dal Comitato Locale di Pavia.
+Il gioco consiste in un quiz con domande di carattere scientifico-tecnologico e risposte a scelta multipla: un'ottima occasione per divertirsi, mettere alla prova il proprio spirito critico e imparare! Le domande verteranno su molteplici argomenti: dalla fisica alla medicina, dalla chimica alla biologia e all'ingegneria."
+    id: bdc
+    when: Mercoledì 6 marzo, ore 21:30
+
+  - img: planetario.jpg
+    title: Serata sotto le stelle del Planetario di Milano
+    descr: "Nella cornice verde dei Giardini Indro Montanelli, nella zona ricca di storia che collega il centro con Porta Venezia, sorge il Civico Planetario di Milano.
+Donato dall'editore Hoepli alla città nel 1929, il più grande planetario italiano è un'interessante edificio storico che ospita eventi e conferenze tutto l'anno.
+Durante lo spettacolo, organizzato dall'Associazione LOfficina in collaborazione con AISF, avrete modo di osservare in azione la macchina <i>planetario</i> Zeiss IV, risalente al 1968: una dei pochissimi esemplari meccanici ancora in uso.
+<br> <br> <small>
+<b>Associazione LOfficina</b> <br>
+Dal 1 luglio 2016 Associazione LOfficina ha in concessione le attività pubbliche, scolastiche e i servizi di cassa, accoglienza e segreteria del Civico Planetario di Milano. Il suo staff cura quindi la programmazione degli appuntamenti rivolti al pubblico, la progettazione di nuove attività, la conduzione di tutte le proposte scolastiche e la conduzione di alcuni degli appuntamenti pubblici. 
+LOfficina nasce a Milano nel 2005, è composta da un gruppo eterogeneo di operatori, con formazione tecnico-scientifica ed umanistica, con esperienza pluriennale nel campo della divulgazione scientifica e didattica museale.</small>"
+    id: planetario
+    when: Giovedì 7 marzo, ore 21.00
+
+  - img: cenasociale.jpg
+    title: Cena sociale e serata milanese
+    descr: "Milano è una grande città che offre opportunità e svaghi a una popolazione cosmopolita e variegata. Il miglior modo di scoprirla: una serata ad esplorare una delle zone più vive, chic e interessanti del centro, dopo una soddisfacente cena sociale."
+    id: cenasociale
+    when: Venerdì 8 marzo, ore 19.30
+
+  - img: Loris Paleari 2015.jpg
+    title: Serata libera
+    photocredit: Loris Paleari, 2015
+    descr: "Quale occasione migliore di un sabato sera per mettere alla prova la conoscenza acquisita di Milano? O per farsi trascinare da studenti del posto nei loro locali preferiti?"
+    id: libera
+    when: Sabato 9 marzo, ore 19.30

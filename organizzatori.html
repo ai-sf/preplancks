@@ -1,0 +1,29 @@
+---
+layout: page
+title: Comitato organizzatore
+---
+
+<div class="row">
+	{% for item in site.data.organizzatori %}
+      <div class="col m3">
+       <div class="card">
+	<div class="card-image">
+			 <img src="{{ site.url }}/img/organizzatori/{{ item.img }}">
+		 </div>
+	 <div class="card-content">
+		 <p style="color:{{site.data.generic.color1}}">{{ item.nome }}</p>
+		 <span>{{ item.studio }}</span>
+ 			<br>
+			<span>{{ item.uni }}</span>
+			<br>
+ 			<span><i>{{ item.ruolo }}</i></span>
+	 </div>
+	 <!-- <div class="card-action">
+		 <a href="#">This is a link</a>
+	 </div> -->
+        </div>
+ </div>
+ {% endfor %}
+</div>
+
+

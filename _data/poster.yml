@@ -1,0 +1,57 @@
+description: "Una poster session sarà organizzata in modo da permettere agli studenti partecipanti alla conferenza, a ricercatori e ai dottorandi dei Dipartimenti di Fisica di Milano e di Milano-Bicocca di esporre la propria attività di ricerca o di approfondire alcune tematiche incontrate durante le conferenze precedenti.
+<!-- Se interessati, è possibile indicare in fase di registrazione all'evento l'intenzione di presentare un poster specificandone eventualmente anche il titolo. -->"
+
+content:
+- name: "Alessandro Buonaiuto"  
+  uni: "Univ. degli Studi del Salento" 
+  poster: "Out of equilbrium dynamics of the Hubbard model on a dimer"
+  abstract: "In this work, I study how a two atom system evolves out of equilibrium; such task is accomplished using the Hubbard model written in first quantization. Due to the necessity to deal with mixed states, the Liouville formalism is used. The time evolution of different observables is reported."
+
+- name: "Alessandra Lorenzo"
+  uni: Alma Mater Studiorum - Univ. di Bologna 
+  poster: "Moving from academia to industry - my evidence"
+  abstract: "When I thought to move from academia to industry, I asked a friend to review my CV. He told me to relegate my posters and presentations to the back of the document. The focus, he said, should be on the ability to perform the job requirements, to keep deadlines and to have teamwork skills.<br>
+
+Since July I am part of the Traffic Management System (TMS) Software Factory. TMS is a key technology in the railway signalling business, providing a set of advanced features for railway traffic automation and regulation.
+
+Currently I am involved in a project of designing of a TMS for the French railway network. Here to bring the evidence of my choice."
+
+- name: "Daniele Ducci"  
+  uni: "Univ. degli Studi di Pisa" 
+  poster: "Il vettore di Runge-Lenz e il gruppo di simmetria SO(4) nell'atomo di idrogeno"
+  abstract: "Lo studio delle simmetrie di un sistema attraverso le tecniche fornite dalla teoria dei gruppi costituisce un approccio particolarmente utile per descrivere molte delle proprietá fisiche che esso manifesta. Utilizzeremo questo approccio nell'ambito della meccanica quantistica, per determinare lo spettro energetico dell'atomo di idrogeno e giustificare l'origine della degenerazione accidentale negli autovalori dell'hamiltoniana, tale metodo costituisce una via alternativa allo studio del sistema tramite il formalismo della funzione d'onda.<br>
+Verrá preliminarmente analizzato il corrispettivo caso classico del problema, evidenziando come la conservazione del vettore di Lenz, insieme al momento angolare, costituisca il punto centrale dal quale deriva la peculiarità dell'atomo di idrogeno, tanto nell'impostazione classica quanto in quella quantistica."
+
+- name: "Giovanna Feraco"  
+  uni: "Univ. della Calabria" 
+  poster: "Healing effect of different molecules on defective MoS<sub>2</sub> grown by CVD method"
+  abstract: "I materiali bidimensionali (2D) stanno guadagnando sempre più interesse da parte dei ricercatori a causa delle loro proprietà elettroniche, meccaniche e ottiche e della loro vasta applicabilità in catalisi, stoccaggio di energia e nanoelettronica. A questo proposito una delle classi di materiali più promettente, sembra essere quella dei <i>transition metal dichalcogenides</i> (TMDs). I <i>monolayer</i> di TMDs sono materiali composti da uno strato di atomi di un metallo di transizione (Mo, W) frapposto fra due strati di atomi calcogeni (S, Se). I legami sul piano sono covalenti, mentre le interazioni fra i diversi strati sono di Van der Waals. <br> 
+Fra tutti i TMDs, il monolayer di Disolfuro di Molibdeno (2D-MoS<sub>2</sub>) ha attratto particolare attenzione a causa delle sue proprietà elettroniche uniche. Quando questo materiale viene sintetizzato tramite deposizione chimica da vapore (CVD) si possono formare alcuni difetti che ne modificano le proprietà elettroniche. Uno dei metodi che si usa per riparare questi difetti è la funzionalizzazione tramite l'uso di molecole contenti zolfo. In questo lavoro sono state usate tre diverse molecole contenti zolfo per riparare i difetti del monolayer di MoS<sub>2</sub>. I campioni sono stati analizzati tramite spettroscopia di fotoemissione di raggi X (XPS) per valutare l'effetto dei tre diversi gruppi funzionali. Sono state performate inoltre altre tecniche di caratterizzazione, quali spettroscopia Raman, spettroscopia di fotoluminescenza (PL) e micoscopia a forza atomica (AFM), per valutare la qualità del monolayer di MoS<sub>2</sub> sintetizzato."
+
+- name: "Giuseppe Sottile"  
+  uni: "Univ. della Calabria" 
+  poster: "Qubit & Computer Quantistici"
+  abstract: "I computers hanno da tempo sostituito l'uomo in molte delle attività mentali e raziocinanti, prettamente legate al calcolo ed al trattamento dell'informazione. Tra le mille cose che questi dispositivi elettronici sanno fare con straordinaria velocità e precisione, c'è, fortunatamente, una cosa che essi non sanno fare e risultano, pertanto, assai inefficienti; si tratta dei contesti legati alla creatività ed alle emozioni, correlati all'emisfero destro del nostro cervello, quindi al pensiero che va al di là della logica. Si inizia dal contesto in cui i computers sono nati <i>la logica di commutazione</i> e si passa dall'algebra booleana alla meccanica quantistica. Nel contesto si parla delle differenze tra computer tradizionali e computer quantistici. Una trattazione fa riferimento alle porte logiche quantistiche ed alle loro caratteristiche correlate all'indeterminazione ed alla sovrapposizione degli stati. Viene introdotto il concetto di qubit come unità di informazione quantistica ed inoltre viene analizzata la geometria 3D dei qubit. Dopo un'analisi teorica dell'hardware si passano in rassegna alcuni dei principali algoritmi quantistici, come il teletrasporto, il parallelismo e l'algoritmo di Deutsch. Si conclude con un'accenno alla trasformata di Fourier quantistica ed al meccanismo degli ioni intrappolati."
+
+- name: "Leonardo Pacciani Mori"  
+  uni: "Univ. degli Studi di Padova" 
+  poster: "Adaptive consumer-resource models can explain diauxic shifts and the violation of the Competitive Exclusion Principle"
+  abstract: "Competitive ecosystems are most commonly described mathematically using MacArthur's consumer-resource model, leading to the <i>Competitive Exclusion Principle</i> which limits the number of coexisting competing species to the number of available resources. Nevertheless, several empirical evidences - such as bacterial community cultures - show that this principle is violated in real ecosystems. <br> Another experimental evidence involving microbial populations that cannot be explained in this framework is the existence of diauxic (or polyauxic) shifts in microbial growth curves. By introducing adaptive metabolic strategies whose dynamics tends to maximize species' relative fitness, we can explain both these empirical evidences. Moreover, we show that adaptation time scales play a fundamental role in how species dynamics respond to external perturbations and volatile resources."
+
+- name: "Loris Fato"  
+  uni: "Univ. della Calabria" 
+  poster: "YouPhysics"
+  abstract: "YouPhysics è un progetto di divulgazione scientifica sul web atto ad aiutare giovani ed adulti a comprendere al meglio il fantastico mondo della fisica, più in generale della scienza. Quante persone si sono ritrovate a voler apprendere una nozione scientifica con scarsi risultati? Tantissime, purtroppo. Inizialmente anche io mi sono ritrovato in questa situazione. Momenti in cui non riuscivo a comprendere le nozioni fondamentali per affrontare esami e per comprendere alcuni fenomeni naturali che mi circondavano. <br>
+
+In prima persona ho affrontato e superato tutte le difficoltà che incontrano studenti e appassionati che si addentrano in questo mondo. L'apprendimento in genere avviene tramite libri di testo, divulgativi, internet, riviste scientifiche e documentari. Metodi che spesso presentano delle difficoltà intrinseche dovute alla poca chiarezza o alla mancata esposizione di una nozione che viene data per scontata, ma che scontata non è. Ad oggi il mezzo di comunicazione più potente ed efficace è proprio il web che, con le sue enormi potenzialità, ha permesso la nascita di questo progetto. <br>
+
+Quali sono i mezzi e le caratteristiche che rendono vincente questo nuovo metodo di apprendimento scientifico? Due siti web costituiti da migliaia di pagine in collaborazione con medici, ingegneri e altri professionisti del settore, un mondo social dedicato alla scienza costituito da post giornalieri di fisica presenti su Facebook, Twitter, Instagram, un insieme di eBook Amazon che rappresentano delle vere e proprie guide e un canale Youtube con all'interno video didattici e divulgativi. <br>
+
+Ho potuto verificare che il progetto funziona ed è in forte crescita. Il canale Youtube ha oltre un milione di visualizzazioni, le vendite degli eBook vanno oltre il centinaio e più di 1100 persone hanno superato esami grazie a questo metodo."
+
+- name: "Luca Teruzzi"  
+  uni: "Univ. degli Studi di Milano" 
+  poster: "Measurements of phase topological properties of OAM channeling radiation through Asymmetryc Lateral Coherence"
+  abstract: "Anche se la generazione di radiazioni che trasportano momento angolare orbitale (OAM) è stata realizzata sia con luce visibile che con microonde, la realizzazione pratica di vortici con raggi X ad alta luminosità è un problema tuttora aperto. Il limite principale è legato alla soglia di danno degli elementi ottici. <br>
+Nuovi approcci per generare raggi X OAM, utilizzando fasci relativistici che interagiscono con laser ad altissima potenza, hanno portato sfide assolutamente nuove per lo sviluppo di metodi di misurazione.
+La parte reale del fattore di coerenza di una radiazione OAM fornisce una misura diretta delle proprietà di fase e della carica topologica dei vortici a raggi X: infatti, il ​​numero di lobi azimutali del fattore di coerenza aumenta all'aumentare della carica topologica, fornendo così un metodo adatto per diagnosticare i raggi X con momento angolare orbitale prodotto da fasci ultra-relativistici. Con questo poster viene mostrata una nuova tecnica diagnostica basata sull'interferometria a scansione denominata <i>Coerenza Laterale Asimmetrica</i> per misurare accuratamente la parte reale del grado complesso di radiazione OAM di raggi X coerenti."
