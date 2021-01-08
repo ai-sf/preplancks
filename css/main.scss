@@ -17,7 +17,7 @@ $spacing-unit:     30px;
 
 $color-type1: {{ site.data.generic.color1 }};
 $color-type2: {{ site.data.generic.color2 }};
-
+$color-type2-light: {{ site.data.generic.color2-light }};
 // $color-type1: #4C6EAD;
 // $color-type2: #EAA84E;
 
@@ -25,7 +25,7 @@ $color-type2: {{ site.data.generic.color2 }};
 
 $text-color:       #111;
 $background-color: #eee;
-$brand-color:      #E2652A;
+$brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -36,12 +36,6 @@ $content-width:    800px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-#box {
-  font-family: Helvetica, Arial, sans-serif;
-  color: {{ site.data.generic.color1 }};
-  text-align: center;
-}
 
 
 

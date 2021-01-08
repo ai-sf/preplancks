@@ -1,35 +1,22 @@
 title: Associazione Italiana Studenti di Fisica
-descr: "L'Associazione Italiana Studenti di Fisica (AISF), organizzazione con finalità educative e senza fine di lucro, riunisce molti studenti di fisica italiani. <br>
-Conta più di 1000 membri e 17 Comitati Locali; fondata nel 2014, è un Comitato Nazionale dell'<i>International Association of Physics Students</i> (IAPS)."
+descr: The Associazione Italiana Studenti di Fisica (AISF) gathers together most of the Italian physics students. It was founded in Heidelberg in August 2014 and since January 2015 is a National Committee for the International Association of Physics Students (IAPS).
 
 contact:
-  - name: Comitato Organizzatore CISF 2019
-    mail: cisf2019@ai-sf.it
-  - name: Comitato Esecutivo AISF
+  - name: AISF
     mail: esecutivo@ai-sf.it
-  - name: AISF UniMi
-    mail: luca.teruzzi@ai-sf.it
-  - name: AISF Milano Bicocca
-    mail: giulia.marcucci@ai-sf.it
+  - name: AISF Trento
+    mail: trento@ai-sf.it
+  - name: Contact person
+    mail: zeno.bacciconi@ai-sf.it
+
+
 
 connect:
-  - name: AISF
-    url: https://www.facebook.com/aisf.fisica/
-    img_name: /footer/AISF_logo_white_nobkg_r.png
-  - name: AISF UniMi
-    url: https://www.facebook.com/aisfunimi/
-    img_name: /footer/logo_AISF_UNIMI.png
-  - name: AISF Milano Bicocca
-    url: https://www.facebook.com/AISFMilanoBICOCCA/
-    img_name: /footer/logo_AISF_UNIMIB.png
-
-
+  - name: Facebook
+    url: https://www.facebook.com/AisfTrento/
 
 creator:
-  - name: Luca Colombo Gomez
-    mail: 
-  - name: Paolo Wetzl
-    mail: paoloandrea.wetzl@studenti.unimi.it
-
-#TODO:
-#inserire mail luca
+  - name: Elisa Garabello
+    mail: elisa.garabello@ai-sf.it
+  - name: Roberto Ciccarelli
+    mail: roberto.ciccarelli@ai-sf.it

@@ -1,0 +1,326 @@
+description:
+    title: "General Info"
+    paragraphs:
+        - paragraph:
+            - line: "The event will be rescheduled. New dates are to be notified."
+        - paragraph:
+            - line: "The Trento-Innsbruck Quantum Information Tour is coming to its third edition.<br>The event will have a focus on Bose-Einstein Condensation, Nanoscience, Quantum Optics and Quantum Information. The language of the talks will be English."
+            - line: "Students will be given lectures on forefront theoretical and experimental research in this fields by academics and prominent figures in Trento and Innsbruck environment."
+        - paragraph:
+            - line: "The event will start in Trento with the visit to the University nanosciences and photonics labs."
+            - line: "On Tuesday students will be hosted in the morning by Bruno Kessler Foundation and in the afternoon will be guided through the BEC nanoscience labs."
+            - line: "The following day participants will move to Innsbruck to visit the Institute for Quantum Optics and Quantum Information."
+            - line: "The morning of the final day will be spent at the Physics Department of Innsbruck University. After lunch a private bus will take to Trento participants who need to return there."
+        - paragraph:
+            - line: "You can find the detailed program below, which will be constantly updated"
+
+last_update: 27/11/19
+
+schedule:
+  - day: ""
+    date: "TBD"
+    location: "Trento"
+    activity:
+      - hour: "9:00"
+        name: "Accreditation in Trento"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+      - hour: "11:00"
+        name: "Open cerimony"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+      - hour: "11:30"
+        name: "Plenary Lecture"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+        subactivities:
+            -  title: "Hybrid quantum-classical algorithms for solving optimization problems"
+               abstract: "The hybrid approach to quantum computing combines quantum operations and classical processing to maximize the efficiency of existing quantum hardware. In this talk I will present an overview on hybrid quantum-classical algorithms and some recent results in this area about quantum annealing and adiabatic quantum computing."
+               people:
+                   name: "dott. Davide Pastorello"
+                   tag: "pastorello"
+      - hour: "13:00"
+        name: "Lunch"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+
+      - hour: "14:30"
+        name: "Lectures by NanoLab Group"
+        group: "nanolab"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+        subactivities:
+          - title: "Quantum Science and Technologies: a successful example"
+            abstract: "Starting from the second quantum revolution, the key ingredients of quantum physics essential for developing new kind of devices are discussed. A specific example of device in quantum security will be described."
+            people:
+                name: "prof. Lorenzo Pavesi"
+                tag: "pavesi"
+          - title: "Single particle entanglement: where quantum and classical physics clashes"
+            abstract: "During the talk a definition of entanglement and the methods to assess the entanglement will be described. By using the single particle entanglement, the inherent differences between classical physics and quantum physics (non-locality and contestuality) well be derived."
+            people:
+                name: "dott. Stefano Azzini"
+                tag: "azzini"
+
+          - title: "Heralded single photon sources: who, where, what, when and why"
+            abstract: "The sources of entangled two photons and of heralded single photons are described to show the advantages of integrated quantum photonics and where the field is evolving."
+            people:
+                name: "dott. Stefano Signorini"
+                tag: "signorini"
+
+      - hour: "16:00"
+        name: "Coffee Break"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+      - hour: "16:30"
+        name: "Visit to NanoLab laboratories"
+        group: "nanolab"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "NanoLab laboratories"
+
+      - hour: "18:30"
+        name: "Check-in"
+        location:
+            name: "Hostel 'Giovane Europa'"
+            tag: "hosteltrento"
+
+      - hour: "19:30"
+        name: "Social Dinner (optional)"
+        location:
+            name: "La Rosa D'Oro"
+            tag: "rosadoro"
+
+  - day: ""
+    date: "TBD"
+    location: "Trento"
+    activity:
+      - hour: "9:00"
+        name: "Lectures by BEC Group (Part I)"
+        group: "bec"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+        subactivities:
+          - title: "Introduction to superfluidity in quantum gases"
+            people:
+                name: "prof. Franco Dalfovo"
+                tag: "dalfovo"
+          - title: "Production and observation of a BEC"
+            people:
+                name: "prof. Giacomo Lamporesi"
+                tag: "lamporesi"
+
+          - title: "Supersolids and quantum droplets"
+            people:
+                name: "prof. Alessio Recati"
+                tag: "recati"
+          - title: "Analog gravity with cold atoms and photons"
+            people:
+                name: "prof. Iacopo Carusotto"
+                tag: "carusotto"
+      - hour: "10:45"
+        name: "Coffee break"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+      - hour: "11:00"
+        name: "Visit to FBK"
+        location:
+            name: "FBK"
+            tag: "fbk"
+
+      - hour: "12:30"
+        name: "Lunch"
+        location:
+            name: "FBK"
+            tag: "fbk"
+            room: "Room TBD"
+      - hour: "14:00"
+        name: "Lectures by BEC Group (Part II)"
+        group: "bec"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+        subactivities:
+          - title: "Simulating lattice gauge theories with neutral atoms"
+            people:
+                name: "prof. Philipp Hauke"
+                tag: "hauke"
+          - title: "QCD physics with superfluid mixtures"
+            people:
+                name: "prof. Gabriele Ferrari"
+                tag: "ferrari"
+          - title: "Montecarlo simulation of low-dimensional gases"
+            group: "bec"
+            people:
+                name: "prof. Stefano Giorgini"
+                tag: "giorgini"
+          - title: "Optical lattices and synthetic dimensions"
+            people:
+                name: "prof. Dimitrios Trypogeorgos"
+                tag: "trypogeorgos"
+      - hour: "15:30"
+        name: "Coffee break"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+      - hour: "16:00"
+        name: "BEC lab tour"
+        group: "bec"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Laboratories"
+      - hour: "18:00"
+        name: "Orientation moment"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+      - hour: "18:45"
+        name: "Dinner buffet"
+        location:
+            name: "Physics Department"
+            tag: "physunitn"
+            room: "Room TBD"
+      - hour: "21:00"
+        name: "Free night"
+        details: none
+        
+        
+  - day: "Wednesday"
+    date: "TBD"
+    location: "Innsbruck"
+    activity:
+      - hour: "6:00"
+        name: "Check out and departure from Trento"
+        location:
+            name: "Hostel Giovane Europa"
+            tag: "hosteltrento"
+      - hour: "8:30"
+        name: "Arrival at Innsbruck"
+        details: none
+      - hour: "9:00"
+        name: "IQOQI Lab tour (Part I)"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "10:30"
+        name: "Coffee break"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "11:00"
+        name: "Plenary lecture"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "12:30"
+        name: "Lunch"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "14:00"
+        name: "Plenary lecture"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "15:30"
+        name: "Coffee break"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "16:00"
+        name: "Lab Tour at IQOQI (Part II)"
+        location:
+            name: "IQOQI"
+            tag: "iqoqi"
+            room: "Room TBD"
+      - hour: "18:00"
+        name: "Check in at the hotel"
+        location:
+            name: "Hotel Tautermann"
+            tag: "hotel_innsbruck"
+      - hour: "19:30"
+        name: "Social Dinner"
+        location:
+            name: "Innsbruck Restaurant"
+            tag: "resinnsbruck"
+
+
+  - day: ""
+    date: "TBD"
+    location: "Innsbruck"
+    activity:
+      - hour: "09:00"
+        name: "Talks"
+        location:
+            name: "University of Innsbruck"
+            tag: "uniinn"
+            room: "Room TBD"
+      - hour: "10:30"
+        name: "Coffee break"
+        location:
+            name: "University of Innsbruck"
+            tag: "uniinn"
+            room: "Room TBD"
+      - hour: "11:00"
+        name: "University of Innsbruck Lab Tour"
+        location:
+            name: "University of Innsbruck"
+            tag: "uniinn"
+            room: "Room TBD"
+      - hour: "13:00"
+        name: "Pizza lunch with the students of Innsbruck"
+        location:
+            name: "Pizzeria"
+            tag: "pizzainn"
+      - hour: "14:30"
+        name: "Orientation moment"
+        location:
+            name: "University of Innsbruck"
+            tag: "uniinn"
+            room: "Room TBD"
+      - hour: "15:30"
+        name: "Bus to Trento"
+        details: none
+
+
+
+
+sections:
+  - name: "Partecipation fee and requirements"
+    points:
+    - text: "In order to sign up for the event you must be an AISF or IAPS member"
+    - text: "Participation fee is different whether you need the accommodation both in Trento and Innsbruck or only in one of them:"
+      subpoints:
+        - text: "Fee is 50€ without accomodation in Trento or Innsbruck (limited spots)"
+        - text: "Fee is 80€ with included accomodation in Trento at Hostel for the night of Monday and Tuesday and in Innsbruck for the night of Wednesday"
+    - text: "Such fee will cover dinners of Tuesday and Wednesday, all breakfasts and lunches, local transportation in Trento, the bus to and from Innsbruck and the accomodation in Innsbruck"
+    - text: "Participants who need to arrive and sleep in Trento on Sunday 22nd and/or on Thursday 26th can request to book extra night(s) at the hostel, by adding to the fee 21,50€ per night."
+    - text: "Please notice that participation fees <b>does not cover</b> the following:"
+      subpoints:
+        - text: "Journeys to and from Trento to arrive at the event and leave once it is concluded"
+        - text: "Insurance"
+    - text: "Note: if you are Italian and you are not an AISF member yet you can become an AISF member while registering for this event."
+    - text: "Please note that unfortunately we are not able to provide scholarships and/or bursaries for any students at this time."

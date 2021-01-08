@@ -1,7 +1,7 @@
 # Site settings
 # title: "Acr Ev"
 # description: "nome evento completo"
-url: "http://ai-sf.it/" # the base hostname & protocol for your site
+#url: "/" # the base hostname & protocol for your site
 destination: ../site/
 locale: "it"
 

@@ -1,20 +1,21 @@
-#meglio png, su alcuni pc problemi compatibilita'
-banner: img/banner.png
+logo: "img/logo-white.png"
+longname: "Trento Innsbruck Quantum Information Tour"
 
-who: "<b>150</b> studenti dei corsi di laurea <b>Triennale</b> o <b>Magistrale</b> o del <b>Dottorato di ricerca</b> in Fisica che siano regolarmente iscritti all'AISF per l'anno accademico 2018/2019."
+who:
+    text: "40 Physics students of whom:"
+    subpoints:
+        - text: "20 among AISF (Associazione Italiana Studenti di Fisica) members"
+        - text: "20 among IAPS (International Association of Physics Students) members"
 
-when: "Cerimonia di apertura: pomeriggio di mercoledì <b>6 marzo</b>. Cerimonia di chiusura: primo pomeriggio di domenica <b>10 marzo 2019</b>."
+when: "From the 23rd to the 26th March 2020"
 
-where: "Sedi principali dell'evento sono il Dipartimento di Fisica dell'Università degli Studi di <b>Milano</b> e il Dipartimento di Fisica dell'Università degli Studi di <b>Milano Bicocca</b>."
-
+where: "The first two days will be spent in Trento visiting the University and FBK labs, the other two in Innsbruck at the IQOQI research center and the university"
 
 slideshow:
+  - img: img/trento.jpg
+    alt: Trento
   - img: img/innsbruck.jpg
     alt: Innsbruck
-    title: Innsbruck
-  - img: img/pavia.jpg
-    alt: Centro Nazionale di Adroterapia Oncologica (CNAO) - Pavia
-    title:
 
-paragraph: "CISF è l'evento annuale più importante di AISF, l'Associazione Italiana Studenti di Fisica. Dopo Torino, Bari e Pisa, CISF sbarca a Milano per la quinta edizione. Nella cornice dei dipartimenti di Fisica delle due università Milanesi, 150 studenti da tutta Italia potranno assistere a conferenze tenute da scienziati (e non solo) di livello internazionale, esporre il proprio lavoro ai colleghi, visitare aziende e centri di ricerca, partecipare alla vita associativa di AISF, stringere amicizie e vivere per una settimana la vita all'ombra della Madonnina."
 
+paragraph: "The Trento-Innsbruck Quantum Information Tour is an event organised by AISF Trento (Local Committee of the Italian Association of Physics Students AISF) in collaboration with AISF: it will bring 40 enthusiast students to visit some of the most advanced research facilities in Trento and Innsbruck and is conceived to showcase research mainly in the field of Quantum Information and Quantum Science. "

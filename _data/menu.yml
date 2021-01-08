@@ -1,16 +1,11 @@
-- text: Programma
-  url: programma
-- text: Speaker
-  url: speaker
-- text: Strutture
-  url: strutture
-- text: Eventi serali
-  url: serate
-- text: <b>Iscrizioni</b>
-  url: iscrizioni	
-- text: CO
-  url: organizzatori
-- text: Sponsor
-  url: sponsor
-- text: AISF
+- text: "Facilities"
+  url: "facilities"
+- text: "Programme"
+  url: "programme"
+- text: "Registration"
+  url:  "registration"
+- text: "Sponsors"
+  url: "sponsors"
+- text: "AISF"
+  icon: "public"
   url: http://www.ai-sf.it

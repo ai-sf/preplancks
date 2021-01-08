@@ -1,7 +1,7 @@
 # Site settings
-title: "PLANCKS (IT)"
-description: "Italian preliminaries of IAPS PLANCKS competition"
-url: "http://ai-sf.it/plancksIT/"
+title: "Tiqit"
+description: "Tiqit"
+url: "http://ai-sf.it/tiqit20"
 destination: ../site/
 locale: "it"
 
@@ -22,6 +22,6 @@ collections:
     output: true
     permalink: /:categories/:year/:month/:day/:title/
 
-plugins:
- - jekyll-redirect-from
+#plugins:
+# - jekyll-redirect-from
 # - jekyll-sitemap
