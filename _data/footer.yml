@@ -17,7 +17,6 @@ connect:
   - name: Instagram
     url: https://www.instagram.com/aisf_fisica/
     instagram: true
-    url: https://www.facebook.com/aisf.fisica/
 
 creator:
   - name: Roberto Ciccarelli
