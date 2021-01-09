@@ -4,27 +4,20 @@ descr: The Associazione Italiana Studenti di Fisica (AISF) gathers together most
 contact:
   - name: AISF
     mail: esecutivo@ai-sf.it
-<<<<<<< HEAD
   - name: Andrea Lo Sasso
     mail: andrea.losasso@ai-sf.it
-=======
   - name: Contact person
     mail: roberto.ciccarelli@ai-sf.it
-
->>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e
 
 
 connect:
   - name: Facebook
-<<<<<<< HEAD
     url: https://it-it.facebook.com/aisf.fisica/
     facebook: true
   - name: Instagram
     url: https://www.instagram.com/aisf_fisica/
     instagram: true
-=======
     url: https://www.facebook.com/aisf.fisica/
->>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e
 
 creator:
   - name: Roberto Ciccarelli
