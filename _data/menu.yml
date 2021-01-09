@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - text: "Iscrizione"
   icon: "create"
   url:  "iscrizione"
@@ -10,3 +11,14 @@
 - text: "Contatti"
   icon: "share"
   url: "contatti"
+=======
+- text: "Facilities"
+  url: "facilities"
+- text: "Programme"
+  url: "programme"
+- text: "Registration"
+  url:  "registration"
+- text: "AISF"
+  icon: "public"
+  url: http://www.ai-sf.it
+>>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e

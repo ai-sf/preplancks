@@ -1,4 +1,4 @@
-<footer class="page-footer custom1">
+<footer class="page-footer primary">
   <div class="container">
     <div class="row">
       <div class="col l6 m6 s12">
@@ -8,24 +8,28 @@
       <div class="col l3 m6 s6">
         <h5 class="white-text">Contact</h5>
         <ul>
-        {% for item in site.data.footer.contact %}
+          {% for item in site.data.footer.contact %}
           <li>{{ item.name }}</li>
-      	  <li><a class="white-text" href="mailto:{{ item.mail }}">{{ item.mail }}</a></li>
-        {% endfor %}
+          <li><a class="white-text" href="mailto:{{ item.mail }}">{{ item.mail }}</a></li>
+          {% endfor %}
         </ul>
       </div>
       <div class="col l3 m6 s6">
         <h5 class="white-text">Connect</h5>
         <ul>
           {% for item in site.data.footer.connect %}
+<<<<<<< HEAD
 	        <li>
             {% if item.facebook %}
+=======
+          <li>
+>>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e
             <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{site.url}}/img/fb_logo.png"></a>
             {% elsif item.instagram %}
             <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{site.url}}/img/insta_logo.png"></a>
             {% endif %}
           </li>
-	        {% endfor %}
+          {% endfor %}
         </ul>
       </div>
     </div>
@@ -34,7 +38,8 @@
     <div class="container">
       Built with Jekyll and materializecss by
       {% for item in site.data.footer.creator%}
-        <a class="white-text text-accent-3" href="mailto:{{ item.mail }}">{{ item.name }}</a>{% if forloop.last %}.{% else %},{% endif %}
+      <a class="white-text text-accent-3" href="mailto:{{ item.mail }}">{{ item.name }}</a>{% if forloop.last %}.{% else
+      %},{% endif %}
       {% endfor %}
     </div>
   </div>
