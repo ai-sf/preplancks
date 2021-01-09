@@ -1,10 +1,14 @@
 (function ($) {
     $(function () {
-        M.AutoInit()
+        M.AutoInit();
         $('.sidenav').sidenav();
         $('.parallax').parallax();
         $('.slider#slider-home').slider({ height: 550, interval: 4000, duration: 3000 });
         $('.slider:not(#slider-home)').slider();
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+
         // Initialize collapsible (uncomment the line below if you use the dropdown variation)
         $('.collapsible').collapsible({
             onOpenStart: function (el) {

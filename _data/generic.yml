@@ -5,3 +5,8 @@ long_title: "Trento-Innsbruck Quantum Information Tour"
 primary-color: "#1b5e20"
 accent-color: "#ff9800"
 accent-color-light: "#fff3e0"
+
+custom-css:
+  - "article"
+  - "events"
+  - "custom"

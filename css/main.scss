@@ -116,6 +116,10 @@ $colors_custom: (
 $colors : map-merge($colors, $colors_custom);
 
 @import "components/_color-classes";
-@import "custom";
+
+
+{% for file in site.data.generic.custom-css %}
+@import "{{file}}";
+{% endfor %}
 
 

@@ -4331,6 +4331,16 @@ input[type=range]::-ms-thumb { border: none; height: 14px; width: 14px; border-r
 
 .transparent-text { color: transparent !important; }
 
+article img { width: 100%; }
+
+.eventshome { margin: 23px 0; border-left: 5px solid #ee6e73; font-size: 11px; height: inherit; }
+
+.events-banner { margin: 0; height: 100%; }
+
+.eventstitle { margin: 0; color: #ee6e73; font-size: 1.64rem; }
+
+.eventsitem { margin: 5px 0 0 0; color: black; font-weight: 500; }
+
 img .fullwidth { /* non funziona, perché? */ width: 100%; }
 
 .chip { display: inline-block; height: 32px; font-size: 13px; font-weight: 500; color: rgba(0, 0, 0, 0.6); line-height: 32px; padding: 0 12px; border-radius: 16px; background-color: #e4e4e4; }
@@ -4401,16 +4411,6 @@ ul.dashed > li:before { content: "-"; width: 10px; margin-left: -5px; display: i
 .carousel .carousel-item { width: 500px; }
 
 .carousel .carousel-item img { width: 100%; }
-
-.eventshome { margin: 23px 0; border-left: 5px solid #ee6e73; font-size: 11px; height: inherit; }
-
-.events-banner { margin: 0; height: 100%; }
-
-.eventstitle { margin: 0; color: #ee6e73; font-size: 1.64rem; }
-
-.eventsitem { margin: 5px 0 0 0; color: black; font-weight: 500; }
-
-article img { width: 100%; }
 
 #index-top-logo { width: 100%; padding: 20px 0 0 0; }
 

@@ -2,8 +2,6 @@ description:
     title: "General Info"
     paragraphs:
         - paragraph:
-            - line: "The event will be rescheduled. New dates are to be notified."
-        - paragraph:
             - line: "The Trento-Innsbruck Quantum Information Tour is coming to its third edition.<br>The event will have a focus on Bose-Einstein Condensation, Nanoscience, Quantum Optics and Quantum Information. The language of the talks will be English."
             - line: "Students will be given lectures on forefront theoretical and experimental research in this fields by academics and prominent figures in Trento and Innsbruck environment."
         - paragraph:
@@ -17,12 +15,12 @@ description:
 last_update: 27/11/19
 
 schedule:
-  - day: ""
-    date: "TBD"
+  - day: "Monday"
+    date: "01/01"
     location: "Trento"
     activity:
       - hour: "9:00"
-        name: "Accreditation in Trento"
+        name: "Accreditation"
         location:
             name: "Physics Department"
             tag: "physunitn"
@@ -101,8 +99,8 @@ schedule:
             name: "La Rosa D'Oro"
             tag: "rosadoro"
 
-  - day: ""
-    date: "TBD"
+  - day: "Tuesday"
+    date: "02/02"
     location: "Trento"
     activity:
       - hour: "9:00"
@@ -203,7 +201,7 @@ schedule:
         
         
   - day: "Wednesday"
-    date: "TBD"
+    date: "03/01"
     location: "Innsbruck"
     activity:
       - hour: "6:00"
@@ -268,8 +266,8 @@ schedule:
             tag: "resinnsbruck"
 
 
-  - day: ""
-    date: "TBD"
+  - day: "Thursday"
+    date: "04/01"
     location: "Innsbruck"
     activity:
       - hour: "09:00"
