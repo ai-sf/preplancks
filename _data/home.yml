@@ -9,7 +9,7 @@ when: "19 Febbraio 2021"
 where: "Online, in contemporanea in tutta Italia"
 
 backimage:
-  - img: img/plancks_back.png
+  - img: img/site.png
     alt: Sfondo
 
 
