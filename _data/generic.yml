@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 title: prePLANKS 21
 long_title: "Preselizioni Italiane per PLANKS 2021"
-color1: "#862d8f"
-color2: "#7ed1d6"
-color2-light: "#a89e8f"
+primary-color: "#862d8f"
+accent-color: "#7ed1d6"
+accent-color-light: "#a89e8f"
 
 instagram_url: "https://www.instagram.com/aisf_fisica/"
 facebook_url: "https://it-it.facebook.com/aisf.fisica/"
-=======
-title: TIQIT
-long_title: "Trento-Innsbruck Quantum Information Tour"
-
-#
-primary-color: "#1b5e20"
-accent-color: "#ff9800"
-accent-color-light: "#fff3e0"
 
 custom-css:
   - "article"
   - "events"
   - "custom"
->>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e

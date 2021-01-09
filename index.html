@@ -5,35 +5,31 @@ countdown: "Jan 22, 2021 23:59:59"
 ---
 <div class="slider fullscreen" id="slider-home">
   <div id="banner-description">
-    <div class="row"><div class="col s12">
-    <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo" style="width:inherit; height:inherit;">
-    </div></div>
+    <div class="row">
+      <div class="col s12">
+        <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo" style="width:inherit; height:inherit;">
+      </div>
+    </div>
     <div><b>{{site.data.home.longname}}</b></div>
   </div>
   <div id="gradient-nav" style="background: rgba(0,0,0, 0.2);"></div>
   <div id="chevron-banner"><i class="material-icons">keyboard_arrow_down</i></div>
-    {% for img in site.data.home.backimage %}
-      <img src="{{site.url}}/{{img.img}}" alt="{{img.alt}}" style="height: 100%;
+  {% for img in site.data.home.backimage %}
+  <img src="{{site.url}}/{{img.img}}" alt="{{img.alt}}" style="height: 100%;
         width: 100%;
         background-size: cover;
         background-position: center;
         object-fit:cover;">
-    {% endfor%}
+  {% endfor%}
 </div>
 
 
 <div class="no-pad-top" id="index-page">
   <div class="container">
     <div class="row">
-<<<<<<< HEAD
       <div class="column s12 m4">
-      <h3 id="countdown" class="center custom1-text" style=""></h3>
+        <h3 id="countdown" class="center custom1-text" style=""></h3>
       </div>
-=======
-      <h3 id="regtext" class="center primary-text">COVID MERDA Due to the measures recently adopted in order to contain
-        COVID-19 spreading, the event won't take place in March. <b></b> Participants will be informed about eventual
-        rescheduling as soon as possible.</h3>
->>>>>>> 2e55954558e0c812806b78d347fbc7fd712f974e
     </div>
     <!--   Icon Section   -->
     <div class="section">
