@@ -4,19 +4,20 @@ descr: The Associazione Italiana Studenti di Fisica (AISF) gathers together most
 contact:
   - name: AISF
     mail: esecutivo@ai-sf.it
-  - name: AISF Trento
-    mail: trento@ai-sf.it
-  - name: Contact person
-    mail: zeno.bacciconi@ai-sf.it
-
+  - name: Andrea Lo Sasso
+    mail: andrea.losasso@ai-sf.it
 
 
 connect:
   - name: Facebook
-    url: https://www.facebook.com/AisfTrento/
+    url: https://it-it.facebook.com/aisf.fisica/
+    facebook: true
+  - name: Instagram
+    url: https://www.instagram.com/aisf_fisica/
+    instagram: true
 
 creator:
-  - name: Elisa Garabello
-    mail: elisa.garabello@ai-sf.it
   - name: Roberto Ciccarelli
     mail: roberto.ciccarelli@ai-sf.it
+  - name: Damiano Lucarelli
+    mail: lucarelli.damiano.ld@gmail.com

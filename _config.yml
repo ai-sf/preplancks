@@ -1,7 +1,7 @@
 # Site settings
-title: "Tiqit"
-description: "Tiqit"
-url: "http://ai-sf.it/tiqit20"
+title: "prePlanks 2021"
+description: "prePlanks 2021"
+url: "http://ai-sf.it/plancks"
 destination: ../site/
 locale: "it"
 

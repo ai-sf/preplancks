@@ -1,30 +1,33 @@
 ---
 layout: home
 script: home.js
+countdown: "Jan 22, 2021 23:59:59"
 ---
 <div class="slider fullscreen" id="slider-home">
   <div id="banner-description">
-    <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo">
-    <div>{{site.data.home.longname}}</div>
+    <div class="row"><div class="col s12">
+    <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo" style="width:inherit; height:inherit;">
+    </div></div>
+    <div><b>{{site.data.home.longname}}</b></div>
   </div>
-  <div id="gradient-nav"></div>
+  <div id="gradient-nav" style="background: rgba(0,0,0, 0.2);"></div>
   <div id="chevron-banner"><i class="material-icons">keyboard_arrow_down</i></div>
-  <ul class="slides">
-    {% for img in site.data.home.slideshow %}
-    <li>
-      <img src="{{site.url}}/{{img.img}}" alt="{{img.alt}}">
-    </li>
+    {% for img in site.data.home.backimage %}
+      <img src="{{site.url}}/{{img.img}}" alt="{{img.alt}}" style="height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        object-fit:cover;">
     {% endfor%}
-  </ul>
 </div>
 
 
 <div class="no-pad-top" id="index-page">
   <div class="container">
     <div class="row">
-      <h3 id="regtext" class="center custom1-text">COVID MERDA Due to the measures recently adopted in order to contain
-        COVID-19 spreading, the event won't take place in March. <b></b> Participants will be informed about eventual
-        rescheduling as soon as possible.</h3>
+      <div class="column s12 m4">
+      <h3 id="countdown" class="center custom1-text" style=""></h3>
+      </div>
     </div>
     <!--   Icon Section   -->
     <div class="section">
@@ -49,7 +52,7 @@ script: home.js
           <div class="icon-block">
             <h2 class="center"><i class="medium material-icons custom1-text">today</i></h2>
             <h2 class="center">When</h2>
-            <p class="light">{{ site.data.home.when }}</p>
+            <p class="light center">{{ site.data.home.when }}</p>
           </div>
         </div>
 
@@ -66,7 +69,7 @@ script: home.js
       <!-- paragraph -->
       <div class="section">
         <div class="row">
-          <div class="col s8 offset-s2">
+          <div class="col s10 offset-s1">
             <div class="icon-block">
               <h3 class="center"><i class="medium material-icons custom1-text">send</i></h3>
               <p class="center light">{{ site.data.home.paragraph }}</p>
