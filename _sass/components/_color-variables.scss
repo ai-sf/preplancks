@@ -1,47 +1,4 @@
 // Google Color Palette defined: http://www.google.com/design/spec/style/color.html
-$aisf: (
-  "lighten-5": #cbc2e4,
-  "lighten-4": #8c6ae4,
-  "lighten-3": #6a37eb,
-  "lighten-2": #4d12e4,
-  "lighten-1": #3b05c5,
-  "base":      #2e00a0,
-  "darken-1": #28008c,
-  "darken-2": #220078,
-  "darken-3": #1c0064,
-  "darken-4": #170050,
-  "accent-1": #ca7fff,
-  "accent-2": #ba58ff,
-  "accent-3": #aa31ff,
-  "accent-4": #a019ff
-);
-
-
-$custom1: (
-  "lighten-5": lighten($color-type1, 40%),
-  "lighten-4": lighten($color-type1, 30%),
-  "lighten-3": lighten($color-type1, 20%),
-  "lighten-2": lighten($color-type1, 10%),
-  "lighten-1": lighten($color-type1, 5%),
-  "base": $color-type1,
-  "darken-1": darken($color-type1, 5%),
-  "darken-2": darken($color-type1, 10%),
-  "darken-3": darken($color-type1, 20%),
-  "darken-4": darken($color-type1, 30%)
-);
-
-$custom2: (
-  "lighten-5": lighten($color-type2, 40%),
-  "lighten-4": lighten($color-type2, 30%),
-  "lighten-3": lighten($color-type2, 20%),
-  "lighten-2": lighten($color-type2, 10%),
-  "lighten-1": lighten($color-type2, 5%),
-  "base": $color-type2,
-  "darken-1": darken($color-type2, 5%),
-  "darken-2": darken($color-type2, 10%),
-  "darken-3": darken($color-type2, 20%),
-  "darken-4": darken($color-type2, 30%)
-);
 
 $materialize-red: (
   "base":       #e51c23,
@@ -374,9 +331,6 @@ $shades: (
 );
 
 $colors: (
-  "custom1": $custom1,
-  "custom2": $custom2,
-  "aisf": $aisf,
   "materialize-red": $materialize-red,
   "red": $red,
   "pink": $pink,

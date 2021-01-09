@@ -15,11 +15,9 @@ $spacing-unit:     30px;
 
 // Colors
 
-$color-type1: {{ site.data.generic.color1 }};
-$color-type2: {{ site.data.generic.color2 }};
-$color-type2-light: {{ site.data.generic.color2-light }};
-// $color-type1: #4C6EAD;
-// $color-type2: #EAA84E;
+$color-primary: {{ site.data.generic.primary-color }};
+$color-accent: {{ site.data.generic.accent-color }};
+$color-accent-light: {{ site.data.generic.accent-color-light }};
 
 //
 
@@ -53,12 +51,71 @@ $on-laptop:        800px;
 }
 
 
+// Create other custom colors and integrate them into Materialize
+// (Needed in order not to modify Materiaize files and cause data loss on Materialize upgrade)
 
-// Import partials from `sass_dir` (defaults to `_sass`)
+$aisf: (
+  "lighten-5": #cbc2e4,
+  "lighten-4": #8c6ae4,
+  "lighten-3": #6a37eb,
+  "lighten-2": #4d12e4,
+  "lighten-1": #3b05c5,
+  "base":      #2e00a0,
+  "darken-1": #28008c,
+  "darken-2": #220078,
+  "darken-3": #1c0064,
+  "darken-4": #170050,
+  "accent-1": #ca7fff,
+  "accent-2": #ba58ff,
+  "accent-3": #aa31ff,
+  "accent-4": #a019ff
+);
+
+
+$primary: (
+  "lighten-5": lighten($color-primary, 40%),
+  "lighten-4": lighten($color-primary, 30%),
+  "lighten-3": lighten($color-primary, 20%),
+  "lighten-2": lighten($color-primary, 10%),
+  "lighten-1": lighten($color-primary, 5%),
+  "base": $color-primary,
+  "darken-1": darken($color-primary, 5%),
+  "darken-2": darken($color-primary, 10%),
+  "darken-3": darken($color-primary, 20%),
+  "darken-4": darken($color-primary, 30%)
+);
+
+$accent: (
+  "lighten-5": lighten($color-accent, 40%),
+  "lighten-4": lighten($color-accent, 30%),
+  "lighten-3": lighten($color-accent, 20%),
+  "lighten-2": lighten($color-accent, 10%),
+  "lighten-1": lighten($color-accent, 5%),
+  "base": $color-accent,
+  "darken-1": darken($color-accent, 5%),
+  "darken-2": darken($color-accent, 10%),
+  "darken-3": darken($color-accent, 20%),
+  "darken-4": darken($color-accent, 30%)
+);
+
+$colors_custom: (
+  "primary": $primary,
+  "accent": $accent,
+  "aisf": $aisf
+);
+
+
 @import
         "base",
         "layout",
         "syntax-highlighting",
-        "materialize",
-        "custom"
-;
+        "materialize";
+
+
+
+$colors : map-merge($colors, $colors_custom);
+
+@import "components/_color-classes";
+@import "custom";
+
+

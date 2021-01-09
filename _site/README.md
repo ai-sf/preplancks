@@ -1,4 +1,4 @@
 
-# TIQIT
+# SITO TEMPLATE
 
-Sito ufficiale dell'evento TIQIT organizzato dal comitato locale di Trento
+Template per i siti AISF
