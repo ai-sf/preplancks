@@ -12,11 +12,14 @@ contact:
 
 connect:
   - name: Facebook
-    url: https://it-it.facebook.com/aisf.fisica/
+    url: "https://it-it.facebook.com/aisf.fisica/"
     facebook: true
   - name: Instagram
-    url: https://www.instagram.com/aisf_fisica/
+    url: "https://www.instagram.com/aisf_fisica/"
     instagram: true
+  - name: Twitter
+    url: "https://twitter.com/aisf_fisica"
+    twitter: true
 
 creator:
   - name: Roberto Ciccarelli
