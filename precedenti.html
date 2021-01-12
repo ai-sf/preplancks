@@ -1,0 +1,83 @@
+---
+layout: page
+title: Edizioni Precedenti
+---
+
+{% include description.html data = site.data.precedenti %}
+
+ <div class="section">
+  <div class="row">
+    <div class="col s12">
+         {% include sections.html data = site.data.precedenti.problemi20 %}
+        {% if site.data.precedenti.slideshow20 %}
+         <div class="slider" id="foto-eventi">
+        <ul class="slides">
+          {% for slide in site.data.precedenti.slideshow20 %}
+            <li>
+              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <div class="caption left-align">
+                <h4>{{ slide.title }}</h4>
+                <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+        {% endif %}
+    </div><br>
+    <div class="col s12">
+         {% include sections.html data = site.data.precedenti.problemi19 %}
+        {% if site.data.precedenti.slideshow19 %}
+         <div class="slider" id="foto-eventi">
+        <ul class="slides">
+          {% for slide in site.data.precedenti.slideshow19 %}
+            <li>
+              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <div class="caption left-align">
+                <h4>{{ slide.title }}</h4>
+                <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+        {% endif %}
+    </div><br>
+    <div class="col s12">
+         {% include sections.html data = site.data.precedenti.problemi18 %}
+        {% if site.data.precedenti.slideshow18 %}
+         <div class="slider" id="foto-eventi">
+        <ul class="slides">
+          {% for slide in site.data.precedenti.slideshow18 %}
+            <li>
+              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <div class="caption left-align">
+                <h4>{{ slide.title }}</h4>
+                <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+        {% endif %}
+    </div><br>
+    <div class="col s12">
+         {% include sections.html data = site.data.precedenti.problemi17 %}
+        {% if site.data.precedenti.slideshow17 %}
+         <div class="slider" id="foto-eventi">
+        <ul class="slides">
+          {% for slide in site.data.precedenti.slideshow17 %}
+            <li>
+              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <div class="caption left-align">
+                <h4>{{ slide.title }}</h4>
+                <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+        {% endif %}
+    </div><br>
+  </div>
+</div>
