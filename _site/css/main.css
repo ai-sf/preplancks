@@ -4183,85 +4183,85 @@ input[type=range]::-ms-thumb { border: none; height: 14px; width: 14px; border-r
 
 .grey-text.text-darken-4 { color: #212121 !important; }
 
-.primary.lighten-5 { background-color: #6fd677 !important; }
+.primary.lighten-5 { background-color: #dda5e3 !important; }
 
-.primary-text.text-lighten-5 { color: #6fd677 !important; }
+.primary-text.text-lighten-5 { color: #dda5e3 !important; }
 
-.primary.lighten-4 { background-color: #48ca51 !important; }
+.primary.lighten-4 { background-color: #ce7ed7 !important; }
 
-.primary-text.text-lighten-4 { color: #48ca51 !important; }
+.primary-text.text-lighten-4 { color: #ce7ed7 !important; }
 
-.primary.lighten-3 { background-color: #32ad3b !important; }
+.primary.lighten-3 { background-color: #c058ca !important; }
 
-.primary-text.text-lighten-3 { color: #32ad3b !important; }
+.primary-text.text-lighten-3 { color: #c058ca !important; }
 
-.primary.lighten-2 { background-color: #26862d !important; }
+.primary.lighten-2 { background-color: #aa39b6 !important; }
 
-.primary-text.text-lighten-2 { color: #26862d !important; }
+.primary-text.text-lighten-2 { color: #aa39b6 !important; }
 
-.primary.lighten-1 { background-color: #217227 !important; }
+.primary.lighten-1 { background-color: #9833a2 !important; }
 
-.primary-text.text-lighten-1 { color: #217227 !important; }
+.primary-text.text-lighten-1 { color: #9833a2 !important; }
 
-.primary { background-color: #1b5e20 !important; }
+.primary { background-color: #862d8f !important; }
 
-.primary-text { color: #1b5e20 !important; }
+.primary-text { color: #862d8f !important; }
 
-.primary.darken-1 { background-color: #154a19 !important; }
+.primary.darken-1 { background-color: #74277c !important; }
 
-.primary-text.text-darken-1 { color: #154a19 !important; }
+.primary-text.text-darken-1 { color: #74277c !important; }
 
-.primary.darken-2 { background-color: #103613 !important; }
+.primary.darken-2 { background-color: #622168 !important; }
 
-.primary-text.text-darken-2 { color: #103613 !important; }
+.primary-text.text-darken-2 { color: #622168 !important; }
 
-.primary.darken-3 { background-color: #040f05 !important; }
+.primary.darken-3 { background-color: #3d1541 !important; }
 
-.primary-text.text-darken-3 { color: #040f05 !important; }
+.primary-text.text-darken-3 { color: #3d1541 !important; }
 
-.primary.darken-4 { background-color: black !important; }
+.primary.darken-4 { background-color: #19081b !important; }
 
-.primary-text.text-darken-4 { color: black !important; }
+.primary-text.text-darken-4 { color: #19081b !important; }
 
-.accent.lighten-5 { background-color: #ffeacc !important; }
+.accent.lighten-5 { background-color: white !important; }
 
-.accent-text.text-lighten-5, .text-lighten-5.card-title-custom { color: #ffeacc !important; }
+.accent-text.text-lighten-5, .text-lighten-5.card-title-custom { color: white !important; }
 
-.accent.lighten-4 { background-color: #ffd699 !important; }
+.accent.lighten-4 { background-color: #f2fafb !important; }
 
-.accent-text.text-lighten-4, .text-lighten-4.card-title-custom { color: #ffd699 !important; }
+.accent-text.text-lighten-4, .text-lighten-4.card-title-custom { color: #f2fafb !important; }
 
-.accent.lighten-3 { background-color: #ffc166 !important; }
+.accent.lighten-3 { background-color: #cbedef !important; }
 
-.accent-text.text-lighten-3, .text-lighten-3.card-title-custom { color: #ffc166 !important; }
+.accent-text.text-lighten-3, .text-lighten-3.card-title-custom { color: #cbedef !important; }
 
-.accent.lighten-2 { background-color: #ffad33 !important; }
+.accent.lighten-2 { background-color: #a5dfe2 !important; }
 
-.accent-text.text-lighten-2, .text-lighten-2.card-title-custom { color: #ffad33 !important; }
+.accent-text.text-lighten-2, .text-lighten-2.card-title-custom { color: #a5dfe2 !important; }
 
-.accent.lighten-1 { background-color: #ffa21a !important; }
+.accent.lighten-1 { background-color: #91d8dc !important; }
 
-.accent-text.text-lighten-1, .text-lighten-1.card-title-custom { color: #ffa21a !important; }
+.accent-text.text-lighten-1, .text-lighten-1.card-title-custom { color: #91d8dc !important; }
 
-.accent { background-color: #ff9800 !important; }
+.accent { background-color: #7ed1d6 !important; }
 
-.accent-text, .card-title-custom { color: #ff9800 !important; }
+.accent-text, .card-title-custom { color: #7ed1d6 !important; }
 
-.accent.darken-1 { background-color: #e68900 !important; }
+.accent.darken-1 { background-color: #6bcad0 !important; }
 
-.accent-text.text-darken-1, .text-darken-1.card-title-custom { color: #e68900 !important; }
+.accent-text.text-darken-1, .text-darken-1.card-title-custom { color: #6bcad0 !important; }
 
-.accent.darken-2 { background-color: #cc7a00 !important; }
+.accent.darken-2 { background-color: #57c3ca !important; }
 
-.accent-text.text-darken-2, .text-darken-2.card-title-custom { color: #cc7a00 !important; }
+.accent-text.text-darken-2, .text-darken-2.card-title-custom { color: #57c3ca !important; }
 
-.accent.darken-3 { background-color: #995b00 !important; }
+.accent.darken-3 { background-color: #39aeb5 !important; }
 
-.accent-text.text-darken-3, .text-darken-3.card-title-custom { color: #995b00 !important; }
+.accent-text.text-darken-3, .text-darken-3.card-title-custom { color: #39aeb5 !important; }
 
-.accent.darken-4 { background-color: #663d00 !important; }
+.accent.darken-4 { background-color: #2d888e !important; }
 
-.accent-text.text-darken-4, .text-darken-4.card-title-custom { color: #663d00 !important; }
+.accent-text.text-darken-4, .text-darken-4.card-title-custom { color: #2d888e !important; }
 
 .aisf.lighten-5 { background-color: #cbc2e4 !important; }
 
