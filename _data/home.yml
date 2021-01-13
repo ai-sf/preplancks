@@ -1,15 +1,15 @@
 logo: "img/logo_preplancks21_trasparente.png"
-longname: "Preselizioni Italiane per PLANKS 2021"
+longname: "Preselezioni Italiane per PLANCKS 2021"
 
 who:
-    text: "Squadre di 3 o 4 studenti (triennali, magistrali o misti) regolarmente iscritti ad AISF)"
+    text: "Squadre di 3 o 4 studenti (triennali, magistrali o misti) regolarmente iscritti ad AISF"
 
 when: "19 Febbraio 2021"
 
 where: "Online, in contemporanea in tutta Italia"
 
 backimage:
-  - img: img/plancks_back.png
+  - img: img/site.png
     alt: Sfondo
 
 

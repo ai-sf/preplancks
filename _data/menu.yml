@@ -1,12 +1,10 @@
 - text: "Iscrizione"
-  icon: "create"
   url:  "iscrizione"
+- text: "Edizioni Precedenti"
+  url: "precedenti"
 - text: "AISF"
-  icon: "foundation"
   url: http://www.ai-sf.it
-- text: "PLANKS 2021"
-  icon: "public"
+- text: "PLANCKS 2021"
   url: https://2021.plancks.org
-- text: "Contatti"
-  icon: "share"
+- icon: "share"
   url: "contatti"

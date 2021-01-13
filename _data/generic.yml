@@ -1,11 +1,12 @@
-title: prePLANKS 21
-long_title: "Preselizioni Italiane per PLANKS 2021"
+title: prePLANCKS 21
+long_title: "Preselezioni Italiane per PLANCKS 2021"
 primary-color: "#862d8f"
 accent-color: "#7ed1d6"
 accent-color-light: "#a89e8f"
 
-instagram_url: "https://www.instagram.com/aisf_fisica/"
 facebook_url: "https://it-it.facebook.com/aisf.fisica/"
+instagram_url: "https://www.instagram.com/aisf_fisica/"
+twitter_url: "https://twitter.com/aisf_fisica"
 
 custom-css:
   - "article"
