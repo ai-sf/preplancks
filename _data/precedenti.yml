@@ -57,3 +57,13 @@ problemi17:
             - text: "Soluzioni di prePLANCKS 2017: "
               url: "files/precedenti/2017/2017_soluzioni.pdf"
               button: Soluzioni
+
+slideshow17:
+    - img: "img/precedenti/2017/PLANCKSprel01.jpg"
+      alt: "prePLANCKS 2017"
+    - img: "img/precedenti/2017/PLANCKSprel02.jpg"
+      alt: "prePLANCKS 2017"
+    - img: "img/precedenti/2017/PLANCKSprel03.jpg"
+      alt: "prePLANCKS 2017"
+    - img: "img/precedenti/2017/PLANCKSprel04.jpg"
+      alt: "prePLANCKS 2017"
