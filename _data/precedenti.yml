@@ -2,7 +2,23 @@ description:
     paragraphs:
         - paragraph:
             - line: "Di seguito sono raccolti i testi delle precedenti edizioni di prePLANCKS e qualche immagine immortalata durante la gara."
-        
+
+slideshow21:
+    - img: "img/precedenti/2021/Pcconci_Gang_Pisa.png"
+      alt: "prePLANCKS 2021 Pisa"
+    - img: "img/precedenti/2021/Mauro_Solidali_Padova.png"
+      alt: "prePLANCKS 2021 Padova"
+    - img: "img/precedenti/2021/In_Baconto_Bologna.png"
+      alt: "prePLANCKS 2021 Bologna"
+    - img: "img/precedenti/2021/I_Ragazzi_di_Via_Giuria_Torino.png"
+      alt: "prePLANCKS 2021 Torino"
+    - img: "img/precedenti/2021/B.O.h._Roma_3.png"
+      alt: "prePLANCKS 2021 Roma 3"
+    - img: "img/precedenti/2021/Aula_A_Pisa.png"
+      alt: "prePLANCKS 2021 Pisa"
+    - img: "img/precedenti/2021/Barzelletta_Roma.png"
+      alt: "prePLANCKS 2021 Roma"
+      
 problemi20:
     sections:
         - name: "2020"
