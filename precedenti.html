@@ -7,6 +7,24 @@ title: Edizioni Precedenti
 
  <div class="section">
   <div class="row">
+      <div class="col s12">
+             {% include sections.html data = site.data.precedenti.problemi21 %}
+            {% if site.data.precedenti.slideshow21 %}
+             <div class="slider" id="foto-eventi">
+            <ul class="slides">
+              {% for slide in site.data.precedenti.slideshow21 %}
+                <li>
+                  <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+                  <div class="caption left-align">
+                    <h4>{{ slide.title }}</h4>
+                    <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+            {% endif %}
+        </div><br>
     <div class="col s12">
          {% include sections.html data = site.data.precedenti.problemi20 %}
         {% if site.data.precedenti.slideshow20 %}
