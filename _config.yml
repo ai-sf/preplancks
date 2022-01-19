@@ -1,8 +1,8 @@
 # Site settings
 title: "prePlanks 2022"
 description: "prePlanks 2022"
-url: "http://127.0.0.1:4000/"
-#url: "https://ai-sf.it/plancks"
+#url: "http://127.0.0.1:4000/"
+url: "https://ai-sf.it/plancks"
 destination: ../site/
 locale: "it"
 
