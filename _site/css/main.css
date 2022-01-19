@@ -4183,45 +4183,45 @@ input[type=range]::-ms-thumb { border: none; height: 14px; width: 14px; border-r
 
 .grey-text.text-darken-4 { color: #212121 !important; }
 
-.primary.lighten-5 { background-color: #dda5e3 !important; }
+.primary.lighten-5 { background-color: #7af2f4 !important; }
 
-.primary-text.text-lighten-5 { color: #dda5e3 !important; }
+.primary-text.text-lighten-5 { color: #7af2f4 !important; }
 
-.primary.lighten-4 { background-color: #ce7ed7 !important; }
+.primary.lighten-4 { background-color: #4aedf1 !important; }
 
-.primary-text.text-lighten-4 { color: #ce7ed7 !important; }
+.primary-text.text-lighten-4 { color: #4aedf1 !important; }
 
-.primary.lighten-3 { background-color: #c058ca !important; }
+.primary.lighten-3 { background-color: #1be8ed !important; }
 
-.primary-text.text-lighten-3 { color: #c058ca !important; }
+.primary-text.text-lighten-3 { color: #1be8ed !important; }
 
-.primary.lighten-2 { background-color: #aa39b6 !important; }
+.primary.lighten-2 { background-color: #10c1c5 !important; }
 
-.primary-text.text-lighten-2 { color: #aa39b6 !important; }
+.primary-text.text-lighten-2 { color: #10c1c5 !important; }
 
-.primary.lighten-1 { background-color: #9833a2 !important; }
+.primary.lighten-1 { background-color: #0eaaae !important; }
 
-.primary-text.text-lighten-1 { color: #9833a2 !important; }
+.primary-text.text-lighten-1 { color: #0eaaae !important; }
 
-.primary { background-color: #862d8f !important; }
+.primary { background-color: #0c9396 !important; }
 
-.primary-text { color: #862d8f !important; }
+.primary-text { color: #0c9396 !important; }
 
-.primary.darken-1 { background-color: #74277c !important; }
+.primary.darken-1 { background-color: #0a7c7e !important; }
 
-.primary-text.text-darken-1 { color: #74277c !important; }
+.primary-text.text-darken-1 { color: #0a7c7e !important; }
 
-.primary.darken-2 { background-color: #622168 !important; }
+.primary.darken-2 { background-color: #086567 !important; }
 
-.primary-text.text-darken-2 { color: #622168 !important; }
+.primary-text.text-darken-2 { color: #086567 !important; }
 
-.primary.darken-3 { background-color: #3d1541 !important; }
+.primary.darken-3 { background-color: #043638 !important; }
 
-.primary-text.text-darken-3 { color: #3d1541 !important; }
+.primary-text.text-darken-3 { color: #043638 !important; }
 
-.primary.darken-4 { background-color: #19081b !important; }
+.primary.darken-4 { background-color: #010808 !important; }
 
-.primary-text.text-darken-4 { color: #19081b !important; }
+.primary-text.text-darken-4 { color: #010808 !important; }
 
 .accent.lighten-5 { background-color: white !important; }
 
