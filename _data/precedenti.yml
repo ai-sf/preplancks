@@ -2,84 +2,83 @@ description:
     paragraphs:
         - paragraph:
             - line: "Di seguito sono raccolti i testi delle precedenti edizioni di prePLANCKS e qualche immagine immortalata durante la gara."
-
-slideshow21:
-    - img: "img/precedenti/2021/Pcconci_Gang_Pisa.png"
-      alt: "prePLANCKS 2021 Pisa"
-    - img: "img/precedenti/2021/Mauro_Solidali_Padova.png"
-      alt: "prePLANCKS 2021 Padova"
-    - img: "img/precedenti/2021/In_Baconto_Bologna.png"
-      alt: "prePLANCKS 2021 Bologna"
-    - img: "img/precedenti/2021/I_Ragazzi_di_Via_Giuria_Torino.png"
-      alt: "prePLANCKS 2021 Torino"
-    - img: "img/precedenti/2021/B.O.h._Roma_3.png"
-      alt: "prePLANCKS 2021 Roma 3"
-    - img: "img/precedenti/2021/Aula_A_Pisa.png"
-      alt: "prePLANCKS 2021 Pisa"
-    - img: "img/precedenti/2021/Barzelletta_Roma.png"
-      alt: "prePLANCKS 2021 Roma"
+anni:
+  - sections:
+      - name: "2021"
+        info: ""
+        points:
+          - text: "Testo di prePLANCKS 2020: "
+            url: "files/precedenti/2020/2020_problemi.pdf"
+            button: Testo
+    slideshow:
+        - img: "img/precedenti/2021/Pcconci_Gang_Pisa.png"
+          alt: "prePLANCKS 2021 Pisa"
+        - img: "img/precedenti/2021/Mauro_Solidali_Padova.png"
+          alt: "prePLANCKS 2021 Padova"
+        - img: "img/precedenti/2021/In_Baconto_Bologna.png"
+          alt: "prePLANCKS 2021 Bologna"
+        - img: "img/precedenti/2021/I_Ragazzi_di_Via_Giuria_Torino.png"
+          alt: "prePLANCKS 2021 Torino"
+        - img: "img/precedenti/2021/B.O.h._Roma_3.png"
+          alt: "prePLANCKS 2021 Roma 3"
+        - img: "img/precedenti/2021/Aula_A_Pisa.png"
+          alt: "prePLANCKS 2021 Pisa"
+        - img: "img/precedenti/2021/Barzelletta_Roma.png"
+          alt: "prePLANCKS 2021 Roma"
       
-problemi20:
-    sections:
-        - name: "2020"
-          info: ""
-          points:
-            - text: "Testo di prePLANCKS 2020: "
-              url: "files/precedenti/2020/2020_problemi.pdf"
-              button: Testo
-
-slideshow20:
-    - img: "img/precedenti/2020/Pisa/Freddie Freeloader.jpg"
-      alt: "prePLANCKS 2020 Pisa"
-    - img: "img/precedenti/2020/Pisa/Maxwell_s Demons.jpg"
-      alt: "prePLANCKS 2020 Pisa"
-    - img: "img/precedenti/2020/Pisa/PCconci Gang.jpg"
-      alt: "prePLANCKS 2020 Pisa"
-    - img: "img/precedenti/2020/Pisa/Splanck.jpg"
-      alt: "prePLANCKS 2020 Pisa"
-    - img: "img/precedenti/2020/Trento/I CETRIOLINI _2.jpg"
-      alt: "prePLANCKS 2020 Trento"
-    - img: "img/precedenti/2020/Trieste/AnAlEmMa.jpg"
-      alt: "prePLANCKS 2020 Trieste"
-    - img: "img/precedenti/2020/Trieste/I Ragazzi di via Bonomea 1.jpg"
-      alt: "prePLANCKS 2020 Trieste"
-      
-problemi19:
-    sections:
-        - name: "2019"
-          info: ""
-          points:
-            - text: "Testo di prePLANCKS 2019: "
-              url: "files/precedenti/2019/2019_problemi.pdf"
-              button: Testo
-
-problemi18:
-    sections:
-        - name: "2018"
-          info: ""
-          points:
-            - text: "Testo di prePLANCKS 2018: "
-              url: "files/precedenti/2018/2018_problemi.pdf"
-              button: Testo
-
-problemi17:
-    sections:
-        - name: "2017"
-          info: ""
-          points:
-            - text: "Testo di prePLANCKS 2017: "
-              url: "files/precedenti/2017/2017_problemi.pdf"
-              button: Testo
-            - text: "Soluzioni di prePLANCKS 2017: "
-              url: "files/precedenti/2017/2017_soluzioni.pdf"
-              button: Soluzioni
-
-slideshow17:
-    - img: "img/precedenti/2017/PLANCKSprel01.jpg"
-      alt: "prePLANCKS 2017"
-    - img: "img/precedenti/2017/PLANCKSprel02.jpg"
-      alt: "prePLANCKS 2017"
-    - img: "img/precedenti/2017/PLANCKSprel03.jpg"
-      alt: "prePLANCKS 2017"
-    - img: "img/precedenti/2017/PLANCKSprel04.jpg"
-      alt: "prePLANCKS 2017"
+  - sections:
+    - name: "2020"
+      info: ""
+      points:
+        - text: "Testo di prePLANCKS 2020: "
+          url: "files/precedenti/2020/2020_problemi.pdf"
+          button: Testo
+    slideshow:
+        - img: "img/precedenti/2020/Pisa/Freddie Freeloader.jpg"
+          alt: "prePLANCKS 2020 Pisa"
+        - img: "img/precedenti/2020/Pisa/Maxwell_s Demons.jpg"
+          alt: "prePLANCKS 2020 Pisa"
+        - img: "img/precedenti/2020/Pisa/PCconci Gang.jpg"
+          alt: "prePLANCKS 2020 Pisa"
+        - img: "img/precedenti/2020/Pisa/Splanck.jpg"
+          alt: "prePLANCKS 2020 Pisa"
+        - img: "img/precedenti/2020/Trento/I CETRIOLINI _2.jpg"
+          alt: "prePLANCKS 2020 Trento"
+        - img: "img/precedenti/2020/Trieste/AnAlEmMa.jpg"
+          alt: "prePLANCKS 2020 Trieste"
+        - img: "img/precedenti/2020/Trieste/I Ragazzi di via Bonomea 1.jpg"
+          alt: "prePLANCKS 2020 Trieste"
+          
+  - sections:
+    - name: "2019"
+      info: ""
+      points:
+        - text: "Testo di prePLANCKS 2019: "
+          url: "files/precedenti/2019/2019_problemi.pdf"
+          button: Testo
+  - sections:
+    - name: "2018"
+      info: ""
+      points:
+        - text: "Testo di prePLANCKS 2018: "
+          url: "files/precedenti/2018/2018_problemi.pdf"
+          button: Testo
+  - sections:      
+    - name: "2017"
+      info: ""
+      points:
+        - text: "Testo di prePLANCKS 2017: "
+          url: "files/precedenti/2017/2017_problemi.pdf"
+          button: Testo
+        - text: "Soluzioni di prePLANCKS 2017: "
+          url: "files/precedenti/2017/2017_soluzioni.pdf"
+          button: Soluzioni
+    slideshow:
+      - img: "img/precedenti/2017/PLANCKSprel01.jpg"
+        alt: "prePLANCKS 2017"
+      - img: "img/precedenti/2017/PLANCKSprel02.jpg"
+        alt: "prePLANCKS 2017"
+      - img: "img/precedenti/2017/PLANCKSprel03.jpg"
+        alt: "prePLANCKS 2017"
+      - img: "img/precedenti/2017/PLANCKSprel04.jpg"
+        alt: "prePLANCKS 2017"
