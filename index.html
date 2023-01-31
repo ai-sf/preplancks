@@ -1,29 +1,26 @@
 ---
 layout: home
 script: home.js
-countdown: "Feb 17, 2022 23:59:59"
 ---
 
 <div class="slider fullscreen" id="slider-home">
   <div id="banner-description">
-    <div class="row">
-      <div class="col s12">
-        <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo" style="width:inherit; height:inherit;">
-      </div>
-    </div>
+    <img src="{{site.url}}/{{site.data.home.logo}}" id="site-logo">
+    <!--<div>{{site.data.home.longname}}</div>-->
   </div>
-    <div class="bold center" style="z-index:999;
-                 width:100%;position:absolute; bottom: 20px; font-size:16pt;"><span class="primary-text white" style="padding:5px 15px;">{{site.data.home.longname}}<span/></div>
-  <div id="gradient-nav" style="background: rgba(0,0,0, 0.2);"></div>
+  <!--<div id="gradient-nav"></div>-->
   <div id="chevron-banner"><i class="material-icons">keyboard_arrow_down</i></div>
-  {% for img in site.data.home.backimage %}
-  <img src="{{site.url}}/{{img.img}}" alt="{{img.alt}}" style="height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        object-fit:cover;">
-  {% endfor%}
-  
+
+  <ul class="slides">
+    {% for img in site.data.home.slideshow %}
+    <li>
+      <picture>
+        <source media="(orientation: portrait)" srcset="{{img.mobile}}">
+        <img src="{{img.img}}" alt="SG2022" style="object-fit: cover; object-position: top;">
+      </picture>
+    </li>
+    {% endfor%}
+  </ul>
 </div>
 
 
@@ -87,33 +84,3 @@ countdown: "Feb 17, 2022 23:59:59"
   </div>
 
 
-  <script>
-  // Set the date we're counting down to
-var countDownDate = new Date( {{ page.countdown | jsonify }} ).getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="countdown"
-  document.getElementById("countdown").innerHTML = "Le iscrizioni terminano tra " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "ISCRIZIONI TERMINATE";
-  }
-}, 1000);
-  </script>
