@@ -1,0 +1,14 @@
+title: prePLANCKS 22
+long_title: "Preselezioni Italiane per PLANCKS 2022"
+primary-color: "#f09029"
+accent-color: "#EF781C"
+accent-color-light: "#9A041E"
+
+facebook_url: "https://it-it.facebook.com/aisf.fisica/"
+instagram_url: "https://www.instagram.com/aisf_fisica/"
+twitter_url: "https://twitter.com/aisf_fisica"
+
+custom-css:
+  - "article"
+  - "events"
+  - "custom"

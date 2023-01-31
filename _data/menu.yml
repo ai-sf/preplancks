@@ -1,0 +1,10 @@
+- text: "Iscrizione"
+  url:  "iscrizione"
+- text: "Edizioni Precedenti"
+  url: "precedenti"
+- text: "AISF"
+  url: http://www.ai-sf.it
+- text: "PLANCKS23 Milano"
+  url: https://plancks23.ai-sf.it
+- icon: "share"
+  url: "contatti"

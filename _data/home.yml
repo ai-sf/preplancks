@@ -1,0 +1,18 @@
+logo: "img/PLANCKS23_titolo.png"
+longname: "Preselezioni Italiane per PLANCKS 2023"
+
+who:
+    text: "Squadre di 3 o 4 studenti (triennali, magistrali o misti) regolarmente iscritti ad AISF"
+
+when: "23 Marzo 2023"
+
+where: "In contemporanea in tutta Italia"
+
+countdown: "Feb 5, 2023 23:59:59"
+
+slideshow:
+  - img: img/sitop23_notitle.png
+    alt: "107° Congresso Nazionale SIF"
+    mobile: img/mobilep23_notitle.png
+
+paragraph: "PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo. L'evento normalmente comprende anche altre attività (simposi, escursioni, ...) e quest'anno si terrà a Monaco. Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale."

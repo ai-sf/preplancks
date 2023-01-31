@@ -1,0 +1,25 @@
+# Site settings
+title: "prePlanks 2022"
+description: "prePlanks 2022"
+#url: "http://127.0.0.1:4000/"
+#url: "/"
+destination: ../site/
+locale: "it"
+
+# Build settings
+markdown: kramdown
+future: true
+permalink: /blog/:year/:month/:day/:title/
+destination: _site
+
+
+#facebook
+fb_admins:
+fb_appid:
+
+#Collections
+collections:
+  events:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+

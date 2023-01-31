@@ -1,0 +1,125 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+// Colors
+
+$color-primary: {{ site.data.generic.primary-color }};
+$color-accent: {{ site.data.generic.accent-color }};
+$color-accent-light: {{ site.data.generic.accent-color-light }};
+
+//
+
+$text-color:       #111;
+$background-color: #eee;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Create other custom colors and integrate them into Materialize
+// (Needed in order not to modify Materiaize files and cause data loss on Materialize upgrade)
+
+$aisf: (
+  "lighten-5": #cbc2e4,
+  "lighten-4": #8c6ae4,
+  "lighten-3": #6a37eb,
+  "lighten-2": #4d12e4,
+  "lighten-1": #3b05c5,
+  "base":      #2e00a0,
+  "darken-1": #28008c,
+  "darken-2": #220078,
+  "darken-3": #1c0064,
+  "darken-4": #170050,
+  "accent-1": #ca7fff,
+  "accent-2": #ba58ff,
+  "accent-3": #aa31ff,
+  "accent-4": #a019ff
+);
+
+
+$primary: (
+  "lighten-5": lighten($color-primary, 40%),
+  "lighten-4": lighten($color-primary, 30%),
+  "lighten-3": lighten($color-primary, 20%),
+  "lighten-2": lighten($color-primary, 10%),
+  "lighten-1": lighten($color-primary, 5%),
+  "base": $color-primary,
+  "darken-1": darken($color-primary, 5%),
+  "darken-2": darken($color-primary, 10%),
+  "darken-3": darken($color-primary, 20%),
+  "darken-4": darken($color-primary, 30%)
+);
+
+$accent: (
+  "lighten-5": lighten($color-accent, 40%),
+  "lighten-4": lighten($color-accent, 30%),
+  "lighten-3": lighten($color-accent, 20%),
+  "lighten-2": lighten($color-accent, 10%),
+  "lighten-1": lighten($color-accent, 5%),
+  "base": $color-accent,
+  "darken-1": darken($color-accent, 5%),
+  "darken-2": darken($color-accent, 10%),
+  "darken-3": darken($color-accent, 20%),
+  "darken-4": darken($color-accent, 30%)
+);
+
+$colors_custom: (
+  "primary": $primary,
+  "accent": $accent,
+  "aisf": $aisf
+);
+
+
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "materialize";
+
+
+
+$colors : map-merge($colors, $colors_custom);
+
+@import "components/_color-classes";
+
+
+{% for file in site.data.generic.custom-css %}
+@import "{{file}}";
+{% endfor %}
+
+
