@@ -7,8 +7,8 @@ anni:
       - name: "2021"
         info: ""
         points:
-          - text: "Testo di prePLANCKS 2020: "
-            url: "files/precedenti/2020/2020_problemi.pdf"
+          - text: "Testo di prePLANCKS 2021: "
+            url: "files/precedenti/2021/2021_problemi.pdf"
             button: Testo
     slideshow:
         - img: "img/precedenti/2021/Pcconci_Gang_Pisa.png"
@@ -25,7 +25,7 @@ anni:
           alt: "prePLANCKS 2021 Pisa"
         - img: "img/precedenti/2021/Barzelletta_Roma.png"
           alt: "prePLANCKS 2021 Roma"
-      
+
   - sections:
     - name: "2020"
       info: ""
@@ -48,7 +48,7 @@ anni:
           alt: "prePLANCKS 2020 Trieste"
         - img: "img/precedenti/2020/Trieste/I Ragazzi di via Bonomea 1.jpg"
           alt: "prePLANCKS 2020 Trieste"
-          
+
   - sections:
     - name: "2019"
       info: ""
@@ -63,7 +63,7 @@ anni:
         - text: "Testo di prePLANCKS 2018: "
           url: "files/precedenti/2018/2018_problemi.pdf"
           button: Testo
-  - sections:      
+  - sections:
     - name: "2017"
       info: ""
       points:

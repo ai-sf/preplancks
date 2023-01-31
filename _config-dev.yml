@@ -2,7 +2,7 @@
 title: "prePlanks 2022"
 description: "prePlanks 2022"
 #url: "http://127.0.0.1:4000/"
-url: "https://ai-sf.it/preplancks"
+#url: "/"
 destination: ../site/
 locale: "it"
 
