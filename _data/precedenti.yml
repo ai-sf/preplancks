@@ -4,11 +4,17 @@ description:
             - line: "Di seguito sono raccolti i testi delle precedenti edizioni di prePLANCKS e qualche immagine immortalata durante la gara."
 anni:
   - sections:
+      - name: "2022"
+        points:
+          - text: "Testo di prePLANCKS 2022"
+            url: "files/precedenti/2022/PREPLANCKS_2022.pdf"
+            button: Testo
+  - sections:
       - name: "2021"
         info: ""
         points:
           - text: "Testo di prePLANCKS 2021: "
-            url: "files/precedenti/2021/2021_problemi.pdf"
+            url: "files/precedenti/2021/PLANCKS_2021.pdf"
             button: Testo
     slideshow:
         - img: "img/precedenti/2021/Pcconci_Gang_Pisa.png"
