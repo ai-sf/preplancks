@@ -2,18 +2,18 @@ description:
     title: "Informazioni generali"
     paragraphs:
         - paragraph:
-            - line: "Possono partecipare squadre di 3 o 4 partecipanti (triennali, magistrali o misti) regolarmente iscritti ad AISF"
+            - line: "Possono partecipare squadre di 3 o 4 partecipanti (triennali, magistrali o misti) regolarmente iscritti ad AISF."
         - paragraph:
-            - line: "La gara si svolgerà in contemporanea in tutta Italia il 16 Febbraio 2024"
+            - line: "La gara si svolgerà in contemporanea in tutta Italia il 5 Febbraio 2025."
         - paragraph:
-            - line: "Le migliori squadre italiane avranno accesso alle fasi finali internazionali"
+            - line: "Le migliori squadre italiane avranno accesso alle fasi finali internazionali."
 
 sections:
     - name: "Deadline e Requisiti"
       info: ""
       points:
-        - text: "Le iscrizioni <b>terminano il 6 Febbraio</b>"
-        - text: "Tutti i membri della squadra devono essere iscritti ad AISF"
+        - text: "Le iscrizioni <b>terminano il 31 Gennaio</b>."
+        - text: "Tutti i membri della squadra devono essere iscritti ad AISF."
           url: "http://ai-sf.it/iscrizione"
           button: Iscriviti
-        - text: "Per iscrivere la tua squadra basta solamente compilare il form qui sotto"
+        - text: "Per iscrivere la tua squadra basta solamente compilare il form qui sotto."

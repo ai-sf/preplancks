@@ -1,18 +1,18 @@
-logo: "img/prePLANCKS24_titolo.png"
-longname: "Preselezioni Italiane per PLANCKS 2024"
+logo: 
+longname: "Preselezioni Italiane per PLANCKS 2025"
 
 who:
     text: "Squadre di 3 o 4 studenti (triennali, magistrali o misti) regolarmente iscritti ad AISF"
 
-when: "16 Febbraio 2023"
+when: "5 Febbraio 2025"
 
 where: "In contemporanea in tutta Italia"
 
-countdown: "Feb 6, 2024 23:59:59"
+countdown: "Jan 31, 2025 23:59:59"
 
 slideshow:
-  - img: img/prePLANCKS24_desktop.png
-    alt: "107° Congresso Nazionale SIF"
-    mobile: img/prePLANCKS24_mobile.png
+  - img: img/SITO_PrePLANCKS25.png
+    alt: "prePLANCKS25"
+    mobile: img/SITOvert_PrePLANCKS25.png
 
 paragraph: "PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo. L'evento normalmente comprende anche altre attività (simposi, escursioni, ...) e quest'anno si terrà a Dublino. Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale."

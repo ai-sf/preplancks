@@ -4,6 +4,12 @@ description:
             - line: "Di seguito sono raccolti i testi delle precedenti edizioni di prePLANCKS e qualche immagine immortalata durante la gara."
 anni:
   - sections:
+      - name: "2024"
+        points:
+          - text: "Testo di prePLANCKS 2024"
+            url: "files/precedenti/2024/Preplancks_24.pdf"
+            button: Testo
+  - sections:
       - name: "2023"
         points:
           - text: "Testo di prePLANCKS 2023"
