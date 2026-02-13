@@ -14,6 +14,6 @@ sections:
       points:
         - text: "Le iscrizioni <b>terminano il 2 Marzo</b>."
         - text: "Tutti i membri della squadra devono essere iscritti ad AISF."
-          url: "http://ai-sf.it/iscrizione"
+          url: "https://ai-sf.it/iscrizione"
           button: Iscriviti
         - text: "Per iscrivere la tua squadra basta solamente compilare il form qui sotto."

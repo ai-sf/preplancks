@@ -8,6 +8,17 @@
   // Set the date we're counting down to
   var countDownDate = new Date( {{ site.data.home.countdown | jsonify }} ).getTime();
 
+  // Italian date formatter
+  var dateFormatter = new Intl.DateTimeFormat('it-IT', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  var formattedDate = dateFormatter.format(countDownDate);
+
   // Update the count down every 1 second
   var x = setInterval(function() {
 
@@ -24,8 +35,10 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="countdown"
-    document.getElementById("countdown").innerHTML = "Le iscrizioni terminano tra " + days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.getElementById("countdown").innerHTML =
+      "Le iscrizioni terminano il " + formattedDate + "<br><br>" +
+      "Mancano " + days + "d " + hours + "h " +
+      minutes + "m " + seconds + "s ";
 
     // If the count down is over, write some text
     if (distance < 0) {
