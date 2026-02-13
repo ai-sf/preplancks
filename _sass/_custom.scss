@@ -21,6 +21,7 @@ img .fullwidth { /* non funziona, perché? */
     position:absolute;
 
 }
+
 footer .container{
     width: 80%;
 }
@@ -28,6 +29,7 @@ footer .container{
 ul.dashed{
     margin-top: -10px;
 }
+
 ul.dashed > li{
     padding-left: 15px !important;
     text-indent: -5px;
@@ -253,6 +255,26 @@ padding: 20px 0 0 0;
 
 .italic {
     font-style: italic;
+}
+
+// Home hero slider: keep it in normal flow so content starts below it,
+// while the transparent navbar overlays the image.
+.slider#slider-home.fullscreen {
+    position: relative;
+    height: 100vh;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}
+
+// Materialize moves slide <img> src into a CSS background-image, so control the crop via background-position.
+.slider#slider-home .slides li img {
+    background-position: center top;
+}
+
+#chevron-banner {
+    text-decoration: none;
 }
 #index-page h2 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
 

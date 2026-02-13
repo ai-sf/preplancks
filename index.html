@@ -5,14 +5,14 @@ script: home.js
 
 <div class="slider fullscreen" id="slider-home">
   
-  <div id="chevron-banner"><i class="material-icons">keyboard_arrow_down</i></div>
+  <a id="chevron-banner" href="#index-page" aria-label="Vai ai contenuti"><i class="material-icons">keyboard_arrow_down</i></a>
 
   <ul class="slides">
     {% for img in site.data.home.slideshow %}
     <li>
       <picture>
         <source media="(max-width: 900px)" srcset="{{img.mobile}}">
-        <img src="{{img.img}}" alt="{{img.alt}}" style="object-fit: cover; object-position: top;">
+        <img src="{{img.img}}" alt="{{img.alt}}">
       </picture>
     </li>
     {% endfor%}
@@ -23,7 +23,7 @@ script: home.js
 <div class="no-pad-top" id="index-page">
   <div class="container">
     <div class="row">
-      <div class="column s12 m4">
+      <div class="col s12 m12">
         <h3 id="countdown" class="bold center accent-text"></h3>
       </div>
     </div>

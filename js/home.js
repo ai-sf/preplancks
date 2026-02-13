@@ -1,10 +1,7 @@
 ---
 ---
 
-(function ($) {
-    $(function () {
-
-
+document.addEventListener('DOMContentLoaded', function () {
   // Set the date we're counting down to
   var countDownDate = new Date( {{ site.data.home.countdown | jsonify }} ).getTime();
 
@@ -47,12 +44,4 @@
     }
   }, 1000);
 
-
-        $("#index-page").css("padding-top", $(".slider").height()+50);
-        $("#chevron-banner").click(function(){
-            $('html, body').animate({
-                scrollTop: ($(".slider").height())
-            },500);
-        });
-    }); // end of document ready
-})(jQuery); // end of jQuery name space
+});
