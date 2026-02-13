@@ -1,18 +1,19 @@
 logo: 
-longname: "Preselezioni Italiane per PLANCKS 2025"
+longname: "Preselezioni Italiane per PLANCKS 2026"
 
 who:
     text: "Squadre di 3 o 4 studenti (triennali, magistrali o misti) regolarmente iscritti ad AISF"
 
-when: "5 Febbraio 2025"
+when: "6 Marzo 2026"
 
 where: "In contemporanea in tutta Italia"
 
-countdown: "Jan 31, 2025 18:00:00"
+countdown: "Mar 2, 2026 18:00:00"
 
 slideshow:
-  - img: img/SITO_PrePLANCKS25.png
-    alt: "prePLANCKS25"
-    mobile: img/SITOvert_PrePLANCKS25.png
+  - img: img/prePLANCKS26.webp
+    alt: "prePLANCKS26"
+    mobile: img/prePLANCKS26_mobile.webp
+    mobile_alt: "prePLANCKS26"
 
-paragraph: "PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo. L'evento normalmente comprende anche altre attività (simposi, escursioni, ...) e quest'anno si terrà a Barcellona. Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale."
+paragraph: "PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo. L'evento normalmente comprende anche altre attività (simposi, escursioni, ...) e quest'anno si terrà a Eindhoven. Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale."
