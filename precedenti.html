@@ -16,7 +16,7 @@ title: Edizioni Precedenti
         <ul class="slides">
           {% for slide in x.slideshow %}
             <li>
-              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <img src="{{ slide.img | prepend: '/' | relative_url }}" alt="{{ slide.alt }}">
               <div class="caption left-align">
                 <h4>{{ slide.title }}</h4>
                 <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
@@ -35,7 +35,7 @@ title: Edizioni Precedenti
         <ul class="slides">
           {% for slide in site.data.precedenti.slideshow19 %}
             <li>
-              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <img src="{{ slide.img | prepend: '/' | relative_url }}" alt="{{ slide.alt }}">
               <div class="caption left-align">
                 <h4>{{ slide.title }}</h4>
                 <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
@@ -53,7 +53,7 @@ title: Edizioni Precedenti
         <ul class="slides">
           {% for slide in site.data.precedenti.slideshow18 %}
             <li>
-              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <img src="{{ slide.img | prepend: '/' | relative_url }}" alt="{{ slide.alt }}">
               <div class="caption left-align">
                 <h4>{{ slide.title }}</h4>
                 <p class="light grey-text text-lighten-3">{{ slide.text }}</p>
@@ -71,7 +71,7 @@ title: Edizioni Precedenti
         <ul class="slides">
           {% for slide in site.data.precedenti.slideshow17 %}
             <li>
-              <img src="{{ site.url }}/{{ slide.img }}" alt="{{ slide.alt }}">
+              <img src="{{ slide.img | prepend: '/' | relative_url }}" alt="{{ slide.alt }}">
               <div class="caption left-align">
                 <h4>{{ slide.title }}</h4>
                 <p class="light grey-text text-lighten-3">{{ slide.text }}</p>

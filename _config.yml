@@ -2,7 +2,8 @@
 title: "prePLANCKS 2026"
 description: "Preselezioni Italiane per PLANCKS 2026"
 #url: "http://127.0.0.1:4000/"
-url: "https://ai-sf.it/preplancks"
+url: "https://ai-sf.it"
+baseurl: "/preplancks"
 destination: ../site/
 locale: "it"
 

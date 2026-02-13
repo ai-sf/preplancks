@@ -3,7 +3,7 @@
   {% assign itemurl = item.url | remove: '/' %}
   {% if item.subitems %}
   <li>
-    <a class="dropdown-button" href="{{ site.url }}/{{ item.url }}" data-target="dropdown-{{ item.slug }}">{{ item.text }}<i class="material-icons right">arrow_drop_down</i></a>
+    <a class="dropdown-button" href="{{ item.url | prepend: '/' | relative_url }}" data-target="dropdown-{{ item.slug }}">{{ item.text }}<i class="material-icons right">arrow_drop_down</i></a>
   </li>
   {% else %}
     <li {% if itemurl  == navurl %} class="active" {% endif %}>
@@ -13,7 +13,7 @@
            {% elsif item.url contains "https://" %}
               href="{{ item.url }}" target="_blank"
            {% else %}
-              href="{{ site.url }}/{{ item.url }}"
+              href="{{ item.url | prepend: '/' | relative_url }}"
            {% endif %}
            >
            {% if item.icon %}

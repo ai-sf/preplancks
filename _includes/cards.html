@@ -15,7 +15,7 @@
                 <div class="col s12 m{{size}}" >
                     <div {% if item.tag%} id="{{item.tag}}" {% endif %} class="card sticky-action customh {% if cards.zoom == true %} zoom-image {% endif %}">
                         <div class="card-image valign-wrapper">
-                            <img src="{{ site.url}}/{{ item.img }}" class="activator">
+                            <img src="{{ item.img | prepend: '/' | relative_url }}" class="activator">
                         </div>
                         <div class="card-content">
                             {% if item.descr %}

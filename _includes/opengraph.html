@@ -1,8 +1,8 @@
 <meta property="og:title"
   content="{% for entry in site.data.meta %}{% if page.url == entry.id %}{% assign trovato = true %}{{ entry.title }}{% endif %}{% endfor %}{% if trovato != true %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}{% endif %}">
 <meta property="og:type" content="{% if page.thumbnail %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ prepend: site.baseurl | prepend: site.url }}">
-<meta property="og:image" content="{{site.url }}/img/plancks_logo_con_sfondo.jpg">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+<meta property="og:image" content="{{ '/img/plancks_logo_con_sfondo.jpg' | absolute_url }}">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale }}">

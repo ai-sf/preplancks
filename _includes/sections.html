@@ -8,8 +8,8 @@
         {% endif %}
     <div class="collection">
         {% for item in section.points %}
-        <a {% if item.url %} {% if item.url contains "http://" %} href="{{ item.url }}" {% else %}
-            href="{{ site.url }}/{{ item.url }}" {% endif %} {% endif %}
+        <a {% if item.url %} {% if item.url contains "http://" or item.url contains "https://" %} href="{{ item.url }}" {% else %}
+            href="{{ item.url | prepend: '/' | relative_url }}" {% endif %} {% endif %}
             class="collection-item row black-text valign-wrapper" style="display:flex; align-items: center;">
             <div href="#" class="col {% if item.url %} s10 {% else %} s12 {% endif %}">
                 {{ item.text }}
@@ -27,8 +27,8 @@
             {% endif %}
         </a>
         {% for subitem in item.subpoints %}
-        <a {% if subitem.url %} {% if subitem.url contains "http://" %} href="{{ subitem.url }}" {% else %}
-            href="{{ subitem.url }}/{{ subitem.url }}" {% endif %} {% endif %}
+        <a {% if subitem.url %} {% if subitem.url contains "http://" or subitem.url contains "https://" %} href="{{ subitem.url }}" {% else %}
+            href="{{ subitem.url | prepend: '/' | relative_url }}" {% endif %} {% endif %}
             class="collection-item black-text left-padding">
             {{ subitem.text }}
             {% if subitem.url %}

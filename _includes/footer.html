@@ -20,11 +20,11 @@
           {% for item in site.data.footer.connect %}
 	        <li>
             {% if item.facebook %}
-            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{site.url}}/img/fb_logo.png"></a>
+            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{ '/img/fb_logo.png' | relative_url }}"></a>
             {% elsif item.instagram %}
-            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{site.url}}/img/insta_logo.png"></a>
+            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{ '/img/insta_logo.png' | relative_url }}"></a>
             {% elsif item.twitter %}
-            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{site.url}}/img/tw_logo.png"></a>
+            <a class="white-text" href="{{item.url}}" target="_blank"><img src="{{ '/img/tw_logo.png' | relative_url }}"></a>
             {% endif %}
           </li>
           {% endfor %}

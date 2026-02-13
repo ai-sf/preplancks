@@ -11,8 +11,8 @@ script: home.js
     {% for img in site.data.home.slideshow %}
     <li>
       <picture>
-        <source media="(orientation: portrait)" srcset="{{img.mobile}}">
-        <img src="{{img.img}}" alt="SG2022" style="object-fit: cover; object-position: top;">
+        <source media="(max-width: 900px)" srcset="{{img.mobile}}">
+        <img src="{{img.img}}" alt="{{img.alt}}" style="object-fit: cover; object-position: top;">
       </picture>
     </li>
     {% endfor%}

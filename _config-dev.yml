@@ -1,8 +1,10 @@
 # Site settings
 title: "prePLANCKS 2026"
 description: "Preselezioni Italiane per PLANCKS 2026"
-#url: "http://127.0.0.1:4000/"
-#url: "/"
+# Override production URL for local development.
+# Using an empty string makes templates like "{{ site.url }}/js/..." resolve to "/js/...".
+url: "http://localhost:4000"
+baseurl: ""
 destination: ../site/
 locale: "it"
 

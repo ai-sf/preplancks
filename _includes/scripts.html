@@ -1,6 +1,6 @@
-<script src="{{ site.url }}/js/jquery.min.js"></script>
-<script src="{{ site.url }}/js/materialize.min.js"></script>
-<script src="{{ site.url }}/js/init.js"></script>
+<script src="{{ '/js/jquery.min.js' | relative_url }}"></script>
+<script src="{{ '/js/materialize.min.js' | relative_url }}"></script>
+<script src="{{ '/js/init.js' | relative_url }}"></script>
 {% if page.script %}
-<script src="{{ site.url }}/js/{{page.script}}"></script>
+<script src="{{ page.script | prepend: '/js/' | relative_url }}"></script>
 {% endif %}
