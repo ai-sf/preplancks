@@ -4,10 +4,19 @@ description:
             - line: "Di seguito sono raccolti i testi delle precedenti edizioni di prePLANCKS e qualche immagine immortalata durante la gara."
 anni:
   - sections:
+      - name: "2026"
+        points:
+          - text: "Testo di prePLANCKS 2026"
+            url: "files/precedenti/2026/PrePLANCKS_2026.pdf"
+            button: Testo
+          - text: "Soluzioni di prePLANCKS 2026"
+            url: "files/precedenti/2026/PrePLANCKS_2026_with_sol.pdf"
+            button: Soluzioni
+  - sections:
       - name: "2025"
         points:
           - text: "Testo di prePLANCKS 2025"
-            url: "files/precedenti/2025/PrePlancks_2025-3.pdf"
+            url: "files/precedenti/2025/PrePlancks_2025.pdf"
             button: Testo
           - text: "Soluzioni di prePLANCKS 2025"
             url: "files/precedenti/2025/PrePlancks_2025_with_sol.pdf"

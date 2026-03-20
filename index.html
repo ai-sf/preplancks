@@ -26,6 +26,14 @@ script: home.js
       <div class="col s12 m12">
         <h3 id="countdown" class="bold center accent-text"></h3>
       </div>
+      {% if site.data.home.show_solutions %}
+      <div class="col s12 m12">
+        <h3 class="center bold">
+          Le soluzioni sono disponibili
+          <a href="{{ '/precedenti/' | relative_url }}">qui</a>
+        </h3>
+      </div>
+      {% endif %}
     </div>
     <!--   Icon Section   -->
     <div class="section">
