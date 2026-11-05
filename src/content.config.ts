@@ -6,12 +6,15 @@ import { parse } from "yaml";
 // Keep in sync with .pages.yml: a field missing there is dropped when the CMS saves.
 
 // PagesCMS writes dates as 'yyyy-MM-dd'; YAML may also hand us a Date. Both end up as a string.
+// The CMS writes '' for fields left empty; that means "not set".
+const str = z.string().optional().transform((v) => v || undefined);
+
 const day = z
   .union([z.string(), z.date()])
-  .transform((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v))
+  .transform((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v || undefined))
   .optional();
 
-const logo = z.object({ name: z.string(), image: z.string(), href: z.string().optional() });
+const logo = z.object({ name: z.string(), image: z.string(), href: str });
 
 const editions = defineCollection({
   loader: glob({ base: "./src/content/editions", pattern: "*.md" }),
@@ -20,24 +23,26 @@ const editions = defineCollection({
     event_date: day,
     registration_opens: day,
     registration_closes: day,
-    registration_url: z.string().optional(),
-    host: z.string().optional(),
-    host_url: z.string().optional(),
-    who: z.string().optional(),
-    who_detail: z.string().optional(),
-    where: z.string().optional(),
-    hero_line: z.string().optional(),
+    registration_url: str,
+    host: str,
+    host_url: str,
+    who: str,
+    who_detail: str,
+    where: str,
+    hero_line: str,
     logos: z.array(logo).default([]),
+    // all three colours or none: a half-filled theme falls back to the defaults
     theme: z
-      .object({ paper: z.string(), accent: z.string(), accent_ink: z.string() })
-      .optional(),
+      .object({ paper: str, accent: str, accent_ink: str })
+      .optional()
+      .transform((t) => (t?.paper && t.accent && t.accent_ink ? { paper: t.paper, accent: t.accent, accent_ink: t.accent_ink } : undefined)),
     art: z
       .object({
-        banner: z.string().optional(),
-        banner_mobile: z.string().optional(),
-        background: z.string().optional(),
-        background_mobile: z.string().optional(),
-        alt: z.string().optional(),
+        banner: str,
+        banner_mobile: str,
+        background: str,
+        background_mobile: str,
+        alt: str,
       })
       .optional(),
     documents: z

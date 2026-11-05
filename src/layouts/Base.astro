@@ -5,7 +5,8 @@ import "@fontsource/hanken-grotesk/700.css";
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
-import { getSite, themeStyle } from "../lib/editions";
+import { getCurrent, getSite, themeStyle } from "../lib/editions";
+import { season } from "../lib/season";
 import { u } from "../lib/url";
 
 interface Props {
@@ -16,6 +17,8 @@ interface Props {
 }
 const { title, description, theme, overNav = false } = Astro.props;
 const site = await getSite();
+// The registration section exists only while the current edition is not over.
+const showJoin = season((await getCurrent()).data) !== "done";
 ---
 
 <html lang="it" style={themeStyle(theme)}>
@@ -30,8 +33,8 @@ const site = await getSite();
     <title>{title}</title>
   </head>
   <body>
-    <Nav over={overNav} name={site.name} organiserUrl={site.organiser_url} />
+    <Nav over={overNav} name={site.name} organiserUrl={site.organiser_url} showJoin={showJoin} />
     <slot />
-    <Footer site={site} />
+    <Footer site={site} showJoin={showJoin} />
   </body>
 </html>

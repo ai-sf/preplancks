@@ -35,6 +35,9 @@ The look is the chosen direction A2 (`design-options/a2.html`, reference only, n
 - Fonts: Dela Gothic One (titles) and Hanken Grotesk (text) from `@fontsource`; no CDN. One stylesheet, `src/styles/global.css`, plain CSS with tokens. No Tailwind.
 - The stylesheet starts with the Hallmark stamp comment; keep it as the first lines. Every colour and font goes through a token at `:root`; no literal colours elsewhere (the linter enforces it).
 - Past-edition art differs per year (2025 orange, 2024 magenta, 2023 black). Do not hard-code red or yellow anywhere.
+- The title "prePLANCKS" is 8.1em wide in Dela Gothic One and must never wrap mid-word: hero and edition `h1` use `min(<normal size>, (100vw - 2 * gutter - 16px) / 8.4)`. Keep that cap if you change the size or the font. Check 320 to 428 px wide.
+- The nav and footer "Iscrizione" links exist only while the current edition is not done (the `#iscrizione` section is hidden then).
+- Empty CMS fields arrive as `''`; the schema turns them into `undefined` (`str` helper). A half-filled `theme` falls back to the defaults. A new edition with every field empty renders (no art, default colours); do not break that.
 - Section `padding-block` applies to every `<section>`. Hero, edition head and archive head reset it to 0; remember that for new sections that should not have it.
 
 ## Skills and MCP

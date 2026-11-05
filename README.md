@@ -64,6 +64,8 @@ Le sezioni sono due:
 6. Carica la grafica (vedi sotto) e il logo dell'edizione, per esempio quello di PLANCKS dell'anno.
 7. Salva. Alla prossima pubblicazione la home mostra la nuova edizione e quella vecchia passa nell'archivio.
 
+Puoi creare la voce anche subito e completarla man mano: i campi vuoti sono ammessi e la home mostra «Le informazioni arriveranno presto» finché mancano le date. Senza grafica e colori la pagina usa l'aspetto di base (sfondo scuro, accento giallo).
+
 Dopo la gara aggiungi i PDF in «Testi e soluzioni» ed eventuali foto in «Foto». La pagina dell'edizione e la home si aggiornano da sole.
 
 ### Grafica

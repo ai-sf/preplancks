@@ -46,8 +46,9 @@ const logos = [...d.logos, ...site.logos];
       </div>
     </section>
 
+    {(art?.banner || d.who || d.event_date || d.where) && (
     <section class="showcase">
-      <div class="container">
+      <div class:list={["container", { "no-banner": !art?.banner }]}>
         <Banner class="banner" desktop={art?.banner} alt={art?.alt ?? `Banner di prePLANCKS ${d.year}`} />
         <dl>
           {d.who && <div><dt>Chi</dt><dd>{d.who}{d.who_detail && <small>{d.who_detail}</small>}</dd></div>}
@@ -56,6 +57,7 @@ const logos = [...d.logos, ...site.logos];
         </dl>
       </div>
     </section>
+    )}
 
     <section class="about" id="plancks">
       <div class="container">

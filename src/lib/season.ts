@@ -53,5 +53,5 @@ export function hero(e: Edition, s: Season, membershipUrl: string): Hero {
     line = `Si è svolta il ${ev}${hasSolutions ? ": testo e soluzioni sono online" : hasText ? ": il testo è online" : ""}.`;
     action = { label: hasSolutions ? `Soluzioni ${e.year}` : `Edizione ${e.year}`, href: `/edizioni/${e.year}/` };
   }
-  return { line: e.hero_line || line, action };
+  return { line: e.hero_line || line || `Le informazioni su prePLANCKS ${e.year.slice(2)} arriveranno presto.`, action };
 }
