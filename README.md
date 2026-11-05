@@ -141,7 +141,7 @@ Alcuni dati importati sono incompleti o dedotti e vanno controllati nel CMS:
 
 Il progetto è pensato per essere sviluppato anche con agenti di programmazione. Le istruzioni per loro stanno in `AGENTS.md` (`CLAUDE.md` è un collegamento allo stesso file): comandi, modello dei contenuti, regole grafiche, convenzioni sui commit e punti noti da controllare.
 
-Le competenze usate per la grafica sono `hallmark` e `design-taste-frontend`, installate in `.agents/skills/` e collegate da `.claude/skills/`. `skills-lock.json` ne fissa le versioni con un hash. Il file `mcp.json` aggiunge il server MCP della documentazione di Astro.
+Le competenze usate per la grafica sono `hallmark` e `design-taste-frontend`. `skills-lock.json` ne fissa le versioni con un hash, mentre le copie installate (`.agents/skills/` e i collegamenti in `.claude/skills/`) non sono nel repository: dopo il clone si ripristinano con `npx skills experimental_install`. Il file `mcp.json` aggiunge il server MCP della documentazione di Astro.
 
 ## Pubblicazione
 

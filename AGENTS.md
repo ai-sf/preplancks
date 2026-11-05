@@ -42,7 +42,7 @@ The look is the chosen direction A2 (`design-options/a2.html`, reference only, n
 
 ## Skills and MCP
 
-- `skills-lock.json` pins the skills by hash. `.agents/skills/` holds the installed copies and `.claude/skills/` symlinks to them, so a fresh clone works without a setup step. Skills: `hallmark` (MIT) and `design-taste-frontend` (taste-skill; no licence file in its folder, check upstream before redistributing outside this repo).
+- `skills-lock.json` pins the skills by hash. The installed copies (`.agents/skills/`, with `.claude/skills/` symlinks) are git-ignored: after cloning, run `npx skills experimental_install` to restore them from the lock (`--dry-run` to preview). Skills: `hallmark` (MIT) and `design-taste-frontend` (taste-skill; no licence file in its folder, so its files are not redistributed here).
 - Use `hallmark` for new pages or sections, `design-taste-frontend` for restyles and polish. After visual work, run the linter on the running preview: `node .agents/skills/hallmark/scripts/sloplint.mjs --url http://localhost:4321/preplancks/ --genre editorial`. Fix every FAIL; fix or waive every REFLEX with a real reason. The render tier needs `puppeteer-core`, which is not installed.
 - Screenshots: `chromium-browser --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,900 --screenshot=<path inside the project> <url>`. The snap Chromium cannot write to `/tmp`; write inside the project (git-ignored `design-options/shots/`). Check mobile at 390 wide.
 - `mcp.json` adds the Astro docs MCP server (`https://mcp.docs.astro.build/mcp`). Use it for Astro questions. It only adds a server; it does not switch anything off.

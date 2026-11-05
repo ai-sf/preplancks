@@ -22,5 +22,5 @@ Facts used: all copy comes from preplancks/_data/*.yml. 2026 edition is over (6 
 - Data not in the old repo and left empty: registration open dates, host cities for 2017 to 2021/2024/2025 (old 2025 text said Dublin, a stale copy of 2024). 2024 event date inferred (old file said "16 Febbraio 2023").
 
 ## Agentic development (2026-11-05)
-- Kept in the repo: `skills-lock.json`, `.agents/skills/` (installed copies, 9.6 MB) with `.claude/skills/` symlinks, `mcp.json`, `AGENTS.md` (with `CLAUDE.md` symlink). A fresh clone works without a setup step; hashes in the lock pin the versions.
+- Kept in the repo: `skills-lock.json`, `mcp.json`, `AGENTS.md` (with `CLAUDE.md` symlink). The installed skill copies (`.agents/skills/`, `.claude/skills/`) are git-ignored and removed from history; restore with `npx skills experimental_install`. Reason: 9.6 MB of third-party files, and no licence file for the taste skill.
 - Commits and README in Italian; no AI attribution in commits.
