@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="it" data-edition="2026">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Preselezioni italiane per PLANCKS 2026, la gara di fisica teorica di AISF: informazioni, iscrizione e archivio delle edizioni.">
+<title>prePLANCKS 26, direzione C: Registro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Ledger of editions · genre: editorial · theme: custom · job: attend · idea: "the home is a register of every edition since 2017; the current year is the open row and the rest fold down beneath it as one long list of years" · vibe: "dense, archival, black with a red page"
+ * paper: oklch(12% 0.015 25) · accent: oklch(92% 0.19 105) · display: Antonio · body: IBM Plex Sans · hero: the open 2026 row, year numerals at poster scale over the key art · nav: edge-aligned wordmark and links · footer: a mast with the wordmark over the links · imagery: the 2026 key art inside the open row, past key art on hover · signature: the register, ten years as one list of giant numerals
+ * axes: dark/display-condensed/chromatic-yellow · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H4 E4 S4 R4 V4 · weakest: H, the first screen is mostly numerals; the sentence and the actions sit under the year */
+:root {
+  --color-paper: oklch(12% 0.015 25); --color-paper-2: oklch(17% 0.025 25); --color-paper-3: oklch(22% 0.04 25);
+  --color-ink: oklch(96% 0.008 25); --color-ink-2: oklch(86% 0.012 25); --color-muted: oklch(72% 0.018 25);
+  --color-rule: oklch(32% 0.04 25);
+  --color-accent: oklch(92% 0.19 105); --color-accent-ink: oklch(14% 0.03 100); --color-focus: oklch(92% 0.19 105);
+  --color-red: oklch(52% 0.25 27); --color-scrim-strong: oklch(10% 0.03 25 / 0.55); --color-scrim-weak: oklch(10% 0.03 25 / 0.1);
+  --font-display: "Antonio", ui-sans-serif, system-ui, sans-serif; --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-display);
+  --tracking-display: -0.01em; --radius-card: 0px;
+}
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem); --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem); --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
+  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
+  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+  --radius-card: 4px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.02em;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scrollbar-color: var(--color-muted) var(--color-paper); scroll-padding-top: var(--space-3xl); }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-md); line-height: 1.55; -webkit-font-smoothing: antialiased; caret-color: var(--color-accent); }
+::selection { background: color-mix(in oklab, var(--color-accent) 22%, transparent); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-synthesis: none; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+p:not([class]) { max-width: 65ch; }
+img, video { max-width: 100%; height: auto; display: block; }
+svg { display: block; }
+[hidden] { display: none !important; }
+button, input, select, textarea { font: inherit; }
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); box-sizing: border-box; }
+.num, .figure, td.num { font-variant-numeric: tabular-nums; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+[data-slot] { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--color-paper-2, var(--color-paper)), var(--color-paper-3, var(--color-paper))); }
+[data-slot] > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+[data-slot]:has(> img) > :not(img):not([data-keep]) { display: none !important; }
+@media (max-width: 60rem) { :root { --gutter: 24px; --section-gap-s: 80px; --section-gap: 96px; --section-gap-l: 120px; } }
+@media (max-width: 40rem) { :root { --gutter: 16px; --section-gap-s: 56px; --section-gap: 72px; --section-gap-l: 96px; --gap-columns: 16px; } }
+@media (prefers-reduced-motion: reduce) { *:not(.keep-motion), *:not(.keep-motion)::before, *:not(.keep-motion)::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+a { text-decoration: none; }
+.btn { display: inline-flex; align-items: center; min-height: 52px; padding: 0 var(--space-xl); font-weight: 600; transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out); }
+.btn-primary { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn-primary:hover { background: var(--color-ink); }
+.btn-ghost { border: 1px solid var(--color-ink); }
+.btn:active { transform: translateY(1px); }
+.btn-ghost:hover { background: var(--color-ink); color: var(--color-paper); }
+.tl { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
+.tl:hover { color: var(--color-ink); }
+
+.nav .container { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: var(--space-lg); }
+.wordmark { font-family: var(--font-display); font-size: var(--text-2xl); letter-spacing: var(--tracking-display); }
+.nav ul { display: flex; gap: var(--space-xl); list-style: none; margin: 0; padding: 0; }
+.nav ul a:hover { color: var(--color-accent); }
+
+/* open row = hero */
+.open { background: var(--color-red); position: relative; overflow: hidden; }
+.open > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 100% 50%; }
+.open::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--color-scrim-strong) 0%, var(--color-scrim-weak) 60%, transparent 100%); }
+.open .container { position: relative; z-index: var(--z-raised); display: grid; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: var(--space-lg); padding-block: var(--space-2xl); min-height: min(78svh, 42rem); }
+.open .container > div:last-child { max-width: 34rem; }
+.year { font-family: var(--font-display); font-size: clamp(7rem, 19vw, 17rem); line-height: 0.8; letter-spacing: -0.02em; margin-left: -0.04em; }
+.open h1 { font-family: var(--font-display); font-size: var(--text-title); letter-spacing: 0.01em; margin-bottom: var(--space-sm); color: var(--color-accent); }
+.open p { font-size: var(--text-lead); max-width: 30ch; }
+.open .actions { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-lg); }
+
+.detail { border-bottom: 1px solid var(--color-rule); }
+.detail .container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); padding-block: var(--space-xl); }
+.detail dt { color: var(--color-muted); font-size: var(--text-sm); }
+.detail dd { margin: var(--space-3xs) 0 0; font-family: var(--font-display); font-size: var(--text-2xl); line-height: 1.1; }
+.detail dd small { display: block; font-family: var(--font-body); font-size: var(--text-md); color: var(--color-ink-2); margin-top: var(--space-xs); }
+
+.register h2 { font-family: var(--font-display); font-size: var(--text-section); letter-spacing: var(--tracking-display); padding-block: var(--space-2xl) var(--space-md); }
+.register .container > p { color: var(--color-ink-2); max-width: 52ch; margin-bottom: var(--space-xl); }
+.reg { list-style: none; margin: 0; padding: 0; }
+.reg li { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 5fr) minmax(0, 3fr); gap: var(--gap-columns); align-items: center; padding-block: var(--space-md); border-top: 1px solid var(--color-rule); position: relative; }
+.reg li:last-child { border-bottom: 1px solid var(--color-rule); }
+.reg .y { font-family: var(--font-display); font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: 0.9; letter-spacing: -0.02em; transition: color var(--dur-short) var(--ease-out); }
+.reg li:hover .y { color: var(--color-accent); }
+.reg .what { display: flex; gap: var(--space-lg); flex-wrap: wrap; }
+.reg .what a { border-bottom: 1px solid var(--color-muted); padding-bottom: var(--space-3xs); }
+.reg .what a:hover { color: var(--color-accent); border-color: var(--color-accent); }
+.reg .what span { color: var(--color-muted); }
+.reg .thumb { justify-self: end; width: 100%; max-width: 240px; aspect-ratio: 16 / 9; background: var(--color-paper-2); overflow: hidden; }
+.reg .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.how { margin-top: var(--section-gap-s); background: var(--color-paper-2); padding-block: var(--section-gap-s); }
+.how .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); }
+.how h2 { font-family: var(--font-display); font-size: var(--text-section); line-height: 1.05; letter-spacing: var(--tracking-display); max-width: 14ch; }
+.how p { font-size: var(--text-lead); color: var(--color-ink-2); max-width: 52ch; }
+.how p + p { margin-top: var(--space-lg); }
+.how ul { list-style: none; margin: var(--space-xl) 0 0; padding: 0; }
+.how li { padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
+.how li:last-child { border-bottom: 1px solid var(--color-rule); }
+.how .btn { margin-top: var(--space-xl); }
+
+.contact { padding-block: var(--section-gap-s); }
+.contact .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); }
+.contact h2 { font-family: var(--font-display); font-size: var(--text-section); letter-spacing: var(--tracking-display); }
+.contact ul { list-style: none; margin: 0; padding: 0; }
+.contact li { display: flex; justify-content: space-between; gap: var(--space-lg); flex-wrap: wrap; padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
+.contact li span { color: var(--color-muted); }
+footer { border-top: 1px solid var(--color-rule); padding-block: var(--space-xl); }
+footer .container { display: flex; justify-content: space-between; align-items: end; gap: var(--space-lg); flex-wrap: wrap; }
+footer .wordmark { font-size: clamp(2.5rem, 8vw, 6rem); line-height: 0.9; }
+footer nav { display: flex; gap: var(--space-lg); color: var(--color-ink-2); flex-wrap: wrap; }
+footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); max-width: none; }
+
+@media (max-width: 60rem) {
+  .how .container, .contact .container { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .reg li { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .reg .thumb { display: none; }
+  .nav ul { gap: var(--space-md); font-size: var(--text-sm); }
+}
+@media (max-width: 40rem) {
+  .detail .container { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
+  .reg li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .nav ul li:nth-child(n+3) { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a class="wordmark" href="#">prePLANCKS</a>
+    <nav aria-label="Principale"><ul>
+      <li><a href="#iscrizione">Iscrizione</a></li>
+      <li><a href="#registro">Edizioni</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="https://ai-sf.it">AISF</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+  <section class="open">
+    <img src="img/2026-bkg.jpg" alt="">
+    <div class="container">
+      <div class="year" aria-hidden="true">2026</div>
+      <div>
+        <h1>prePLANCKS 26</h1>
+        <p>Si è svolta il 6 marzo: testo e soluzioni sono online.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#registro">Soluzioni 2026</a>
+          <a class="btn btn-ghost" href="#registro">Tutte le edizioni</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail">
+    <div class="container">
+      <dl style="margin:0"><dt>Chi</dt><dd>Squadre di 3 o 4 studenti<small>Triennali, magistrali o misti, iscritti ad AISF.</small></dd></dl>
+      <dl style="margin:0"><dt>Quando</dt><dd>6 marzo 2026</dd></dl>
+      <dl style="margin:0"><dt>Dove</dt><dd>In contemporanea in tutta Italia</dd></dl>
+    </div>
+  </section>
+
+  <section class="register" id="registro">
+    <div class="container">
+      <h2>Tutte le edizioni</h2>
+      <p>I testi delle edizioni precedenti di prePLANCKS e qualche immagine immortalata durante la gara.</p>
+      <ol class="reg">
+        <li><span class="y">2026</span><div class="what"><a href="#">Testo</a><a href="#">Soluzioni</a></div><div class="thumb"><img src="img/2026.jpg" alt="Locandina 2026" loading="lazy"></div></li>
+        <li><span class="y">2025</span><div class="what"><a href="#">Testo</a><a href="#">Soluzioni</a></div><div class="thumb"><img src="img/2025.jpg" alt="Locandina 2025" loading="lazy"></div></li>
+        <li><span class="y">2024</span><div class="what"><a href="#">Testo</a></div><div class="thumb"><img src="img/2024.jpg" alt="Locandina 2024" loading="lazy"></div></li>
+        <li><span class="y">2023</span><div class="what"><a href="#">Testo</a></div><div class="thumb"><img src="img/2023.jpg" alt="Locandina 2023" loading="lazy"></div></li>
+        <li><span class="y">2022</span><div class="what"><a href="#">Testo</a></div><div class="thumb"></div></li>
+        <li><span class="y">2021</span><div class="what"><a href="#">Testo</a><a href="#">Foto delle squadre</a></div><div class="thumb"></div></li>
+        <li><span class="y">2020</span><div class="what"><a href="#">Testo</a><a href="#">Foto da Pisa, Trento e Trieste</a></div><div class="thumb"></div></li>
+        <li><span class="y">2019</span><div class="what"><a href="#">Testo</a></div><div class="thumb"></div></li>
+        <li><span class="y">2018</span><div class="what"><a href="#">Testo</a></div><div class="thumb"></div></li>
+        <li><span class="y">2017</span><div class="what"><a href="#">Testo</a><a href="#">Soluzioni</a><a href="#">Foto</a></div><div class="thumb"></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="how" id="iscrizione">
+    <div class="container">
+      <h2>Una gara, poi Eindhoven</h2>
+      <div>
+        <p>PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo.</p>
+        <p>Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale a Eindhoven.</p>
+        <ul>
+          <li>Le iscrizioni terminano il 2 marzo.</li>
+          <li>Tutti i membri della squadra devono essere iscritti ad AISF.</li>
+          <li>Per iscrivere la tua squadra basta compilare il form.</li>
+        </ul>
+        <a class="btn btn-primary" href="https://ai-sf.it/iscrizione">Iscriviti ad AISF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="container">
+      <h2>Contatti</h2>
+      <ul>
+        <li><span>E-mail</span><a class="tl" href="mailto:esecutivo@ai-sf.it">esecutivo@ai-sf.it</a></li>
+        <li><span>Instagram</span><a class="tl" href="https://www.instagram.com/aisf_fisica/">@aisf_fisica</a></li>
+        <li><span>Facebook</span><a class="tl" href="https://it-it.facebook.com/aisf.fisica/">aisf.fisica</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <a class="wordmark" href="#">prePLANCKS</a>
+    <nav aria-label="Piè di pagina"><a href="#iscrizione">Iscrizione</a><a href="#registro">Edizioni</a><a href="#contatti">Contatti</a><a href="https://ai-sf.it">AISF</a></nav>
+    <p>Associazione Italiana Studenti di Fisica, comitato nazionale della International Association of Physics Students.</p>
+  </div>
+</footer>
+</body>
+</html>

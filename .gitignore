@@ -1,0 +1,7 @@
+dist/
+.astro/
+node_modules/
+.env
+.DS_Store
+_surge/
+design-options/shots/

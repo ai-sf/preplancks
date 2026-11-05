@@ -1,0 +1,19 @@
+---
+import { u } from "../lib/url";
+import type { CollectionEntry } from "astro:content";
+interface Props { site: CollectionEntry<"site">["data"] }
+const { site } = Astro.props;
+---
+
+<footer>
+  <div class="container">
+    <a class="wordmark" href={u("/")}>{site.name}</a>
+    <nav aria-label="Piè di pagina">
+      <a href={u("/#iscrizione")}>Iscrizione</a>
+      <a href={u("/edizioni/")}>Edizioni</a>
+      <a href={u("/#contatti")}>Contatti</a>
+      <a href={site.organiser_url}>AISF</a>
+    </nav>
+    <p>{site.organiser_description}</p>
+  </div>
+</footer>

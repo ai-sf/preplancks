@@ -1,0 +1,111 @@
+---
+import Base from "../layouts/Base.astro";
+import Banner from "../components/Banner.astro";
+import EditionWall from "../components/EditionWall.astro";
+import { getEditions, getSite } from "../lib/editions";
+import { season, hero, longDate, shortDate } from "../lib/season";
+import { u } from "../lib/url";
+
+const editions = await getEditions();
+const e = editions[0];
+const d = e.data;
+const site = await getSite();
+const s = season(d);
+const h = hero(d, s, site.membership_url);
+const yy = d.year.slice(2);
+const showJoin = s !== "done";
+const art = d.art;
+const logos = [...d.logos, ...site.logos];
+---
+
+<Base
+  title={`prePLANCKS ${yy}, preselezioni italiane per PLANCKS ${d.year}`}
+  description={`Preselezioni italiane per PLANCKS ${d.year}, la gara di fisica teorica di AISF: informazioni, iscrizione e archivio delle edizioni.`}
+  theme={d.theme}
+  overNav
+>
+  <main>
+    <section class="hero">
+      <Banner desktop={art?.background} mobile={art?.background_mobile} loading="eager" />
+      <div class="container">
+        {logos.length > 0 && (
+          <ul class="hero-logos">
+            {logos.map((l) => (
+              <li>
+                {l.href ? <a href={l.href}><img src={u(l.image)} alt={l.name} /></a> : <img src={u(l.image)} alt={l.name} />}
+              </li>
+            ))}
+          </ul>
+        )}
+        <h1>prePLANCKS<br />{yy}</h1>
+        <p>{h.line}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href={u(h.action.href)}>{h.action.label}</a>
+          <a class="btn btn-ghost" href={u("/edizioni/")}>Tutte le edizioni</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <div class="container">
+        <Banner class="banner" desktop={art?.banner} alt={art?.alt ?? `Banner di prePLANCKS ${d.year}`} />
+        <dl>
+          {d.who && <div><dt>Chi</dt><dd>{d.who}{d.who_detail && <small>{d.who_detail}</small>}</dd></div>}
+          {d.event_date && <div><dt>Quando</dt><dd>{longDate(d.event_date)}</dd></div>}
+          {d.where && <div><dt>Dove</dt><dd>{d.where}</dd></div>}
+        </dl>
+      </div>
+    </section>
+
+    <section class="about" id="plancks">
+      <div class="container">
+        <h2>{d.host ? `Una gara di fisica teorica, poi ${d.host}` : "Una gara di fisica teorica"}</h2>
+        <div>
+          <p>{site.plancks_intro}</p>
+          <p>{site.preselection_intro}</p>
+          {d.host_url && <p style="margin-top: var(--space-lg)"><a class="link" href={d.host_url}>Il sito di PLANCKS a {d.host ?? d.year}</a></p>}
+        </div>
+      </div>
+    </section>
+
+    {showJoin && (
+      <section class="join" id="iscrizione">
+        <div class="container">
+          <h2>Come iscrivere una squadra</h2>
+          <div>
+            <ol>
+              {d.registration_closes && <li><span>Le iscrizioni terminano il {shortDate(d.registration_closes)}.</span></li>}
+              <li><span>Tutti i membri della squadra devono essere iscritti ad AISF.</span></li>
+              {d.registration_url && <li><span>Per iscrivere la tua squadra basta compilare il form.</span></li>}
+            </ol>
+            <div class="actions" style="margin-top: var(--space-xl)">
+              {s === "open" && d.registration_url && <a class="btn btn-primary" href={d.registration_url}>Iscrivi la squadra</a>}
+              <a class:list={["btn", s === "open" && d.registration_url ? "btn-ghost" : "btn-primary"]} href={site.membership_url}>Iscriviti ad AISF</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="wall" id="edizioni">
+      <div class="container">
+        <header>
+          <h2>Le edizioni precedenti</h2>
+          <p style="color: var(--color-ink-2); max-width: 40ch">{site.archive_intro}</p>
+        </header>
+        <EditionWall editions={editions} posters={4} />
+        <p style="margin-top: var(--space-xl)"><a class="link" href={u("/edizioni/")}>Tutte le edizioni dal {editions.at(-1)!.data.year}</a></p>
+      </div>
+    </section>
+
+    <section class="contacts" id="contatti">
+      <div class="container">
+        <h2>Contatti</h2>
+        <ul>
+          <li><span>E-mail</span><a class="link" href={`mailto:${site.email}`} style="justify-self: start">{site.email}</a></li>
+          {site.socials.map((x) => <li><span>{x.name}</span><a class="link" href={x.url} style="justify-self: start">{x.label}</a></li>)}
+        </ul>
+      </div>
+    </section>
+  </main>
+</Base>

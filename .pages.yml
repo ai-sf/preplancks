@@ -1,0 +1,160 @@
+# PagesCMS configuration (app.pagescms.org). Mirrors src/content.config.ts 1:1.
+# The newest edition (highest year) is the one the home page shows.
+media:
+  - name: editions
+    label: Edizioni
+    input: public/editions
+    output: /editions
+    rename: safe
+  - name: logos
+    label: Loghi
+    input: public/logos
+    output: /logos
+    rename: safe
+
+content:
+  - name: editions
+    label: Edizioni
+    type: collection
+    path: src/content/editions
+    format: yaml-frontmatter
+    filename:
+      template: "{fields.year}.md"
+      field: create
+    subfolders: false
+    view:
+      fields: [year, event_date, registration_closes]
+      primary: year
+      sort: [year, event_date]
+      default:
+        sort: year
+        order: desc
+    fields:
+      - name: year
+        label: Anno
+        type: string
+        required: true
+        description: "Quattro cifre, per esempio 2027. Diventa l'indirizzo della pagina (/edizioni/2027)."
+        pattern:
+          regex: "^[0-9]{4}$"
+          message: "Quattro cifre, per esempio 2027"
+      - name: event_date
+        label: Data della gara
+        type: date
+        default: ""
+        options: { format: yyyy-MM-dd }
+        description: "Il giorno in cui si svolge la gara. Dopo questa data la home passa alla vista \"edizione conclusa\"."
+      - name: registration_opens
+        label: Apertura iscrizioni
+        type: date
+        default: ""
+        options: { format: yyyy-MM-dd }
+        description: "Primo giorno utile. Vuoto = aperte da subito."
+      - name: registration_closes
+        label: Chiusura iscrizioni
+        type: date
+        default: ""
+        options: { format: yyyy-MM-dd }
+        description: "Ultimo giorno utile, compreso."
+      - name: registration_url
+        label: Link al modulo di iscrizione
+        type: string
+        description: "Il form (per esempio Google Forms). Il pulsante \"Iscrivi la squadra\" compare solo se c'è."
+      - name: host
+        label: Città di PLANCKS
+        type: string
+        description: "Dove si terrà la competizione internazionale."
+      - name: host_url
+        label: Sito di PLANCKS
+        type: string
+      - { name: who, label: Chi partecipa (titolo), type: string, description: "Per esempio: Squadre di 3 o 4 studenti" }
+      - { name: who_detail, label: Chi partecipa (dettaglio), type: string, description: "Una riga sotto il titolo." }
+      - name: where
+        label: Dove
+        type: string
+      - name: hero_line
+        label: Frase in apertura (facoltativa)
+        type: string
+        description: "Sostituisce la frase automatica sotto il titolo. Lasciare vuoto di solito: cambia da sola con le date."
+      - name: logos
+        label: Loghi dell'edizione
+        type: object
+        list: true
+        description: "Logo di PLANCKS di quest'anno e simili. IAPS e AISF sono nelle impostazioni del sito e compaiono sempre."
+        fields:
+          - { name: name, label: Nome (anche descrizione per l'accessibilità), type: string, required: true }
+          - { name: image, label: Logo (chiaro, su sfondo trasparente), type: image, required: true, options: { media: logos } }
+          - { name: href, label: Link (facoltativo), type: string }
+      - name: theme
+        label: Colori dell'edizione
+        type: object
+        description: "Presi dalla grafica dell'anno. Lo sfondo deve essere scuro: il testo è chiaro."
+        fields:
+          - { name: paper, label: "Sfondo (esadecimale, es. #0e0807)", type: string, pattern: { regex: "^#[0-9a-fA-F]{6}$", message: "Esadecimale a 6 cifre, es. #0e0807" } }
+          - { name: accent, label: "Colore di accento (pulsanti e link)", type: string, pattern: { regex: "^#[0-9a-fA-F]{6}$", message: "Esadecimale a 6 cifre" } }
+          - { name: accent_ink, label: Testo sopra l'accento, type: string, pattern: { regex: "^#[0-9a-fA-F]{6}$", message: "Esadecimale a 6 cifre" } }
+      - name: art
+        label: Grafica dell'edizione
+        type: object
+        fields:
+          - { name: banner, label: Banner con titolo e loghi (desktop), type: image, options: { media: editions } }
+          - { name: banner_mobile, label: Banner con titolo e loghi (verticale), type: image, options: { media: editions } }
+          - { name: background, label: Sfondo senza testo (desktop), type: image, options: { media: editions } }
+          - { name: background_mobile, label: Sfondo senza testo (verticale), type: image, options: { media: editions } }
+          - { name: alt, label: Descrizione del banner (accessibilità), type: string }
+      - name: documents
+        label: Testi e soluzioni
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Etichetta, type: string, required: true }
+          - name: kind
+            label: Tipo
+            type: select
+            required: true
+            options:
+              values:
+                - { name: testo, label: Testo }
+                - { name: soluzioni, label: Soluzioni }
+                - { name: altro, label: Altro }
+          - { name: file, label: File PDF, type: file, required: true, options: { media: editions, extensions: [pdf] } }
+      - name: gallery
+        label: Foto
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Foto, type: image, required: true, options: { media: editions } }
+          - { name: alt, label: "Descrizione (accessibilità)", type: string }
+          - { name: caption, label: "Didascalia (squadra e città)", type: string }
+
+  - name: site
+    label: Sito
+    type: file
+    path: src/data/site.yml
+    format: yaml
+    fields:
+      - { name: name, label: Nome del sito, type: string, required: true }
+      - { name: organiser, label: Organizzazione, type: string, required: true }
+      - { name: organiser_url, label: Sito dell'organizzazione, type: string, required: true }
+      - { name: organiser_description, label: Descrizione (piè di pagina), type: text, required: true }
+      - { name: membership_url, label: Pagina di iscrizione ad AISF, type: string, required: true }
+      - { name: plancks_intro, label: Cos'è PLANCKS, type: text, required: true }
+      - { name: preselection_intro, label: Cos'è prePLANCKS, type: text, required: true }
+      - { name: archive_intro, label: Introduzione all'archivio, type: text, required: true }
+      - { name: email, label: E-mail di contatto, type: string, required: true }
+      - name: socials
+        label: Social
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nome, type: string, required: true }
+          - { name: label, label: Testo del link, type: string, required: true }
+          - { name: url, label: Indirizzo, type: string, required: true }
+      - name: logos
+        label: Loghi (in ogni edizione)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Nome (anche descrizione per l'accessibilità), type: string, required: true }
+          - { name: image, label: Logo (chiaro, su sfondo trasparente), type: image, required: true, options: { media: logos } }
+          - { name: href, label: Link (facoltativo), type: string }

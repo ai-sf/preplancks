@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from "astro";
+import Base from "../../layouts/Base.astro";
+import Banner from "../../components/Banner.astro";
+import { getEditions } from "../../lib/editions";
+import { longDate } from "../../lib/season";
+import { u } from "../../lib/url";
+
+export const getStaticPaths = (async () => {
+  const editions = await getEditions();
+  return editions.map((e, i) => ({
+    params: { year: e.data.year },
+    props: { e, newer: editions[i - 1], older: editions[i + 1] },
+  }));
+}) satisfies GetStaticPaths;
+
+const { e, newer, older } = Astro.props;
+const d = e.data;
+const art = d.art;
+const facts = [d.event_date && longDate(d.event_date), d.host && `PLANCKS a ${d.host}`, d.where].filter(Boolean) as string[];
+---
+
+<Base
+  title={`prePLANCKS ${d.year}`}
+  description={`Testo, soluzioni e foto di prePLANCKS ${d.year}, preselezioni italiane per PLANCKS.`}
+  theme={d.theme}
+>
+  <main>
+    <Banner class="edition-art" desktop={art?.banner} mobile={art?.banner_mobile} alt={art?.alt ?? `Banner di prePLANCKS ${d.year}`} loading="eager" />
+    <section class="edition-head">
+      <div class="container">
+        <h1>prePLANCKS {d.year}</h1>
+        {facts.length > 0 && <div class="edition-facts">{facts.map((f) => <span>{f}</span>)}</div>}
+      </div>
+    </section>
+
+    {d.documents.length > 0 && (
+      <section class="docs">
+        <div class="container">
+          <h2>Documenti</h2>
+          <ul class="doc-list">
+            {d.documents.map((x) => <li><a href={u(x.file)}>{x.label}<small>PDF</small></a></li>)}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    {d.gallery.length > 0 && (
+      <section class="gallery">
+        <div class="container">
+          <h2>Foto</h2>
+          <ul>
+            {d.gallery.map((g) => (
+              <li>
+                <figure>
+                  <img src={u(g.image)} alt={g.alt} loading="lazy" />
+                  {g.caption && <figcaption>{g.caption}</figcaption>}
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <nav class="pager" aria-label="Altre edizioni">
+      <div class="container">
+        {older ? <a href={u(`/edizioni/${older.data.year}/`)}><small>Edizione precedente</small>{older.data.year}</a> : <span />}
+        {newer ? <a href={u(`/edizioni/${newer.data.year}/`)}><small>Edizione successiva</small>{newer.data.year}</a> : <span />}
+      </div>
+    </nav>
+  </main>
+</Base>

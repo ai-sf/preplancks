@@ -1,0 +1,19 @@
+---
+import { u } from "../lib/url";
+interface Props { over?: boolean; name: string; organiserUrl: string }
+const { over = false, name, organiserUrl } = Astro.props;
+---
+
+<header class:list={["nav", { "nav--over": over }]}>
+  <div class="container">
+    <a class="wordmark" href={u("/")}>{name}</a>
+    <nav aria-label="Principale">
+      <ul>
+        <li><a href={u("/#iscrizione")}>Iscrizione</a></li>
+        <li><a href={u("/edizioni/")}>Edizioni</a></li>
+        <li><a href={u("/#contatti")}>Contatti</a></li>
+        <li><a href={organiserUrl}>AISF</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

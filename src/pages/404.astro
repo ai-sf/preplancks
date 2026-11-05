@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import { u } from "../lib/url";
+---
+
+<Base title="Pagina non trovata" description="Questa pagina non esiste.">
+  <main class="archive-head">
+    <div class="container">
+      <h1>Pagina non trovata</h1>
+      <p><a class="link" href={u("/")}>Torna alla home</a></p>
+    </div>
+  </main>
+</Base>

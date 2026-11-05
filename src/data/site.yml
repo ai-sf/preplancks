@@ -1,0 +1,26 @@
+name: prePLANCKS
+organiser: Associazione Italiana Studenti di Fisica
+organiser_url: https://ai-sf.it
+organiser_description: Associazione Italiana Studenti di Fisica, comitato nazionale della International Association of Physics Students.
+membership_url: https://ai-sf.it/iscrizione
+plancks_intro: PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo. L'evento normalmente comprende anche altre attività, come simposi ed escursioni.
+preselection_intro: Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale.
+archive_intro: I testi delle edizioni precedenti di prePLANCKS e qualche immagine immortalata durante la gara.
+email: esecutivo@ai-sf.it
+socials:
+  - name: Instagram
+    label: "@aisf_fisica"
+    url: https://www.instagram.com/aisf_fisica/
+  - name: Facebook
+    label: aisf.fisica
+    url: https://it-it.facebook.com/aisf.fisica/
+  - name: Twitter
+    label: "@aisf_fisica"
+    url: https://twitter.com/aisf_fisica
+logos:
+  - name: IAPS
+    image: /logos/iaps.webp
+    href: https://iaps.info
+  - name: AISF
+    image: /logos/aisf.webp
+    href: https://ai-sf.it

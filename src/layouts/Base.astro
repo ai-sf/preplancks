@@ -1,0 +1,37 @@
+---
+import "@fontsource/dela-gothic-one";
+import "@fontsource/hanken-grotesk/400.css";
+import "@fontsource/hanken-grotesk/700.css";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { getSite, themeStyle } from "../lib/editions";
+import { u } from "../lib/url";
+
+interface Props {
+  title: string;
+  description: string;
+  theme?: { paper: string; accent: string; accent_ink: string };
+  overNav?: boolean;
+}
+const { title, description, theme, overNav = false } = Astro.props;
+const site = await getSite();
+---
+
+<html lang="it" style={themeStyle(theme)}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={u("/favicon.svg")} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav over={overNav} name={site.name} organiserUrl={site.organiser_url} />
+    <slot />
+    <Footer site={site} />
+  </body>
+</html>

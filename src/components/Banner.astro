@@ -1,0 +1,14 @@
+---
+import { u } from "../lib/url";
+interface Props { desktop?: string; mobile?: string; alt?: string; class?: string; loading?: "eager" | "lazy" }
+const { desktop, mobile, alt = "", class: cls, loading = "lazy" } = Astro.props;
+---
+
+{
+  desktop && (
+    <picture class={cls}>
+      {mobile && <source media="(max-width: 40rem)" srcset={u(mobile)} />}
+      <img src={u(desktop)} alt={alt} loading={loading} />
+    </picture>
+  )
+}

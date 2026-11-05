@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="it" data-edition="2026">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Preselezioni italiane per PLANCKS 2026, la gara di fisica teorica di AISF: informazioni, iscrizione e archivio delle edizioni.">
+<title>prePLANCKS 26, direzione A: Locandina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Poster wall · genre: editorial · theme: custom · job: attend · idea: "each edition is a poster; the site is this year's poster on top and every earlier poster below it" · vibe: "loud, printed, red-black, student-made"
+ * paper: oklch(13% 0.02 25) · accent: oklch(92% 0.19 105) · display: Dela Gothic One · body: Hanken Grotesk · hero: the 2026 key art full bleed with the headline set over its red field · nav: edge-aligned wordmark and links · footer: a mast, the wordmark over the links · imagery: the editions' own key art · signature: the wall of past posters, 2023 to 2026, each a real edition
+ * axes: dark/grotesk-heavy/chromatic-yellow · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: P, the idea is a layout idea more than an argument; kept because the posters are the real material */
+:root {
+  --color-paper: oklch(13% 0.02 25); --color-paper-2: oklch(18% 0.03 25); --color-paper-3: oklch(23% 0.04 25);
+  --color-ink: oklch(96% 0.01 25); --color-ink-2: oklch(86% 0.015 25); --color-muted: oklch(74% 0.02 25);
+  --color-rule: oklch(34% 0.05 25);
+  --color-accent: oklch(92% 0.19 105); --color-accent-ink: oklch(15% 0.03 100); --color-focus: oklch(92% 0.19 105);
+  --color-red: oklch(52% 0.25 27);
+  --color-scrim-strong: oklch(10% 0.03 25 / 0.5); --color-scrim-mid: oklch(10% 0.03 25 / 0.15);
+  --font-display: "Dela Gothic One", ui-sans-serif, system-ui, sans-serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-display);
+  --tracking-display: -0.02em; --radius-card: 6px;
+}
+/*BASE*/
+a { text-decoration: none; }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--space-lg); border-radius: var(--radius-pill); font-weight: 700; font-size: var(--text-md); transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
+.btn-primary { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn-primary:hover { background: var(--color-ink); }
+.btn-ghost { border: 1px solid var(--color-ink); color: var(--color-ink); }
+.btn:active { transform: translateY(1px); }
+.btn-ghost:hover { background: var(--color-ink); color: var(--color-paper); }
+
+/* nav */
+.nav { background: var(--color-paper); border-bottom: 1px solid var(--color-rule); }
+.nav .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 72px; }
+.wordmark { font-family: var(--font-outlier); font-size: var(--text-xl); letter-spacing: var(--tracking-display); }
+.nav ul { display: flex; gap: var(--space-xl); list-style: none; margin: 0; padding: 0; font-size: var(--text-md); }
+.nav ul a { padding-block: var(--space-xs); border-bottom: 1px solid transparent; }
+.nav ul a:hover { border-color: var(--color-accent); }
+
+/* hero: the edition's own banner carries the title; live text sits in its empty lower left */
+.hero { color: var(--color-ink); position: relative; height: clamp(34rem, calc(100svh - 72px), 56rem); background: var(--color-red); padding: 0; }
+.hero picture, .hero img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero img { object-fit: cover; object-position: 30% 30%; }
+.hero .container { position: absolute; inset: auto 0 0 0; z-index: var(--z-raised); padding-block: 0 var(--space-2xl); display: flex; flex-direction: column; align-items: flex-start; }
+.hero p { font-size: var(--text-lead); max-width: 34ch; color: var(--color-ink); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-lg); }
+
+/* sections */
+section { padding-block: var(--section-gap-s); }
+h2 { font-family: var(--font-display); font-size: var(--text-section); line-height: 1.05; letter-spacing: var(--tracking-display); max-width: 20ch; }
+.facts { background: var(--color-paper); }
+.facts dl { margin: 0; display: grid; gap: 0; }
+.facts .row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--gap-columns); align-items: baseline; padding-block: var(--space-xl); border-top: 1px solid var(--color-rule); }
+.facts .row:last-child { border-bottom: 1px solid var(--color-rule); }
+.facts dt { color: var(--color-muted); font-size: var(--text-md); }
+.facts dd { margin: 0; font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 3.5rem); line-height: 1.05; letter-spacing: var(--tracking-display); overflow-wrap: break-word; }
+.facts dd small { display: block; margin-top: var(--space-sm); font-family: var(--font-body); font-size: var(--text-md); letter-spacing: 0; color: var(--color-ink-2); }
+
+.about { background: var(--color-paper-2); }
+.about .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); align-items: start; }
+.about p { font-size: var(--text-lead); line-height: 1.55; color: var(--color-ink-2); max-width: 52ch; }
+.about p + p { margin-top: var(--space-lg); }
+.link { color: var(--color-accent); border-bottom: 1px solid var(--color-accent); padding-bottom: var(--space-3xs); }
+.link:hover { color: var(--color-ink); border-color: var(--color-ink); }
+
+.join .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); align-items: start; }
+.join ol { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.join li { counter-increment: s; display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-lg); border-top: 1px solid var(--color-rule); font-size: var(--text-lead); }
+.join li:last-child { border-bottom: 1px solid var(--color-rule); }
+.join li::before { content: counter(s); font-family: var(--font-display); color: var(--color-accent); }
+.join .btn { margin-top: var(--space-xl); }
+
+.wall { background: var(--color-paper-2); }
+.wall header { display: flex; justify-content: space-between; align-items: end; gap: var(--space-lg); margin-bottom: var(--space-xl); flex-wrap: wrap; }
+.posters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-columns); }
+.poster { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--radius-card); background: var(--color-paper-3); }
+.poster img { width: 100%; height: 100%; object-fit: cover; }
+.poster:hover { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.poster b { position: absolute; left: var(--space-md); bottom: var(--space-md); padding: var(--space-xs) var(--space-md); background: var(--color-paper); border-radius: var(--radius-pill); font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); }
+.poster span { position: absolute; right: var(--space-md); bottom: var(--space-md); padding: var(--space-xs) var(--space-md); background: var(--color-accent); color: var(--color-accent-ink); border-radius: var(--radius-pill); font-weight: 700; font-size: var(--text-sm); }
+.older { margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--gap-columns); }
+.older a { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
+.older a:hover { color: var(--color-accent); }
+.older b { font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); }
+.older small { align-self: center; color: var(--color-muted); font-size: var(--text-sm); }
+
+.contacts .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); }
+.contacts ul { list-style: none; margin: 0; padding: 0; }
+.contacts li { padding-block: var(--space-md); border-top: 1px solid var(--color-rule); display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-md); }
+.contacts li span { color: var(--color-muted); }
+
+footer { border-top: 1px solid var(--color-rule); padding-block: var(--space-xl) var(--space-lg); }
+footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-lg); align-items: end; }
+footer .wordmark { font-size: clamp(2rem, 6vw, 4.5rem); }
+footer nav { display: flex; gap: var(--space-lg); flex-wrap: wrap; color: var(--color-ink-2); }
+footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); max-width: none; }
+
+@media (max-width: 60rem) {
+  .about .container, .join .container, .contacts .container { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .older { grid-template-columns: minmax(0, 1fr); }
+  .nav ul { gap: var(--space-md); font-size: var(--text-sm); }
+}
+@media (max-width: 40rem) {
+  .posters { grid-template-columns: minmax(0, 1fr); }
+  .facts .row { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .nav ul li:nth-child(n+3) { display: none; }
+  .hero { height: auto; background: var(--color-paper); }
+  .hero picture { position: relative; display: block; height: 70svh; min-height: 26rem; }
+  .hero img { object-position: 50% 0; }
+  .hero .container { position: relative; padding-block: var(--space-xl); }
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <a class="wordmark" href="#">prePLANCKS</a>
+    <nav aria-label="Principale"><ul>
+      <li><a href="#iscrizione">Iscrizione</a></li>
+      <li><a href="#edizioni">Edizioni</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+      <li><a href="https://ai-sf.it">AISF</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <picture>
+      <source media="(max-width: 40rem)" srcset="img/hero-2026-m.webp">
+      <img src="img/hero-2026.webp" alt="PLANCKS 26 preliminaries, con i loghi di IAPS e AISF">
+    </picture>
+    <div class="container">
+      <h1 class="visually-hidden">prePLANCKS 26</h1>
+      <p>Si è svolta il 6 marzo: testo e soluzioni sono online.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#edizioni">Soluzioni 2026</a>
+        <a class="btn btn-ghost" href="#edizioni">Tutte le edizioni</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="facts" aria-labelledby="h-dettagli">
+    <div class="container">
+      <h2 id="h-dettagli" class="visually-hidden">Dettagli dell’edizione</h2>
+      <dl>
+        <div class="row"><dt>Chi</dt><dd>Squadre di 3 o 4 studenti<small>Triennali, magistrali o misti, regolarmente iscritti ad AISF.</small></dd></div>
+        <div class="row"><dt>Quando</dt><dd>6 marzo 2026</dd></div>
+        <div class="row"><dt>Dove</dt><dd>In contemporanea in tutta Italia</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="about" id="plancks">
+    <div class="container">
+      <h2>Una gara di fisica teorica, poi Eindhoven</h2>
+      <div>
+        <p>PLANCKS è una competizione annuale di fisica teorica organizzata per studenti di fisica, sia triennali che magistrali. Possono partecipare squadre di 3 o 4 studenti da ogni parte del mondo.</p>
+        <p>Come ogni anno, AISF organizza una gara di preselezione tutta italiana, al termine della quale si delineeranno le squadre migliori, che avranno accesso alla competizione internazionale. Quest’anno si terrà a Eindhoven.</p>
+        <p style="margin-top:var(--space-lg)"><a class="link" href="https://plancks2026.verenigingspin.nl/">Il sito di PLANCKS26 a Eindhoven</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="iscrizione">
+    <div class="container">
+      <h2>Come iscrivere una squadra</h2>
+      <div>
+        <ol>
+          <li><span>Le iscrizioni terminano il 2 marzo.</span></li>
+          <li><span>Tutti i membri della squadra devono essere iscritti ad AISF.</span></li>
+          <li><span>Per iscrivere la tua squadra basta compilare il form.</span></li>
+        </ol>
+        <a class="btn btn-primary" href="https://ai-sf.it/iscrizione">Iscriviti ad AISF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wall" id="edizioni">
+    <div class="container">
+      <header>
+        <h2>Le edizioni precedenti</h2>
+        <p style="color:var(--color-ink-2);max-width:40ch">I testi di tutte le edizioni di prePLANCKS e qualche immagine immortalata durante la gara.</p>
+      </header>
+      <div class="posters">
+        <a class="poster" href="#"><img src="img/2026.jpg" alt="Locandina prePLANCKS 2026" loading="lazy"><b>2026</b><span>Testo e soluzioni</span></a>
+        <a class="poster" href="#"><img src="img/2025.jpg" alt="Locandina prePLANCKS 2025" loading="lazy"><b>2025</b><span>Testo e soluzioni</span></a>
+        <a class="poster" href="#"><img src="img/2024.jpg" alt="Locandina prePLANCKS 2024" loading="lazy"><b>2024</b><span>Testo</span></a>
+        <a class="poster" href="#"><img src="img/2023.jpg" alt="Locandina prePLANCKS 2023" loading="lazy"><b>2023</b><span>Testo</span></a>
+      </div>
+      <div class="older">
+        <a href="#"><b>2022</b><small>Testo</small></a>
+        <a href="#"><b>2021</b><small>Testo e foto delle squadre</small></a>
+        <a href="#"><b>2020</b><small>Testo e foto da Pisa, Trento, Trieste</small></a>
+        <a href="#"><b>2019</b><small>Testo</small></a>
+        <a href="#"><b>2018</b><small>Testo</small></a>
+        <a href="#"><b>2017</b><small>Testo, soluzioni e foto</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contatti">
+    <div class="container">
+      <h2>Contatti</h2>
+      <ul>
+        <li><span>E-mail</span><a class="link" href="mailto:esecutivo@ai-sf.it" style="justify-self:start">esecutivo@ai-sf.it</a></li>
+        <li><span>Instagram</span><a class="link" href="https://www.instagram.com/aisf_fisica/" style="justify-self:start">@aisf_fisica</a></li>
+        <li><span>Facebook</span><a class="link" href="https://it-it.facebook.com/aisf.fisica/" style="justify-self:start">aisf.fisica</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <a class="wordmark" href="#">prePLANCKS</a>
+    <nav aria-label="Piè di pagina"><a href="#iscrizione">Iscrizione</a><a href="#edizioni">Edizioni</a><a href="#contatti">Contatti</a><a href="https://ai-sf.it">AISF</a></nav>
+    <p>Associazione Italiana Studenti di Fisica, comitato nazionale della International Association of Physics Students.</p>
+  </div>
+</footer>
+</body>
+</html>

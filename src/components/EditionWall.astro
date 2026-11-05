@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { u } from "../lib/url";
+interface Props { editions: CollectionEntry<"editions">[]; posters?: number }
+const { editions, posters = 99 } = Astro.props;
+
+const withArt = editions.filter((e) => e.data.art?.banner).slice(0, posters);
+const rest = editions.filter((e) => !withArt.includes(e));
+
+function what(e: CollectionEntry<"editions">["data"]) {
+  const kinds = new Set(e.documents.map((d) => d.kind));
+  const parts = [];
+  if (kinds.has("testo")) parts.push("Testo");
+  if (kinds.has("soluzioni")) parts.push("soluzioni");
+  if (e.gallery.length) parts.push("foto");
+  return parts.join(", ").replace(/, ([^,]*)$/, " e $1");
+}
+---
+
+{
+  withArt.length > 0 && (
+    <div class="posters">
+      {withArt.map((e) => (
+        <a class="poster" href={u(`/edizioni/${e.data.year}/`)}>
+          <img src={u(e.data.art!.banner!)} alt={`Locandina prePLANCKS ${e.data.year}`} loading="lazy" />
+          <b>{e.data.year}</b>
+          {what(e.data) && <span>{what(e.data)}</span>}
+        </a>
+      ))}
+    </div>
+  )
+}
+{
+  rest.length > 0 && (
+    <div class="older">
+      {rest.map((e) => (
+        <a href={u(`/edizioni/${e.data.year}/`)}>
+          <b>{e.data.year}</b>
+          <small>{what(e.data)}</small>
+        </a>
+      ))}
+    </div>
+  )
+}
