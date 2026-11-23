@@ -7,7 +7,7 @@ Decided 2026-11-04 (user answers):
 - Registration: external form link; form URL and deadline are CMS fields.
 - Stack: Astro + PagesCMS (as aisf-astro / cisf27).
 
-- Direction: A2 (design-options/a2.html). Earlier hero (live title over art-only background) + the edition banner as a poster beside Chi/Quando/Dove. Mobile hero: art block on top, all text on the dark ground below (contrast). Showcase uses the desktop banner on every width.
+- Direction: A2 (direction A2). Earlier hero (live title over art-only background) + the edition banner as a poster beside Chi/Quando/Dove. Mobile hero: art block on top, all text on the dark ground below (contrast). Showcase uses the desktop banner on every width.
 - Seasons: home state driven by CMS dates (registration open/close, event date, solutions flag).
 - Past editions: one page per year (/edizioni/<year>).
 - Language: Italian only.

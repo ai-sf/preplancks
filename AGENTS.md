@@ -21,15 +21,16 @@ Repo: `github.com/dariozar/preplancks` (branch `main`, private for now). Final a
 
 ## Seasons
 
-`src/lib/season.ts` derives the home state from the current edition's dates, in Europe/Rome, at build time: `upcoming`, `open`, `closed`, `live`, `done`. It also produces the one sentence under the title and the primary button. `hero_line` overrides the sentence. The registration section is hidden when the state is `done`. The deploy workflow rebuilds daily at 03:00 UTC so the state follows the calendar; there is no client-side script. Italian dates use "1°" for the first of the month.
+`src/lib/season.ts` derives the home state from the current edition's dates, in Europe/Rome, at build time: `upcoming`, `open`, `closed`, `live`, `done`. `strip()` gives the band under the hero (countdown label and target, side text), `action()` the primary button. The hero has no generated sentence: `hero_line` shows one under the title only when filled. Registrations close at 23:59:59 of their day, the race counts to 00:00 of its day (no time of day in the data). The countdown is server-rendered in days and a small script in `index.astro` unhides and ticks hours to seconds. The registration section is hidden when the state is `done`. The deploy workflow rebuilds daily at 03:00 UTC so the state follows the calendar. Italian dates use "1°" for the first of the month.
+`PREVIEW_DATE=yyyy-MM-dd npm run dev` fakes today (and the browser's clock, via `data-now`) to look at the other states.
 
 ## Design rules
 
-The look is the chosen direction A2 (`design-options/a2.html`, reference only, not built). Rules that came out of the design work:
+The look is the chosen direction A2 (a static mockup, since removed from the repo). Rules that came out of the design work:
 
 - Edition-led: each edition sets `theme.{paper,accent,accent_ink}` (CSS variables on `<html>`) and four images in `art`: `banner` and `banner_mobile` (with title and logos), `background` and `background_mobile` (art only). Paper must be dark; text is light. All other surfaces derive from the three tokens with `color-mix`.
-- Home hero (desktop): the live title over `background`, scrim from the left. The full `banner` sits in the showcase section beside Chi / Quando / Dove, on every screen size.
-- Home hero (mobile): contrast was bad with text on the art. Fixed by layout, not by darkening: the art is its own block on top, and the title, logos, sentence and buttons sit below it on the dark page colour. Never put text on the art on mobile.
+- Home hero (desktop): the live title over `background`, scrim from the left; logos, title and buttons are centred vertically between the nav and the band (`.strip`) that closes the hero. The full `banner` sits in the showcase section beside Chi / Quando / Dove, on every screen size.
+- Home hero (mobile): contrast was bad with text on the art. Fixed by layout, not by darkening: the art is its own block on top, and the title, logos and buttons sit below it, then the band, on the dark page colour. Never put text on the art on mobile.
 - The hero title is live text, so `background` must not contain the title.
 - Logos in the hero: the edition's `logos` first, then `site.logos` (IAPS, AISF). Light logos on transparent. Sources: IAPS press kit (dark-background PNG), AISF brand drive (white, "Al tratto"), PLANCKS 2026 site (`Logo-wit.svg`).
 - Fonts: Dela Gothic One (titles) and Hanken Grotesk (text) from `@fontsource`; no CDN. One stylesheet, `src/styles/global.css`, plain CSS with tokens. No Tailwind.
@@ -44,7 +45,7 @@ The look is the chosen direction A2 (`design-options/a2.html`, reference only, n
 
 - `skills-lock.json` pins the skills by hash. The installed copies (`.agents/skills/`, with `.claude/skills/` symlinks) are git-ignored: after cloning, run `npx skills experimental_install` to restore them from the lock (`--dry-run` to preview). Skills: `hallmark` (MIT) and `design-taste-frontend` (taste-skill; no licence file in its folder, so its files are not redistributed here).
 - Use `hallmark` for new pages or sections, `design-taste-frontend` for restyles and polish. After visual work, run the linter on the running preview: `node .agents/skills/hallmark/scripts/sloplint.mjs --url http://localhost:4321/preplancks/ --genre editorial`. Fix every FAIL; fix or waive every REFLEX with a real reason. The render tier needs `puppeteer-core`, which is not installed.
-- Screenshots: `chromium-browser --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,900 --screenshot=<path inside the project> <url>`. The snap Chromium cannot write to `/tmp`; write inside the project (git-ignored `design-options/shots/`). Check mobile at 390 wide.
+- Screenshots: `chromium-browser --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,900 --screenshot=<path inside the project> <url>`. The snap Chromium cannot write to `/tmp`; write inside the project (git-ignored `.shots/`). Check mobile at 390 wide.
 - `mcp.json` adds the Astro docs MCP server (`https://mcp.docs.astro.build/mcp`). Use it for Astro questions. It only adds a server; it does not switch anything off.
 - Any prose you write for the site or the README goes through the `avoid-ai-writing` skill.
 

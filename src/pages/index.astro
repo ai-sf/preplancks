@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import Banner from "../components/Banner.astro";
 import EditionWall from "../components/EditionWall.astro";
 import { getEditions, getSite } from "../lib/editions";
-import { season, hero, longDate, shortDate } from "../lib/season";
+import { season, strip, action, remaining, previewNow, longDate, shortDate } from "../lib/season";
 import { u } from "../lib/url";
 
 const editions = await getEditions();
@@ -11,7 +11,10 @@ const e = editions[0];
 const d = e.data;
 const site = await getSite();
 const s = season(d);
-const h = hero(d, s, site.membership_url);
+const act = action(d, s, site.membership_url);
+const band = strip(d, s);
+const left = band?.to ? remaining(band.to) : undefined;
+const two = (n: number) => String(n).padStart(2, "0");
 const yy = d.year.slice(2);
 const showJoin = s !== "done";
 const art = d.art;
@@ -38,12 +41,30 @@ const logos = [...d.logos, ...site.logos];
           </ul>
         )}
         <h1>prePLANCKS<br />{yy}</h1>
-        <p>{h.line}</p>
+        {d.hero_line && <p>{d.hero_line}</p>}
         <div class="actions">
-          <a class="btn btn-primary" href={u(h.action.href)}>{h.action.label}</a>
+          <a class="btn btn-primary" href={u(act.href)}>{act.label}</a>
           <a class="btn btn-ghost" href={u("/edizioni/")}>Tutte le edizioni</a>
         </div>
       </div>
+      {band && (
+        <div class="strip">
+          <div class="container">
+            {left && band.to ? (
+              <div class="countdown" data-to={band.to} data-now={previewNow} role="timer" aria-label={`${band.label} ${left.d} giorni`}>
+                <span>{band.label}</span>
+                <div><b data-d>{left.d}</b><small>giorni</small></div>
+                <div hidden><b data-h>{two(left.h)}</b><small>ore</small></div>
+                <div hidden><b data-m>{two(left.m)}</b><small>minuti</small></div>
+                <div hidden><b data-s>{two(left.s)}</b><small>secondi</small></div>
+              </div>
+            ) : (
+              <div class="countdown"><b class="headline">{band.label}</b></div>
+            )}
+            {band.side && <p class="side">{band.side.text}{band.side.date && <b>{band.side.date}</b>}</p>}
+          </div>
+        </div>
+      )}
     </section>
 
     {(art?.banner || d.who || d.event_date || d.where) && (
@@ -110,4 +131,23 @@ const logos = [...d.logos, ...site.logos];
       </div>
     </section>
   </main>
+<script>
+  // Seconds, minutes and hours need a script; without one the band shows the days computed at build.
+  const pad = (n: number) => String(n).padStart(2, "0");
+  document.querySelectorAll<HTMLElement>("[data-to]").forEach((el) => {
+    const to = Date.parse(el.dataset.to!);
+    const skew = el.dataset.now ? Date.parse(el.dataset.now) - Date.now() : 0;
+    el.querySelectorAll<HTMLElement>("[hidden]").forEach((c) => (c.hidden = false));
+    const set = (k: string, v: string | number) => (el.querySelector(`[data-${k}]`)!.textContent = String(v));
+    const tick = () => {
+      const ms = Math.max(0, to - (Date.now() + skew));
+      set("d", Math.floor(ms / 864e5));
+      set("h", pad(Math.floor(ms / 36e5) % 24));
+      set("m", pad(Math.floor(ms / 6e4) % 60));
+      set("s", pad(Math.floor(ms / 1e3) % 60));
+    };
+    tick();
+    setInterval(tick, 1000);
+  });
+</script>
 </Base>

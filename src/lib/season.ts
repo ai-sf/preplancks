@@ -4,7 +4,9 @@ type Edition = CollectionEntry<"editions">["data"];
 export type Season = "upcoming" | "open" | "closed" | "live" | "done";
 
 // The site is static: the state is computed at build time, so the deploy workflow rebuilds daily.
+// PREVIEW_DATE (yyyy-MM-dd) fakes today, to look at the other states while developing.
 export function todayRome(now = new Date()): string {
+  if (process.env.PREVIEW_DATE) return process.env.PREVIEW_DATE;
   return new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Rome" }).format(now);
 }
 
@@ -25,33 +27,59 @@ const fmt = (iso: string, opts: Intl.DateTimeFormatOptions) =>
 export const longDate = (iso: string) => fmt(iso, { day: "numeric", month: "long", year: "numeric" });
 export const shortDate = (iso: string) => fmt(iso, { day: "numeric", month: "long" });
 
-export interface Hero {
-  line: string;
-  action: { label: string; href: string };
+// Europe/Rome offset on a given day ("+01:00" or "+02:00"), so deadlines are Rome time whatever the server's zone.
+function romeOffset(iso: string): string {
+  const name = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", timeZoneName: "shortOffset" })
+    .formatToParts(new Date(iso + "T12:00:00Z"))
+    .find((p) => p.type === "timeZoneName")!.value;
+  const h = Number(name.replace("GMT", "") || 0);
+  return `${h < 0 ? "-" : "+"}${String(Math.abs(h)).padStart(2, "0")}:00`;
+}
+const at = (iso: string, time: string) => `${iso}T${time}${romeOffset(iso)}`;
+
+export interface Strip {
+  /** Text before the countdown, or the headline when there is no countdown. */
+  label: string;
+  /** ISO instant the countdown runs to; absent when there is nothing to count. */
+  to?: string;
+  /** Right-hand side: a lead-in and an optional highlighted date. */
+  side?: { text: string; date?: string };
 }
 
-// One sentence under the title plus the primary action, by season. hero_line overrides the sentence.
-export function hero(e: Edition, s: Season, membershipUrl: string): Hero {
-  const ev = e.event_date ? shortDate(e.event_date) : "";
-  const hasSolutions = e.documents.some((d) => d.kind === "soluzioni");
-  const hasText = e.documents.some((d) => d.kind === "testo");
-  let line = "";
-  let action = { label: "Tutte le edizioni", href: "/edizioni/" };
+// The band under the hero: what happens next and when. Registrations close at the end of their day,
+// the race counts to midnight at its start (the time of day is not in the data).
+export function strip(e: Edition, s: Season): Strip | null {
+  const race = e.event_date ? { text: "La gara", date: shortDate(e.event_date) } : undefined;
+  const toRace = e.event_date ? { label: "La gara è tra", to: at(e.event_date, "00:00:00") } : null;
   if (s === "upcoming") {
-    line = e.registration_opens ? `Le iscrizioni aprono il ${shortDate(e.registration_opens)}.` : ev ? `La gara è il ${ev}.` : "";
-    action = { label: "Iscriviti ad AISF", href: membershipUrl };
-  } else if (s === "open") {
-    line = e.registration_closes ? `Iscrizioni aperte fino al ${shortDate(e.registration_closes)}${ev ? `, gara il ${ev}` : ""}.` : "Iscrizioni aperte.";
-    action = { label: "Iscrivi la squadra", href: e.registration_url ?? "#iscrizione" };
-  } else if (s === "closed") {
-    line = `Iscrizioni chiuse${ev ? `. La gara è il ${ev}` : ""}.`;
-    action = { label: "Come funziona", href: "#iscrizione" };
-  } else if (s === "live") {
-    line = `Oggi si gioca${e.where ? `: ${e.where.charAt(0).toLowerCase()}${e.where.slice(1)}` : ""}.`;
-    action = { label: "Come funziona", href: "#iscrizione" };
-  } else {
-    line = `Si è svolta il ${ev}${hasSolutions ? ": testo e soluzioni sono online" : hasText ? ": il testo è online" : ""}.`;
-    action = { label: hasSolutions ? `Soluzioni ${e.year}` : `Edizione ${e.year}`, href: `/edizioni/${e.year}/` };
+    if (e.registration_opens) return { label: "Le iscrizioni aprono tra", to: at(e.registration_opens, "00:00:00"), side: race };
+    return toRace && { ...toRace, side: undefined };
   }
-  return { line: e.hero_line || line || `Le informazioni su prePLANCKS ${e.year.slice(2)} arriveranno presto.`, action };
+  if (s === "open") {
+    if (e.registration_closes) return { label: "Le iscrizioni chiudono tra", to: at(e.registration_closes, "23:59:59"), side: race };
+    return toRace && { ...toRace, side: undefined };
+  }
+  if (s === "closed") return toRace && { ...toRace, side: { text: "Iscrizioni chiuse" } };
+  if (s === "live") return { label: "Oggi si gioca", side: e.where ? { text: e.where } : undefined };
+  const online = e.documents.some((d) => d.kind === "testo" || d.kind === "soluzioni");
+  return { label: "Gara conclusa", side: online ? { text: "Testo e soluzioni online" } : undefined };
+}
+
+// Primary action of the hero, by season.
+export function action(e: Edition, s: Season, membershipUrl: string): { label: string; href: string } {
+  if (s === "upcoming") return { label: "Iscriviti ad AISF", href: membershipUrl };
+  if (s === "open") return { label: "Iscrivi la squadra", href: e.registration_url ?? "#iscrizione" };
+  if (s === "closed" || s === "live") return { label: "Come funziona", href: "#iscrizione" };
+  const hasSolutions = e.documents.some((d) => d.kind === "soluzioni");
+  return { label: hasSolutions ? `Soluzioni ${e.year}` : `Edizione ${e.year}`, href: `/edizioni/${e.year}/` };
+}
+
+// "Now" as the page is built; with PREVIEW_DATE it is 10:00 Rome on that day, and the page tells the browser so.
+export const previewNow = process.env.PREVIEW_DATE ? at(process.env.PREVIEW_DATE, "10:00:00") : undefined;
+export const buildNow = () => (previewNow ? Date.parse(previewNow) : Date.now());
+
+/** Whole days, hours, minutes and seconds left to an ISO instant (zeros once it has passed). */
+export function remaining(to: string, now = buildNow()) {
+  const ms = Math.max(0, Date.parse(to) - now);
+  return { d: Math.floor(ms / 864e5), h: Math.floor(ms / 36e5) % 24, m: Math.floor(ms / 6e4) % 60, s: Math.floor(ms / 1e3) % 60 };
 }

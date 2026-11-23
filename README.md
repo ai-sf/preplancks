@@ -20,15 +20,17 @@ Ogni edizione ha un aspetto suo, ricavato dalla grafica di quell'anno: tre color
 
 La home cambia con il calendario. Le date stanno nell'edizione e `src/lib/season.ts` le trasforma in uno di cinque stati:
 
-| Stato | Quando | Frase sotto il titolo | Pulsante principale |
+| Stato | Quando | Fascia in fondo allo hero | Pulsante principale |
 | --- | --- | --- | --- |
-| upcoming | prima dell'apertura delle iscrizioni, o senza date | Le iscrizioni aprono il giorno X | Iscriviti ad AISF |
-| open | tra apertura e chiusura | Iscrizioni aperte fino al giorno X, gara il giorno Y | Iscrivi la squadra |
-| closed | dopo la chiusura | Iscrizioni chiuse, la gara è il giorno Y | Come funziona |
-| live | il giorno della gara | Oggi si gioca | Come funziona |
-| done | dopo la gara | Si è svolta il giorno Y, con testo e soluzioni online se ci sono | Soluzioni (o la pagina dell'edizione) |
+| upcoming | prima dell'apertura delle iscrizioni, o senza date | conto alla rovescia all'apertura (alla gara, se manca l'apertura), a destra la data della gara | Iscriviti ad AISF |
+| open | tra apertura e chiusura | conto alla chiusura delle iscrizioni, a destra la data della gara | Iscrivi la squadra |
+| closed | dopo la chiusura | conto alla gara, a destra «Iscrizioni chiuse» | Come funziona |
+| live | il giorno della gara | «Oggi si gioca» e il luogo | Come funziona |
+| done | dopo la gara | «Gara conclusa» e «Testo e soluzioni online» se ci sono i PDF | Soluzioni (o la pagina dell'edizione) |
 
-Finita l'edizione, la sezione sulle iscrizioni sparisce. Il campo `hero_line` dell'edizione sostituisce la frase generata, se serve dire altro.
+Lo hero ha loghi, titolo e pulsanti; date e stato stanno solo nella fascia. Il campo `hero_line` dell'edizione, se compilato, aggiunge una frase sotto il titolo. Le iscrizioni chiudono alla fine del giorno indicato; la gara conta fino a mezzanotte del suo giorno (l'orario non è nei dati). Senza JavaScript la fascia mostra solo i giorni, calcolati alla build. Finita l'edizione, la sezione sulle iscrizioni sparisce.
+
+Per vedere uno stato senza cambiare le date, imposta `PREVIEW_DATE` (aaaa-mm-gg), per esempio `PREVIEW_DATE=2026-02-10 npm run dev`.
 
 Il sito è statico, quindi lo stato si calcola al momento della build. Una pianificazione di GitHub Actions lo ricostruisce ogni mattina alle 03:00 UTC, così la home segue le date senza che nessuno intervenga.
 
@@ -117,8 +119,6 @@ scripts/migrate.py         importazione una tantum dal vecchio sito Jekyll
 ### Stile
 
 Un solo foglio di stile, CSS semplice, nessun framework. Spaziature, dimensioni del testo e colori sono variabili in cima al file. I colori dell'edizione (`--color-paper`, `--color-accent`, `--color-accent-ink`) arrivano dal CMS e vengono impostati su `<html>`; tutti gli altri colori delle superfici si ricavano da questi con `color-mix`. I font sono Dela Gothic One (titoli) e Hanken Grotesk (testo), installati con `@fontsource`, quindi nessuna richiesta parte verso una CDN di font.
-
-L'aspetto nasce da un'esplorazione grafica conservata in `design-options/`: mockup HTML statici di tre direzioni, di cui è stata scelta `a2.html`. È solo materiale di riferimento e non fa parte della build.
 
 ## Reimportare il vecchio sito
 
