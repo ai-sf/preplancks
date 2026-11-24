@@ -140,7 +140,7 @@ footer { border-top: 1px solid var(--color-rule); padding-block: var(--space-xl)
 footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--space-lg); align-items: end; }
 footer .wordmark { font-size: clamp(2rem, 6vw, 4.5rem); }
 footer nav { display: flex; gap: var(--space-lg); flex-wrap: wrap; color: var(--color-ink-2); }
-footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); max-width: none; }
+footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); max-width: none; white-space: pre-line; }
 
 @media (max-width: 60rem) {
   .showcase .container { grid-template-columns: minmax(0, 1fr); }
