@@ -163,6 +163,7 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
   .countdown .headline { font-size: var(--text-2xl); }
   .strip .side { flex-basis: 100%; display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--color-rule); padding-top: var(--space-sm); }
   .strip .side b { font-size: var(--text-lg); }
+  .hero .btn { flex: 1 1 auto; justify-content: center; padding-inline: var(--space-md); } /* side by side at 360px, full-width rows when they cannot fit */
   .hero-logos { gap: var(--space-lg); margin-bottom: var(--space-lg); }
   .hero-logos img { height: 48px; }
   .showcase .container { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
