@@ -10,9 +10,8 @@
   --color-paper-3: color-mix(in oklab, var(--color-paper), var(--color-ink) 12%);
   --color-rule: color-mix(in oklab, var(--color-paper), var(--color-ink) 22%);
   --color-focus: var(--color-accent);
-  --color-shade: color-mix(in oklab, var(--color-paper) 45%, var(--color-accent-ink)); /* the paper hue, darker: tone on tone */
-  --color-scrim-strong: color-mix(in oklab, var(--color-shade) 90%, transparent);
-  --color-scrim-mid: color-mix(in oklab, var(--color-shade) 45%, transparent);
+  --color-scrim-strong: color-mix(in oklab, color-mix(in oklab, var(--color-paper) 45%, var(--color-accent-ink)) 90%, transparent);
+  --color-scrim-mid: color-mix(in oklab, color-mix(in oklab, var(--color-paper) 45%, var(--color-accent-ink)) 45%, transparent);
   --font-display: "Dela Gothic One", ui-sans-serif, system-ui, sans-serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-display);
   --tracking-display: -0.02em; --radius-card: 6px;
 }
