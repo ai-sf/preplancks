@@ -32,7 +32,7 @@ Lo hero ha loghi, titolo e pulsanti; date e stato stanno solo nella fascia. Il c
 
 Per vedere uno stato senza cambiare le date, imposta `PREVIEW_DATE` (aaaa-mm-gg), per esempio `PREVIEW_DATE=2026-02-10 npm run dev`.
 
-Il sito è statico, quindi lo stato si calcola al momento della build. Una pianificazione di GitHub Actions lo ricostruisce ogni mattina alle 03:00 UTC, così la home segue le date senza che nessuno intervenga.
+Il sito è statico: la build scrive nella pagina lo stato del momento, e uno script nel browser lo ricalcola con le stesse funzioni (`src/lib/season.ts`). Se nel frattempo è passata la mezzanotte di una scadenza, pulsante, fascia e sezione iscrizioni si aggiornano da soli, senza una nuova pubblicazione. Senza JavaScript resta lo stato dell'ultima build. I link «Iscrizione» delle altre pagine seguono lo stato dell'ultima build.
 
 ## Sviluppo in locale
 
@@ -136,6 +136,6 @@ Le competenze usate per la grafica sono `hallmark` e `design-taste-frontend`. `s
 
 ## Pubblicazione
 
-Il workflow `.github/workflows/deploy.yml` compila con l'azione ufficiale di Astro e pubblica su GitHub Pages a ogni push su `main`, a ogni esecuzione manuale e ogni mattina alle 03:00 UTC.
+Il workflow `.github/workflows/deploy.yml` compila con l'azione ufficiale di Astro e pubblica su GitHub Pages a ogni push su `main` (quindi a ogni salvataggio del CMS) e a ogni esecuzione manuale. Non c'è nessuna build programmata.
 
 Nelle impostazioni del repository, imposta Pages sulla pubblicazione da GitHub Actions. Finché il dominio definitivo non è attivo, aggiungi una variabile del repository `SITE_URL` con l'origine di Pages (per esempio `https://dariozar.github.io`). In produzione lasciala vuota e il sito usa `https://ai-sf.it`. Il percorso base è sempre `/preplancks`, quindi l'indirizzo pubblico è `ai-sf.it/preplancks`.

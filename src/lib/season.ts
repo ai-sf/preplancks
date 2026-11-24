@@ -5,8 +5,10 @@ export type Season = "upcoming" | "open" | "closed" | "live" | "done";
 
 // The site is static: the state is computed at build time, so the deploy workflow rebuilds daily.
 // PREVIEW_DATE (yyyy-MM-dd) fakes today, to look at the other states while developing.
+// The same file runs in the browser (index.astro), where `process` does not exist.
+const preview = typeof process !== "undefined" ? process.env.PREVIEW_DATE : undefined;
 export function todayRome(now = new Date()): string {
-  if (process.env.PREVIEW_DATE) return process.env.PREVIEW_DATE;
+  if (preview) return preview;
   return new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Rome" }).format(now);
 }
 
@@ -76,7 +78,7 @@ export function action(e: Edition, s: Season, membershipUrl: string): { label: s
 }
 
 // "Now" as the page is built; with PREVIEW_DATE it is 10:00 Rome on that day, and the page tells the browser so.
-export const previewNow = process.env.PREVIEW_DATE ? at(process.env.PREVIEW_DATE, "10:00:00") : undefined;
+export const previewNow = preview ? at(preview, "10:00:00") : undefined;
 export const buildNow = () => (previewNow ? Date.parse(previewNow) : Date.now());
 
 /** Whole days, hours, minutes and seconds left to an ISO instant (zeros once it has passed). */

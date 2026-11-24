@@ -3,7 +3,8 @@ import Base from "../layouts/Base.astro";
 import Banner from "../components/Banner.astro";
 import EditionWall from "../components/EditionWall.astro";
 import { getEditions, getSite } from "../lib/editions";
-import { season, strip, action, remaining, previewNow, longDate, shortDate } from "../lib/season";
+import { season, strip, action, previewNow, longDate, shortDate } from "../lib/season";
+import { stripHtml } from "../lib/strip";
 import { u } from "../lib/url";
 
 const editions = await getEditions();
@@ -13,8 +14,11 @@ const site = await getSite();
 const s = season(d);
 const act = action(d, s, site.membership_url);
 const band = strip(d, s);
-const left = band?.to ? remaining(band.to) : undefined;
-const two = (n: number) => String(n).padStart(2, "0");
+// What the browser needs to recompute the state later; the build-time one can be hours old.
+const data = {
+  year: d.year, event_date: d.event_date, registration_opens: d.registration_opens, registration_closes: d.registration_closes,
+  registration_url: d.registration_url, where: d.where, documents: d.documents.map(({ kind }) => ({ kind })), membership: site.membership_url,
+};
 const yy = d.year.slice(2);
 const showJoin = s !== "done";
 const art = d.art;
@@ -28,7 +32,7 @@ const logos = [...d.logos, ...site.logos];
   overNav
 >
   <main>
-    <section class="hero">
+    <section class="hero" data-season={s} data-now={previewNow}>
       <Banner desktop={art?.background} mobile={art?.background_mobile} loading="eager" />
       <div class="container">
         {logos.length > 0 && (
@@ -43,28 +47,11 @@ const logos = [...d.logos, ...site.logos];
         <h1>prePLANCKS<br />{yy}</h1>
         {d.hero_line && <p>{d.hero_line}</p>}
         <div class="actions">
-          <a class="btn btn-primary" href={u(act.href)}>{act.label}</a>
+          <a class="btn btn-primary" data-action href={u(act.href)}>{act.label}</a>
           <a class="btn btn-ghost" href={u("/edizioni/")}>Tutte le edizioni</a>
         </div>
       </div>
-      {band && (
-        <div class="strip">
-          <div class="container">
-            {left && band.to ? (
-              <div class="countdown" data-to={band.to} data-now={previewNow} role="timer" aria-label={`${band.label} ${left.d} giorni`}>
-                <span>{band.label}</span>
-                <div><b data-d>{left.d}</b><small>giorni</small></div>
-                <div hidden><b data-h>{two(left.h)}</b><small>ore</small></div>
-                <div hidden><b data-m>{two(left.m)}</b><small>minuti</small></div>
-                <div hidden><b data-s>{two(left.s)}</b><small>secondi</small></div>
-              </div>
-            ) : (
-              <div class="countdown"><b class="headline">{band.label}</b></div>
-            )}
-            {band.side && <p class="side">{band.side.text}{band.side.date && <b>{band.side.date}</b>}</p>}
-          </div>
-        </div>
-      )}
+      <div class="strip" hidden={!band} set:html={stripHtml(band)} />
     </section>
 
     {(art?.banner || d.who || d.event_date || d.where) && (
@@ -91,8 +78,7 @@ const logos = [...d.logos, ...site.logos];
       </div>
     </section>
 
-    {showJoin && (
-      <section class="join" id="iscrizione">
+    <section class="join" id="iscrizione" data-join hidden={!showJoin}>
         <div class="container">
           <h2>Come iscrivere una squadra</h2>
           <div>
@@ -102,13 +88,12 @@ const logos = [...d.logos, ...site.logos];
               {d.registration_url && <li><span>Per iscrivere la tua squadra basta compilare il form.</span></li>}
             </ol>
             <div class="actions" style="margin-top: var(--space-xl)">
-              {s === "open" && d.registration_url && <a class="btn btn-primary" href={d.registration_url}>Iscrivi la squadra</a>}
-              <a class:list={["btn", s === "open" && d.registration_url ? "btn-ghost" : "btn-primary"]} href={site.membership_url}>Iscriviti ad AISF</a>
+              {d.registration_url && <a class="btn btn-primary" data-form hidden={s !== "open"} href={d.registration_url}>Iscrivi la squadra</a>}
+              <a class:list={["btn", s === "open" && d.registration_url ? "btn-ghost" : "btn-primary"]} data-aisf href={site.membership_url}>Iscriviti ad AISF</a>
             </div>
           </div>
         </div>
       </section>
-    )}
 
     <section class="wall" id="edizioni">
       <div class="container">
@@ -131,16 +116,41 @@ const logos = [...d.logos, ...site.logos];
       </div>
     </section>
   </main>
+<script type="application/json" id="edition-data" set:html={JSON.stringify(data)} />
 <script>
-  // Seconds, minutes and hours need a script; without one the band shows the days computed at build.
+  import { season, strip, action, todayRome } from "../lib/season";
+  import { stripHtml } from "../lib/strip";
+  import { u } from "../lib/url";
+
+  const hero = document.querySelector<HTMLElement>(".hero")!;
+  const data = JSON.parse(document.getElementById("edition-data")!.textContent!);
+  const skew = hero.dataset.now ? Date.parse(hero.dataset.now) - Date.now() : 0; // PREVIEW_DATE only
+  const now = () => Date.now() + skew;
+
+  // The page can be older than the calendar: recompute the state now and fix what changed.
+  const s = season(data, todayRome(new Date(now())));
+  if (s !== hero.dataset.season) {
+    const act = action(data, s, data.membership);
+    const button = hero.querySelector<HTMLAnchorElement>("[data-action]")!;
+    button.textContent = act.label;
+    button.href = u(act.href);
+    const band = strip(data, s);
+    const el = hero.querySelector<HTMLElement>(".strip")!;
+    el.hidden = !band;
+    el.innerHTML = stripHtml(band);
+    document.querySelectorAll<HTMLElement>("[data-join]").forEach((x) => (x.hidden = s === "done"));
+    document.querySelector<HTMLElement>("[data-form]")?.toggleAttribute("hidden", s !== "open");
+    document.querySelector("[data-aisf]")!.className = `btn ${s === "open" && data.registration_url ? "btn-ghost" : "btn-primary"}`;
+  }
+
+  // Hours to seconds need the script; without it the band shows the days computed at build.
   const pad = (n: number) => String(n).padStart(2, "0");
-  document.querySelectorAll<HTMLElement>("[data-to]").forEach((el) => {
-    const to = Date.parse(el.dataset.to!);
-    const skew = el.dataset.now ? Date.parse(el.dataset.now) - Date.now() : 0;
-    el.querySelectorAll<HTMLElement>("[hidden]").forEach((c) => (c.hidden = false));
-    const set = (k: string, v: string | number) => (el.querySelector(`[data-${k}]`)!.textContent = String(v));
+  document.querySelectorAll<HTMLElement>("[data-to]").forEach((c) => {
+    const to = Date.parse(c.dataset.to!);
+    c.querySelectorAll<HTMLElement>("[hidden]").forEach((x) => (x.hidden = false));
+    const set = (k: string, v: string | number) => (c.querySelector(`[data-${k}]`)!.textContent = String(v));
     const tick = () => {
-      const ms = Math.max(0, to - (Date.now() + skew));
+      const ms = Math.max(0, to - now());
       set("d", Math.floor(ms / 864e5));
       set("h", pad(Math.floor(ms / 36e5) % 24));
       set("m", pad(Math.floor(ms / 6e4) % 60));

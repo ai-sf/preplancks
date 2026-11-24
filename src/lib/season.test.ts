@@ -59,3 +59,11 @@ test("remaining splits a duration and never goes negative", () => {
   assert.deepEqual(remaining("2026-03-02T23:59:59+01:00", now), { d: 20, h: 14, m: 59, s: 59 });
   assert.deepEqual(remaining("2026-02-01T00:00:00+01:00", now), { d: 0, h: 0, m: 0, s: 0 });
 });
+
+test("stripHtml escapes CMS text and counts only when there is a target", async () => {
+  const { stripHtml } = await import("./strip.ts");
+  assert.equal(stripHtml(null), "");
+  assert.match(stripHtml({ label: "x", side: { text: "<b>dove</b>" } }), /&#60;b&#62;dove/);
+  assert.doesNotMatch(stripHtml({ label: "Gara conclusa" }), /data-to/);
+  assert.match(stripHtml({ label: "x", to: "2999-01-01T00:00:00+01:00" }), /data-to="2999-01-01T00:00:00\+01:00"/);
+});

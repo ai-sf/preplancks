@@ -21,7 +21,7 @@ Repo: `github.com/dariozar/preplancks` (branch `main`, private for now). Final a
 
 ## Seasons
 
-`src/lib/season.ts` derives the home state from the current edition's dates, in Europe/Rome, at build time: `upcoming`, `open`, `closed`, `live`, `done`. `strip()` gives the band under the hero (countdown label and target, side text), `action()` the primary button. The hero has no generated sentence: `hero_line` shows one under the title only when filled. Registrations close at 23:59:59 of their day, the race counts to 00:00 of its day (no time of day in the data). The countdown is server-rendered in days and a small script in `index.astro` unhides and ticks hours to seconds. The registration section is hidden when the state is `done`. The deploy workflow rebuilds daily at 03:00 UTC so the state follows the calendar. Italian dates use "1°" for the first of the month.
+`src/lib/season.ts` derives the home state from the current edition's dates, in Europe/Rome, at build time and again in the browser: `upcoming`, `open`, `closed`, `live`, `done`. `strip()` gives the band under the hero (countdown label and target, side text), `action()` the primary button. The hero has no generated sentence: `hero_line` shows one under the title only when filled. Registrations close at 23:59:59 of their day, the race counts to 00:00 of its day (no time of day in the data). `stripHtml()` (`src/lib/strip.ts`) renders the band for both the build and the browser. The script in `index.astro` recomputes the state with the same `season.ts` functions; if it differs from `data-season` it redraws the button, band, `#iscrizione` and the Iscrizione links, then ticks hours to seconds. No scheduled rebuild. Only the home is corrected: the nav and footer links on other pages follow the last build. The registration section is hidden when the state is `done`. Italian dates use "1°" for the first of the month.
 `PREVIEW_DATE=yyyy-MM-dd npm run dev` fakes today (and the browser's clock, via `data-now`) to look at the other states.
 
 ## Design rules
@@ -58,7 +58,7 @@ The look is the chosen direction A2 (a static mockup, since removed from the rep
 ## Git and deploy
 
 - `origin` is `https://github.com/dariozar/preplancks.git` (HTTPS). This machine has no SSH key for GitHub; push with `git -c credential.helper='!gh auth git-credential' push`. Rewriting published history (force-push) needs the user's explicit go-ahead.
-- `.github/workflows/deploy.yml`: official Astro action to GitHub Pages on push to `main`, manual run, and daily at 03:00 UTC. Set the repo variable `SITE_URL` (for example `https://dariozar.github.io`) until `ai-sf.it` is live; unset it for production. `base` is always `/preplancks`. GitHub Pages on a free account needs a public repo.
+- `.github/workflows/deploy.yml`: official Astro action to GitHub Pages on push to `main` and manual run (no schedule: GitHub turns scheduled workflows off after 60 days without activity). Set the repo variable `SITE_URL` (for example `https://dariozar.github.io`) until `ai-sf.it` is live; unset it for production. `base` is always `/preplancks`. GitHub Pages on a free account needs a public repo.
 - Quick shareable preview of a static mockup: `npx surge <dir> <name>.surge.sh` (logged in as the repo owner). `_surge/` is git-ignored.
 
 ## Gotchas

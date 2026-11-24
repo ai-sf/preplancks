@@ -4,10 +4,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    # The home page state (registration open/closed, event over) is computed at build time,
-    # so rebuild every morning.
-    - cron: "0 3 * * *"
 
 permissions:
   contents: read

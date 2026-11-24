@@ -9,7 +9,7 @@ const { site, showJoin = true } = Astro.props;
   <div class="container">
     <a class="wordmark" href={u("/")}>{site.name}</a>
     <nav aria-label="Piè di pagina">
-      {showJoin && <a href={u("/#iscrizione")}>Iscrizione</a>}
+      <a data-join hidden={!showJoin} href={u("/#iscrizione")}>Iscrizione</a>
       <a href={u("/edizioni/")}>Edizioni</a>
       <a href={u("/#contatti")}>Contatti</a>
       <a href={site.organiser_url}>AISF</a>
