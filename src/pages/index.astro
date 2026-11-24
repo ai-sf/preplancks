@@ -155,6 +155,7 @@ const logos = [...d.logos, ...site.logos];
       set("h", pad(Math.floor(ms / 36e5) % 24));
       set("m", pad(Math.floor(ms / 6e4) % 60));
       set("s", pad(Math.floor(ms / 1e3) % 60));
+      c.querySelectorAll<HTMLElement>("small").forEach((u) => (u.textContent = Number(u.previousElementSibling!.textContent) === 1 ? u.dataset.one! : u.dataset.n!));
     };
     tick();
     setInterval(tick, 1000);

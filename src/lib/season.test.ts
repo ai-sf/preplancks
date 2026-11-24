@@ -85,4 +85,6 @@ test("stripHtml escapes CMS text and counts only when there is a target", async 
   assert.match(stripHtml({ label: "x", side: { text: "<b>dove</b>" } }), /&#60;b&#62;dove/);
   assert.doesNotMatch(stripHtml({ label: "Gara conclusa" }), /data-to/);
   assert.match(stripHtml({ label: "x", to: "2999-01-01T00:00:00+01:00" }), /data-to="2999-01-01T00:00:00\+01:00"/);
+  assert.match(stripHtml({ label: "x", to: "2999-01-01T00:00:00+01:00" }), /giorni/);
+  assert.match(stripHtml({ label: "x", to: new Date(Date.now() + 36e5 * 25).toISOString() }), />giorno</);
 });

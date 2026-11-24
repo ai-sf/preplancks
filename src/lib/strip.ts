@@ -11,8 +11,9 @@ export function stripHtml(b: Strip | null): string {
   if (b.to) {
     const r = remaining(b.to);
     // hours to seconds start hidden: only the script keeps them current, without it the band shows days
-    const cell = (k: string, label: string, v: number) => `<div hidden><b data-${k}>${two(v)}</b><small>${label}</small></div>`;
-    left = `<div class="countdown" data-to="${b.to}" role="timer" aria-label="${esc(b.label)} ${r.d} giorni"><span>${esc(b.label)}</span><div><b data-d>${r.d}</b><small>giorni</small></div>${cell("h", "ore", r.h)}${cell("m", "minuti", r.m)}${cell("s", "secondi", r.s)}</div>`;
+    const unit = (v: number, one: string, many: string) => `<small data-one="${one}" data-n="${many}">${v === 1 ? one : many}</small>`;
+    const cell = (k: string, v: number, one: string, many: string) => `<div hidden><b data-${k}>${two(v)}</b>${unit(v, one, many)}</div>`;
+    left = `<div class="countdown" data-to="${b.to}" role="timer" aria-label="${esc(b.label)} ${r.d} giorni"><span>${esc(b.label)}</span><div><b data-d>${r.d}</b>${unit(r.d, "giorno", "giorni")}</div>${cell("h", r.h, "ora", "ore")}${cell("m", r.m, "minuto", "minuti")}${cell("s", r.s, "secondo", "secondi")}</div>`;
   }
   return `<div class="container">${left}${side}</div>`;
 }
