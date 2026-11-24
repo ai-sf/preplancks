@@ -17,8 +17,8 @@ export const getStaticPaths = (async () => {
 const { e, newer, older } = Astro.props;
 const d = e.data;
 const art = d.art;
-// Written from the edition's data unless the CMS gives one.
-const description = d.description ?? `Preselezioni italiane per PLANCKS ${d.year}${d.host ? ` (${d.host})` : ""}.${d.event_date ? ` Gara: ${longDate(d.event_date)}.` : ""}`;
+// Written from the edition's data, so it follows the CMS fields.
+const description = `Preselezioni italiane per PLANCKS ${d.year}${d.host ? ` (${d.host})` : ""}.${d.event_date ? ` Gara: ${longDate(d.event_date)}.` : ""}`;
 const facts = [when(d), d.host && `PLANCKS a ${d.host}`, d.where].filter(Boolean) as string[];
 ---
 
