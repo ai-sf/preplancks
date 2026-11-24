@@ -127,12 +127,10 @@ h2 { font-family: var(--font-display); font-size: var(--text-section); line-heig
 .poster img { width: 100%; height: 100%; object-fit: cover; }
 .poster:hover { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 .poster b { position: absolute; left: var(--space-md); bottom: var(--space-md); padding: var(--space-xs) var(--space-md); background: var(--color-paper); border-radius: var(--radius-pill); font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); }
-.poster span { position: absolute; right: var(--space-md); bottom: var(--space-md); padding: var(--space-xs) var(--space-md); background: var(--color-accent); color: var(--color-accent-ink); border-radius: var(--radius-pill); font-weight: 700; font-size: var(--text-sm); }
 .older { margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 var(--gap-columns); }
 .older a { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-top: 1px solid var(--color-rule); }
 .older a:hover { color: var(--color-accent); }
 .older b { font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); }
-.older small { align-self: center; color: var(--color-muted); font-size: var(--text-sm); }
 
 .contacts .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); }
 .contacts ul { list-style: none; margin: 0; padding: 0; }
@@ -154,7 +152,6 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
 @media (max-width: 40rem) {
   .posters { grid-template-columns: minmax(0, 1fr); }
   .poster b { left: var(--space-sm); bottom: var(--space-sm); padding: var(--space-2xs) var(--space-sm); font-size: var(--text-md); }
-  .poster span { right: var(--space-sm); bottom: var(--space-sm); }
     .nav--over { position: static; background: var(--color-paper); }
   .nav .container { min-height: 64px; padding-block: var(--space-xs); }
   .hero { display: block; min-height: 0; background: var(--color-paper); color: var(--color-ink); }

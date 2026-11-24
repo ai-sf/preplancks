@@ -26,7 +26,7 @@ La home cambia con il calendario. Le date stanno nell'edizione e `src/lib/season
 | open | tra apertura e chiusura | conto alla chiusura delle iscrizioni, a destra la data della gara | Iscrivi la squadra |
 | closed | dopo la chiusura | conto alla gara, a destra «Iscrizioni chiuse» | Come funziona |
 | live | il giorno della gara | «Oggi si gioca» e il luogo | Come funziona |
-| done | dopo la gara | «Gara conclusa» e «Testo e soluzioni online» se ci sono i PDF | Soluzioni (o la pagina dell'edizione) |
+| done | dopo la gara | «Gara conclusa» | Soluzioni (o la pagina dell'edizione) |
 
 Lo hero ha loghi, titolo e pulsanti; date e stato stanno solo nella fascia. Il campo `hero_line` dell'edizione, se compilato, aggiunge una frase sotto il titolo. Le iscrizioni chiudono all'ora indicata (altrimenti a fine giornata); la gara conta fino al suo orario di inizio (altrimenti fino a mezzanotte). Senza JavaScript la fascia mostra solo i giorni, calcolati alla build. Finita l'edizione, la sezione sulle iscrizioni sparisce.
 

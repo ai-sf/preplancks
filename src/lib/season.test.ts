@@ -58,11 +58,6 @@ test("the offset follows daylight saving, also on the day it changes", () => {
   assert.equal(strip(ed({ registration_closes: "2026-03-29" }), "open")!.to, "2026-03-29T23:59:59+02:00");
 });
 
-test("done shows the documents note only when there are documents", () => {
-  assert.equal(strip(e26, "done")!.side, undefined);
-  assert.equal(strip(ed({ documents: [{ kind: "testo" }] }), "done")!.side!.text, "Testo e soluzioni online");
-});
-
 test("action by season", () => {
   assert.equal(action(e26, "upcoming", "https://aisf").href, "https://aisf");
   assert.equal(action(e26, "open", "https://aisf").href, "https://form");

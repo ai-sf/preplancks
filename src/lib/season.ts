@@ -78,8 +78,7 @@ export function strip(e: Edition, s: Season, now = buildNow()): Strip | null {
   if (s === "closed") return toRace && { ...toRace, side: { text: "Iscrizioni chiuse" } };
   const where = e.where ? { text: e.where } : undefined;
   if (s === "live") return start && e.event_start && now < Date.parse(start) ? { label: "La gara inizia tra", to: start, side: where } : { label: "Oggi si gioca", side: where };
-  const online = e.documents.some((d) => d.kind === "testo" || d.kind === "soluzioni");
-  return { label: "Gara conclusa", side: online ? { text: "Testo e soluzioni online" } : undefined };
+  return { label: "Gara conclusa" };
 }
 
 // Primary action of the hero, by season.
