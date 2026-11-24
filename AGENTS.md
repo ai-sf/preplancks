@@ -1,7 +1,7 @@
 # AGENTS.md: prePLANCKS
 
 Astro 7 static site for prePLANCKS, the Italian preselection for PLANCKS (organised by AISF, Associazione Italiana Studenti di Fisica). Content is edited in Pages CMS, hosting is GitHub Pages. Site text is Italian only.
-Repo: `github.com/dariozar/preplancks` (branch `main`, private for now). Final address: `ai-sf.it/preplancks`.
+Repo: `github.com/ai-sf/preplancks` (public, branch `main`; the old Jekyll site is the branch `legacy` and the tag `sito-vecchio`). Live at `ai-sf.it/preplancks`. `dariozar/preplancks` is only a personal preview copy (remote `preview`, Pages at `dariozar.github.io/preplancks`).
 `DECISIONS.md` records what was decided and why. `README.md` (Italian) is the human guide; keep it in step when behaviour changes.
 
 ## Commands
@@ -58,8 +58,8 @@ The look is the chosen direction A2 (a static mockup, since removed from the rep
 
 ## Git and deploy
 
-- `origin` is `https://github.com/dariozar/preplancks.git` (HTTPS). This machine has no SSH key for GitHub; push with `git -c credential.helper='!gh auth git-credential' push`. Rewriting published history (force-push) needs the user's explicit go-ahead.
-- `.github/workflows/deploy.yml`: official Astro action to GitHub Pages on push to `main` and manual run (no schedule: GitHub turns scheduled workflows off after 60 days without activity). Set the repo variable `SITE_URL` (for example `https://dariozar.github.io`) until `ai-sf.it` is live; unset it for production. `base` is always `/preplancks`. GitHub Pages on a free account needs a public repo.
+- `origin` is `https://github.com/ai-sf/preplancks.git` and `preview` is `https://github.com/dariozar/preplancks.git` (HTTPS). Push to `preview` to see a change on the personal Pages before it goes to `origin`. This machine has no SSH key for GitHub; push with `git -c credential.helper='!gh auth git-credential' push`. Rewriting published history (force-push) needs the user's explicit go-ahead.
+- `.github/workflows/deploy.yml`: official Astro action to GitHub Pages on push to `main` and manual run (no schedule: GitHub turns scheduled workflows off after 60 days without activity). Pages is set to "GitHub Actions" and the `github-pages` environment only allows `main`. The repo variable `SITE_URL` is set only on `preview` (`https://dariozar.github.io`); on `origin` it is unset and the site falls back to `https://ai-sf.it` (an empty value counts as unset). `base` is always `/preplancks`.
 - Quick shareable preview of a static mockup: `npx surge <dir> <name>.surge.sh` (logged in as the repo owner). `_surge/` is git-ignored.
 
 ## Gotchas
