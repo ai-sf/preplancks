@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 type Edition = CollectionEntry<"editions">["data"];
 export type Season = "upcoming" | "open" | "closed" | "live" | "done";
 
-// The site is static: the state is computed at build time, so the deploy workflow rebuilds daily.
 // PREVIEW_DATE (yyyy-MM-dd) fakes today, to look at the other states while developing.
 // The same file runs in the browser (index.astro), where `process` does not exist.
 const preview = typeof process !== "undefined" ? process.env.PREVIEW_DATE : undefined;
@@ -60,8 +59,7 @@ export interface Strip {
   side?: { text: string; date?: string };
 }
 
-// The band under the hero: what happens next and when. Registrations close at the end of their day,
-// the race counts to midnight at its start (the time of day is not in the data).
+// The band under the hero: what happens next and when.
 export function strip(e: Edition, s: Season, now = buildNow()): Strip | null {
   const race = e.event_date ? { text: "La gara", date: shortDate(e.event_date) } : undefined;
   const start = startsAt(e);
