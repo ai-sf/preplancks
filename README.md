@@ -1,6 +1,6 @@
 # prePLANCKS
 
-Sito di prePLANCKS, la preselezione italiana per PLANCKS, una gara di fisica teorica per squadre di 3 o 4 studenti di fisica. La organizza ogni primavera AISF (Associazione Italiana Studenti di Fisica). Il sito mostra l'edizione in corso, raccoglie le iscrizioni tramite un modulo esterno e conserva l'archivio di tutte le edizioni dal 2017, con testi dei problemi, soluzioni e foto.
+Sito di prePLANCKS, la preselezione italiana per PLANCKS, una gara di problem solving di fisica per squadre di 3 o 4 studenti di fisica. La organizza ogni primavera AISF (Associazione Italiana Studenti di Fisica). Il sito mostra l'edizione in corso, raccoglie le iscrizioni tramite un modulo esterno e conserva l'archivio di tutte le edizioni dal 2017, con testi dei problemi, soluzioni e foto.
 
 È un sito statico fatto con Astro, modificabile da Pages CMS e pubblicato su GitHub Pages. I testi sono in italiano.
 
