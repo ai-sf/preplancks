@@ -97,6 +97,10 @@ content:
         label: Frase sotto il titolo (facoltativa)
         type: string
         description: "Aggiunge una frase sotto il titolo. Lasciare vuoto di solito: date e stato stanno nella fascia in fondo allo hero."
+      - name: description
+        label: Descrizione per Google e anteprime
+        type: text
+        description: "Una o due frasi sulla pagina di questa edizione. Se la lasci vuota si scrive da sola: preselezioni per PLANCKS, città dell'ospitante e data della gara."
       - name: logos
         label: Loghi dell'edizione
         type: object

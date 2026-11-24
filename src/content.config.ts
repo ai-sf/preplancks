@@ -36,6 +36,7 @@ const editions = defineCollection({
     who_detail: str,
     where: str,
     hero_line: str,
+    description: str,
     logos: z.array(logo).default([]),
     // all three colours or none: a half-filled theme falls back to the defaults
     theme: z

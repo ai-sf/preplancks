@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import Base from "../../layouts/Base.astro";
 import Banner from "../../components/Banner.astro";
 import { getEditions } from "../../lib/editions";
-import { when } from "../../lib/season";
+import { when, longDate } from "../../lib/season";
 import { u } from "../../lib/url";
 
 export const getStaticPaths = (async () => {
@@ -17,12 +17,14 @@ export const getStaticPaths = (async () => {
 const { e, newer, older } = Astro.props;
 const d = e.data;
 const art = d.art;
+// Written from the edition's data unless the CMS gives one.
+const description = d.description ?? `Preselezioni italiane per PLANCKS ${d.year}${d.host ? ` (${d.host})` : ""}.${d.event_date ? ` Gara: ${longDate(d.event_date)}.` : ""}`;
 const facts = [when(d), d.host && `PLANCKS a ${d.host}`, d.where].filter(Boolean) as string[];
 ---
 
 <Base
   title={`prePLANCKS ${d.year}`}
-  description={`Testo, soluzioni e foto di prePLANCKS ${d.year}, preselezioni italiane per PLANCKS.`}
+  description={description}
   theme={d.theme}
   image={art?.share}
 >
