@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import Banner from "../components/Banner.astro";
 import EditionWall from "../components/EditionWall.astro";
 import { getEditions, getArchive, getSite } from "../lib/editions";
-import { season, strip, action, previewNow, when, withArticle } from "../lib/season";
+import { season, strip, action, previewNow, longDate, hours, withArticle } from "../lib/season";
 import { stripHtml } from "../lib/strip";
 import { u } from "../lib/url";
 
@@ -60,7 +60,7 @@ const logos = [...d.logos, ...site.logos];
         <Banner class="banner" desktop={art?.banner} alt={art?.alt ?? `Banner di prePLANCKS ${d.year}`} />
         <dl>
           {d.who && <div><dt>Chi</dt><dd>{d.who}{d.who_detail && <small>{d.who_detail}</small>}</dd></div>}
-          {d.event_date && <div><dt>Quando</dt><dd>{when(d)}</dd></div>}
+          {d.event_date && <div><dt>Quando</dt><dd>{longDate(d.event_date)}{hours(d) && <small>{hours(d)}</small>}</dd></div>}
           {d.where && <div><dt>Dove</dt><dd>{d.where}</dd></div>}
         </dl>
       </div>

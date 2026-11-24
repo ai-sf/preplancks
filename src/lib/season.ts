@@ -35,9 +35,10 @@ export const longDate = (iso: string) => fmt(iso, { day: "numeric", month: "long
 export const shortDate = (iso: string) => fmt(iso, { day: "numeric", month: "long" });
 // "il 2 marzo", "l'8 dicembre", "l'11 dicembre": Italian elides the article before 8 and 11.
 export const withArticle = (iso: string) => `${[8, 11].includes(Number(iso.slice(8, 10))) ? "l'" : "il "}${shortDate(iso)}`;
+/** "dalle 14:30 alle 17:30" (empty when no start is set). */
+export const hours = (e: Edition) => (e.event_start ? `dalle ${e.event_start}${e.event_end ? ` alle ${e.event_end}` : ""}` : "");
 /** "11 dicembre 2026, dalle 14:30 alle 17:30" (the hours only when they are set). */
-export const when = (e: Edition) =>
-  e.event_date && longDate(e.event_date) + (e.event_start ? `, dalle ${e.event_start}${e.event_end ? ` alle ${e.event_end}` : ""}` : "");
+export const when = (e: Edition) => e.event_date && longDate(e.event_date) + (e.event_start ? `, ${hours(e)}` : "");
 
 // Europe/Rome offset ("+01:00" or "+02:00") at that clock time, so deadlines are Rome time whatever the server's zone.
 // Read at the same hh:mm in UTC: the switch happens at 01:00 UTC, so midnight and 23:59 both land on the right side.
