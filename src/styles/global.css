@@ -88,7 +88,7 @@ a { text-decoration: none; }
 .countdown .headline { color: var(--color-accent); }
 .countdown small { font-size: var(--text-sm); color: var(--color-ink-2); }
 .strip .side { margin: 0; }
-.strip .side b { font-family: var(--font-display); font-weight: 400; font-size: var(--text-xl); color: var(--color-accent); margin-left: 0.5em; }
+.strip .side b { font-family: var(--font-display); font-variant-numeric: proportional-nums; font-weight: 400; font-size: var(--text-xl); color: var(--color-accent); margin-left: 0.5em; }
 .banner { display: block; background: var(--color-red); }
 .banner img { width: 100%; height: auto; }
 .showcase { background: var(--color-paper-2); }
