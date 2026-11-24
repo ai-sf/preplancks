@@ -150,12 +150,9 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
 @media (max-width: 40rem) {
   .posters { grid-template-columns: minmax(0, 1fr); }
   .poster b { left: var(--space-sm); bottom: var(--space-sm); padding: var(--space-2xs) var(--space-sm); font-size: var(--text-md); }
-    .nav--over { position: static; background: var(--color-paper); }
   .nav .container { min-height: 64px; padding-block: var(--space-xs); }
-  .hero { display: block; min-height: 0; background: var(--color-paper); color: var(--color-ink); }
-  .hero picture { position: relative; display: block; inset: auto; height: clamp(8rem, 22svh, 14rem); overflow: hidden; }
-  .hero picture img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 100%; }
-  .hero > .container { display: block; padding-block: var(--space-sm) var(--space-lg); }
+  .hero { min-height: 0; }
+  .hero > .container { display: block; padding-block: var(--space-4xl) var(--space-lg); }
   .strip .container { gap: var(--space-sm); padding-block: var(--space-md); }
   .countdown { align-items: flex-start; gap: var(--space-lg); }
   .countdown > span { flex-basis: 100%; }

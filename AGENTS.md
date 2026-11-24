@@ -30,7 +30,7 @@ The look is the chosen direction A2 (a static mockup, since removed from the rep
 
 - Edition-led: each edition sets `theme.{paper,accent,accent_ink}` (CSS variables on `<html>`) and four images in `art`: `banner` and `banner_mobile` (with title and logos), `background` and `background_mobile` (art only). Paper must be dark; text is light. All other surfaces derive from the three tokens with `color-mix`.
 - Home hero (desktop): the live title over `background`, scrim from the left; logos, title and buttons are centred vertically between the nav and the band (`.strip`) that closes the hero. The full `banner` sits in the showcase section beside Chi / Quando / Dove, on every screen size.
-- Home hero (mobile): contrast was bad with text on the art. Fixed by layout, not by darkening: the art is its own block on top, and the title, logos and buttons sit below it, then the band, on the dark page colour. Never put text on the art on mobile.
+- Home hero (mobile): same as desktop, the art (`background_mobile`) sits behind logos, title, buttons and the band. The mobile art is dark enough for light text; check legibility when replacing it. The only gradient is the short fade of the paper colour behind the nav, on both.
 - The hero title is live text, so `background` must not contain the title.
 - Logos in the hero: the edition's `logos` first, then `site.logos` (IAPS, AISF). Light logos on transparent. Sources: IAPS press kit (dark-background PNG), AISF brand drive (white, "Al tratto"), PLANCKS 2026 site (`Logo-wit.svg`).
 - Fonts: Dela Gothic One (titles) and Hanken Grotesk (text) from `@fontsource`; no CDN. One stylesheet, `src/styles/global.css`, plain CSS with tokens. No Tailwind.
@@ -68,5 +68,5 @@ The look is the chosen direction A2 (a static mockup, since removed from the rep
 - `registration_opens` empty and a form URL set means open from now; with no opening date and no form URL the state is `upcoming` (also when a closing date is set).
 - The edition `year` names the PLANCKS it leads to, not the year of the race: prePLANCKS 27 takes place on 11 December 2026. Do not validate `event_date` against `year`.
 - IAPS and AISF logos are raster (700 px and 900 px wide). Fine at 64 px high; replace with vectors if they are ever shown larger.
-- `<picture>` hero images are absolutely positioned on desktop and in normal flow on mobile (`global.css`, `@media (max-width: 40rem)`). Change both when touching the hero.
+- `<picture>` hero images are absolutely positioned behind the hero on every screen size (`global.css`).
 - Unlinked old files from the previous site (`program_talks.pdf`, `PROGRAMMA.pdf`, the presidents' guide, the IAPS code of conduct) are not imported; ask which edition they belong to before adding them.
