@@ -44,6 +44,20 @@ content:
         default: ""
         options: { format: yyyy-MM-dd }
         description: "Il giorno in cui si svolge la gara. Dopo questa data la home passa alla vista \"edizione conclusa\"."
+      - name: event_start
+        label: Inizio della gara
+        type: string
+        description: "Facoltativo, per esempio 14:30. Se c'è, il conto alla rovescia arriva fino a quest'ora."
+        pattern:
+          regex: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+          message: "Ore e minuti, per esempio 14:30"
+      - name: event_end
+        label: Fine della gara
+        type: string
+        description: "Facoltativo, per esempio 17:30."
+        pattern:
+          regex: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+          message: "Ore e minuti, per esempio 14:30"
       - name: registration_opens
         label: Apertura iscrizioni
         type: date
@@ -56,6 +70,13 @@ content:
         default: ""
         options: { format: yyyy-MM-dd }
         description: "Ultimo giorno utile, compreso."
+      - name: registration_closes_time
+        label: Ora di chiusura iscrizioni
+        type: string
+        description: "Facoltativo, per esempio 20:00. Vuoto = fino a fine giornata."
+        pattern:
+          regex: "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+          message: "Ore e minuti, per esempio 14:30"
       - name: registration_url
         label: Link al modulo di iscrizione
         type: string

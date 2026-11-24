@@ -3,7 +3,7 @@ import type { GetStaticPaths } from "astro";
 import Base from "../../layouts/Base.astro";
 import Banner from "../../components/Banner.astro";
 import { getEditions } from "../../lib/editions";
-import { longDate } from "../../lib/season";
+import { when } from "../../lib/season";
 import { u } from "../../lib/url";
 
 export const getStaticPaths = (async () => {
@@ -17,7 +17,7 @@ export const getStaticPaths = (async () => {
 const { e, newer, older } = Astro.props;
 const d = e.data;
 const art = d.art;
-const facts = [d.event_date && longDate(d.event_date), d.host && `PLANCKS a ${d.host}`, d.where].filter(Boolean) as string[];
+const facts = [when(d), d.host && `PLANCKS a ${d.host}`, d.where].filter(Boolean) as string[];
 ---
 
 <Base

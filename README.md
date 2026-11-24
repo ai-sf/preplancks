@@ -28,7 +28,7 @@ La home cambia con il calendario. Le date stanno nell'edizione e `src/lib/season
 | live | il giorno della gara | «Oggi si gioca» e il luogo | Come funziona |
 | done | dopo la gara | «Gara conclusa» e «Testo e soluzioni online» se ci sono i PDF | Soluzioni (o la pagina dell'edizione) |
 
-Lo hero ha loghi, titolo e pulsanti; date e stato stanno solo nella fascia. Il campo `hero_line` dell'edizione, se compilato, aggiunge una frase sotto il titolo. Le iscrizioni chiudono alla fine del giorno indicato; la gara conta fino a mezzanotte del suo giorno (l'orario non è nei dati). Senza JavaScript la fascia mostra solo i giorni, calcolati alla build. Finita l'edizione, la sezione sulle iscrizioni sparisce.
+Lo hero ha loghi, titolo e pulsanti; date e stato stanno solo nella fascia. Il campo `hero_line` dell'edizione, se compilato, aggiunge una frase sotto il titolo. Le iscrizioni chiudono all'ora indicata (altrimenti a fine giornata); la gara conta fino al suo orario di inizio (altrimenti fino a mezzanotte). Senza JavaScript la fascia mostra solo i giorni, calcolati alla build. Finita l'edizione, la sezione sulle iscrizioni sparisce.
 
 Per vedere uno stato senza cambiare le date, imposta `PREVIEW_DATE` (aaaa-mm-gg), per esempio `PREVIEW_DATE=2026-02-10 npm run dev`.
 
@@ -59,7 +59,7 @@ Le sezioni sono due:
 ### Aggiungere una nuova edizione
 
 1. In Edizioni crea una voce. L'anno (quattro cifre) diventa il nome del file e l'indirizzo.
-2. Compila la data della gara e le date di apertura e chiusura delle iscrizioni. Lascia vuota l'apertura se le iscrizioni partono subito.
+2. Compila la data della gara e le date di apertura e chiusura delle iscrizioni. Gli orari sono facoltativi: inizio e fine della gara (il conto alla rovescia arriva all'inizio) e ora di chiusura delle iscrizioni (senza, valgono fino a fine giornata). Se l'apertura è vuota e non c'è ancora il link al modulo, le iscrizioni risultano non aperte; con il link e senza data di apertura sono aperte da subito.
 3. Incolla il link del modulo in `registration_url`. Il pulsante «Iscrivi la squadra» compare solo se il campo è compilato.
 4. Aggiungi la città di PLANCKS e il suo sito, se li conosci.
 5. Imposta i tre colori del tema. Lo sfondo deve essere scuro, perché il testo è chiaro.

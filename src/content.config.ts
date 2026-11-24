@@ -14,6 +14,9 @@ const day = z
   .transform((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v || undefined))
   .optional();
 
+// "14:30"; the schema, like .pages.yml, accepts only that shape
+const time = z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/).or(z.literal("")).optional().transform((v) => v || undefined);
+
 const logo = z.object({ name: z.string(), image: z.string(), href: str });
 
 const editions = defineCollection({
@@ -21,8 +24,11 @@ const editions = defineCollection({
   schema: z.object({
     year: z.string(),
     event_date: day,
+    event_start: time,
+    event_end: time,
     registration_opens: day,
     registration_closes: day,
+    registration_closes_time: time,
     registration_url: str,
     host: str,
     host_url: str,

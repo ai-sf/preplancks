@@ -12,12 +12,18 @@ export function todayRome(now = new Date()): string {
   return new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Rome" }).format(now);
 }
 
-export function season(e: Edition, today = todayRome()): Season {
+// Registrations end at their closing time (end of that day when no time is set); the race day is "live" all day.
+const closesAt = (e: Edition) => e.registration_closes && at(e.registration_closes, e.registration_closes_time ? `${e.registration_closes_time}:00` : "23:59:59");
+const startsAt = (e: Edition) => e.event_date && at(e.event_date, e.event_start ? `${e.event_start}:00` : "00:00:00");
+
+export function season(e: Edition, now = new Date(buildNow())): Season {
+  const today = todayRome(now);
+  const closes = closesAt(e);
   if (e.event_date && today > e.event_date) return "done";
   if (e.event_date && today === e.event_date) return "live";
-  if (e.registration_closes && today > e.registration_closes) return "closed";
+  if (closes && now.getTime() > Date.parse(closes)) return "closed";
   if (e.registration_opens && today < e.registration_opens) return "upcoming";
-  if (!e.registration_opens && !e.registration_closes && !e.registration_url) return "upcoming";
+  if (!e.registration_opens && !e.registration_url) return "upcoming"; // no opening date and no form: nothing to open yet
   return "open";
 }
 
@@ -28,6 +34,11 @@ const fmt = (iso: string, opts: Intl.DateTimeFormatOptions) =>
 
 export const longDate = (iso: string) => fmt(iso, { day: "numeric", month: "long", year: "numeric" });
 export const shortDate = (iso: string) => fmt(iso, { day: "numeric", month: "long" });
+// "il 2 marzo", "l'8 dicembre", "l'11 dicembre": Italian elides the article before 8 and 11.
+export const withArticle = (iso: string) => `${[8, 11].includes(Number(iso.slice(8, 10))) ? "l'" : "il "}${shortDate(iso)}`;
+/** "11 dicembre 2026, dalle 14:30 alle 17:30" (the hours only when they are set). */
+export const when = (e: Edition) =>
+  e.event_date && longDate(e.event_date) + (e.event_start ? `, dalle ${e.event_start}${e.event_end ? ` alle ${e.event_end}` : ""}` : "");
 
 // Europe/Rome offset ("+01:00" or "+02:00") at that clock time, so deadlines are Rome time whatever the server's zone.
 // Read at the same hh:mm in UTC: the switch happens at 01:00 UTC, so midnight and 23:59 both land on the right side.
@@ -51,19 +62,22 @@ export interface Strip {
 
 // The band under the hero: what happens next and when. Registrations close at the end of their day,
 // the race counts to midnight at its start (the time of day is not in the data).
-export function strip(e: Edition, s: Season): Strip | null {
+export function strip(e: Edition, s: Season, now = buildNow()): Strip | null {
   const race = e.event_date ? { text: "La gara", date: shortDate(e.event_date) } : undefined;
-  const toRace = e.event_date ? { label: "La gara è tra", to: at(e.event_date, "00:00:00") } : null;
+  const start = startsAt(e);
+  const toRace = start ? { label: "La gara è tra", to: start } : null;
+  const closes = closesAt(e);
   if (s === "upcoming") {
     if (e.registration_opens) return { label: "Le iscrizioni aprono tra", to: at(e.registration_opens, "00:00:00"), side: race };
     return toRace && { ...toRace, side: undefined };
   }
   if (s === "open") {
-    if (e.registration_closes) return { label: "Le iscrizioni chiudono tra", to: at(e.registration_closes, "23:59:59"), side: race };
+    if (closes) return { label: "Le iscrizioni chiudono tra", to: closes, side: race };
     return toRace && { ...toRace, side: undefined };
   }
   if (s === "closed") return toRace && { ...toRace, side: { text: "Iscrizioni chiuse" } };
-  if (s === "live") return { label: "Oggi si gioca", side: e.where ? { text: e.where } : undefined };
+  const where = e.where ? { text: e.where } : undefined;
+  if (s === "live") return start && e.event_start && now < Date.parse(start) ? { label: "La gara inizia tra", to: start, side: where } : { label: "Oggi si gioca", side: where };
   const online = e.documents.some((d) => d.kind === "testo" || d.kind === "soluzioni");
   return { label: "Gara conclusa", side: online ? { text: "Testo e soluzioni online" } : undefined };
 }
