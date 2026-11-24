@@ -44,7 +44,6 @@ svg { display: block; }
 button, input, select, textarea { font: inherit; }
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); box-sizing: border-box; }
 .num, .figure, td.num { font-variant-numeric: tabular-nums; }
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 [data-slot] { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--color-paper-2, var(--color-paper)), var(--color-paper-3, var(--color-paper))); }
 [data-slot] > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 [data-slot]:has(> img) > :not(img):not([data-keep]) { display: none !important; }
@@ -107,13 +106,6 @@ a { text-decoration: none; }
 /* sections */
 section { padding-block: var(--section-gap-s); }
 h2 { font-family: var(--font-display); font-size: var(--text-section); line-height: 1.05; letter-spacing: var(--tracking-display); max-width: 20ch; }
-.facts { background: var(--color-paper); }
-.facts dl { margin: 0; display: grid; gap: 0; }
-.facts .row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: var(--gap-columns); align-items: baseline; padding-block: var(--space-xl); border-top: 1px solid var(--color-rule); }
-.facts .row:last-child { border-bottom: 1px solid var(--color-rule); }
-.facts dt { color: var(--color-muted); font-size: var(--text-md); }
-.facts dd { margin: 0; font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 3.5rem); line-height: 1.05; letter-spacing: var(--tracking-display); overflow-wrap: break-word; }
-.facts dd small { display: block; margin-top: var(--space-sm); font-family: var(--font-body); font-size: var(--text-md); letter-spacing: 0; color: var(--color-ink-2); }
 
 .about { background: var(--color-paper-2); }
 .about .container { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-2xl); align-items: start; }
@@ -161,8 +153,7 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
 }
 @media (max-width: 40rem) {
   .posters { grid-template-columns: minmax(0, 1fr); }
-  .facts .row { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
-  .nav--over { position: static; background: var(--color-paper); }
+    .nav--over { position: static; background: var(--color-paper); }
   .nav .container { min-height: 64px; padding-block: var(--space-xs); }
   .hero { display: block; min-height: 0; background: var(--color-paper); color: var(--color-ink); }
   .hero picture { position: relative; display: block; inset: auto; height: clamp(14rem, 40svh, 26rem); overflow: hidden; }

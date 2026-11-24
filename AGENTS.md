@@ -8,7 +8,7 @@ Repo: `github.com/dariozar/preplancks` (branch `main`, private for now). Final a
 
 - `npm run dev -- --host 0.0.0.0` (or `astro dev --background`), `npm run build`, `npm run preview -- --host 0.0.0.0 --port 4321`. Always run `npm run build` before finishing.
 - Local URLs carry the base: `http://localhost:4321/preplancks/`.
-- `python3 scripts/migrate.py <old Jekyll repo>`: re-imports editions 2017 to 2026 (idempotent, overwrites `src/content/editions/*.md` and `public/editions/`). Do not run it after CMS edits to those files. Needs Pillow and PyYAML.
+- `npm test`: unit tests for the season logic (`node --test`, no extra dependency).
 
 ## Content model (Pages CMS)
 
@@ -63,7 +63,7 @@ The look is the chosen direction A2 (a static mockup, since removed from the rep
 
 ## Gotchas
 
-- 2023 and 2024 banners are composites (title over an art-only image, placed as the old CSS did: centred, top at 15%) made by `migrate.py`. Replace them in the CMS if the original banners turn up.
+- 2023 and 2024 banners are composites (title over an art-only image, placed as the old CSS did: centred, top at 15%) made once by the import script (removed; see git history before the cleanup). Replace them in the CMS if the original banners turn up.
 - The 2024 event date (2024-02-16) is inferred: the old data said 2023. Registration open dates and PLANCKS host cities are empty for most years; the old repo does not hold them. Palettes for 2023 to 2025 were picked by eye.
 - `registration_opens` empty means open from now; with no dates and no form URL the state is `upcoming`.
 - IAPS and AISF logos are raster (700 px and 900 px wide). Fine at 64 px high; replace with vectors if they are ever shown larger.

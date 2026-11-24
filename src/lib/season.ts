@@ -27,15 +27,16 @@ const fmt = (iso: string, opts: Intl.DateTimeFormatOptions) =>
 export const longDate = (iso: string) => fmt(iso, { day: "numeric", month: "long", year: "numeric" });
 export const shortDate = (iso: string) => fmt(iso, { day: "numeric", month: "long" });
 
-// Europe/Rome offset on a given day ("+01:00" or "+02:00"), so deadlines are Rome time whatever the server's zone.
-function romeOffset(iso: string): string {
+// Europe/Rome offset ("+01:00" or "+02:00") at that clock time, so deadlines are Rome time whatever the server's zone.
+// Read at the same hh:mm in UTC: the switch happens at 01:00 UTC, so midnight and 23:59 both land on the right side.
+function romeOffset(iso: string, time: string): string {
   const name = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Rome", timeZoneName: "shortOffset" })
-    .formatToParts(new Date(iso + "T12:00:00Z"))
+    .formatToParts(new Date(`${iso}T${time}Z`))
     .find((p) => p.type === "timeZoneName")!.value;
   const h = Number(name.replace("GMT", "") || 0);
   return `${h < 0 ? "-" : "+"}${String(Math.abs(h)).padStart(2, "0")}:00`;
 }
-const at = (iso: string, time: string) => `${iso}T${time}${romeOffset(iso)}`;
+const at = (iso: string, time: string) => `${iso}T${time}${romeOffset(iso, time)}`;
 
 export interface Strip {
   /** Text before the countdown, or the headline when there is no countdown. */

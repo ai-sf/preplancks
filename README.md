@@ -113,26 +113,17 @@ src/pages/                 index, edizioni/index, edizioni/[year], 404
 src/styles/global.css      variabili, impaginazione, componenti (un solo file)
 public/editions/<anno>/    banner, PDF, foto della galleria
 public/logos/              loghi
-scripts/migrate.py         importazione una tantum dal vecchio sito Jekyll
 ```
 
 ### Stile
 
 Un solo foglio di stile, CSS semplice, nessun framework. Spaziature, dimensioni del testo e colori sono variabili in cima al file. I colori dell'edizione (`--color-paper`, `--color-accent`, `--color-accent-ink`) arrivano dal CMS e vengono impostati su `<html>`; tutti gli altri colori delle superfici si ricavano da questi con `color-mix`. I font sono Dela Gothic One (titoli) e Hanken Grotesk (testo), installati con `@fontsource`, quindi nessuna richiesta parte verso una CDN di font.
 
-## Reimportare il vecchio sito
+## Dati importati dal vecchio sito
 
-`scripts/migrate.py` ha ricostruito l'archivio a partire dal vecchio sito Jekyll (`ai-sf/preplancks`). Legge i file dati e la cronologia git di quel repository, copia e ridimensiona PDF e foto, e scrive i file delle edizioni. Si può rilanciare senza danni, ma sovrascrive i file delle edizioni che gestisce: non va eseguito dopo aver modificato quei file dal CMS.
+L'archivio 2017–2026 è stato importato una volta dal vecchio sito Jekyll (`ai-sf/preplancks`); lo script è nella cronologia git. Alcuni dati importati sono incompleti o dedotti e vanno controllati nel CMS:
 
-```sh
-python3 scripts/migrate.py /percorso/del/vecchio/preplancks
-```
-
-Servono Python 3 con `Pillow` e `PyYAML`.
-
-Alcuni dati importati sono incompleti o dedotti e vanno controllati nel CMS:
-
-- I banner 2023 e 2024 sono composizioni. Il vecchio sito sovrapponeva un'immagine con il titolo a una grafica senza testo, e lo script riproduce quella sovrapposizione. Se hai i banner originali, sostituiscili.
+- I banner 2023 e 2024 sono composizioni. Il vecchio sito sovrapponeva un'immagine con il titolo a una grafica senza testo, e l'importazione ha riprodotto quella sovrapposizione. Se hai i banner originali, sostituiscili.
 - La data della gara 2024 è il 16 febbraio 2024. Nei vecchi dati c'era scritto 2023, un refuso, quindi l'anno è dedotto.
 - Per la maggior parte degli anni mancano le date di apertura delle iscrizioni e la città di PLANCKS, perché il vecchio repository non le contiene.
 - Le palette dei colori per il 2023, il 2024 e il 2025 sono state scelte a occhio dalla grafica.

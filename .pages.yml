@@ -73,9 +73,9 @@ content:
         label: Dove
         type: string
       - name: hero_line
-        label: Frase in apertura (facoltativa)
+        label: Frase sotto il titolo (facoltativa)
         type: string
-        description: "Sostituisce la frase automatica sotto il titolo. Lasciare vuoto di solito: cambia da sola con le date."
+        description: "Aggiunge una frase sotto il titolo. Lasciare vuoto di solito: date e stato stanno nella fascia in fondo allo hero."
       - name: logos
         label: Loghi dell'edizione
         type: object
