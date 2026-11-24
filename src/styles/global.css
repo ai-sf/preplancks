@@ -10,8 +10,9 @@
   --color-paper-3: color-mix(in oklab, var(--color-paper), var(--color-ink) 12%);
   --color-rule: color-mix(in oklab, var(--color-paper), var(--color-ink) 22%);
   --color-focus: var(--color-accent);
-  --color-scrim-strong: color-mix(in oklab, var(--color-paper) 55%, transparent);
-  --color-scrim-mid: color-mix(in oklab, var(--color-paper) 15%, transparent);
+  --color-shade: color-mix(in oklab, var(--color-paper) 45%, var(--color-accent-ink)); /* the paper hue, darker: tone on tone */
+  --color-scrim-strong: color-mix(in oklab, var(--color-shade) 90%, transparent);
+  --color-scrim-mid: color-mix(in oklab, var(--color-shade) 45%, transparent);
   --font-display: "Dela Gothic One", ui-sans-serif, system-ui, sans-serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-display);
   --tracking-display: -0.02em; --radius-card: 6px;
 }
@@ -72,7 +73,7 @@ a { text-decoration: none; }
 .hero { padding: 0; color: var(--color-ink); position: relative; min-height: min(100svh, 52rem); display: flex; flex-direction: column; background: var(--color-paper-2); }
 .hero picture, .hero > picture img { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero picture img { object-fit: cover; object-position: 70% 50%; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--color-scrim-strong) 0%, var(--color-scrim-mid) 45%, transparent 75%); }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--color-scrim-strong) 0%, var(--color-scrim-mid) 50%, transparent 85%); }
 .hero > .container { position: relative; z-index: var(--z-raised); flex: 1; display: flex; flex-direction: column; justify-content: center; padding-block: var(--space-4xl) var(--space-2xl); }
 .hero-logos { list-style: none; margin: 0 0 var(--space-xl); padding: 0; display: flex; align-items: center; gap: var(--space-xl); }
 .hero-logos a { display: block; }
