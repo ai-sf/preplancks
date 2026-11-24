@@ -13,17 +13,14 @@ preselection_intro: Come ogni anno, AISF organizza una gara di preselezione
   che avranno accesso alla competizione internazionale.
 archive_intro: I testi delle edizioni precedenti di prePLANCKS e qualche
   immagine immortalata durante la gara.
-email: esecutivo@ai-sf.it
+email: preplancks@ai-sf.it
 socials:
+  - name: E-mail AISF
+    label: esecutivo@ai-sf.it
+    url: mailto:esecutivo@ai-sf.it
   - name: Instagram
     label: "@aisf_fisica"
     url: https://www.instagram.com/aisf_fisica/
-  - name: Facebook
-    label: aisf.fisica
-    url: https://it-it.facebook.com/aisf.fisica/
-  - name: Twitter
-    label: "@aisf_fisica"
-    url: https://twitter.com/aisf_fisica
 logos:
   - name: IAPS
     image: /logos/iaps.webp
