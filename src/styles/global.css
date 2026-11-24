@@ -152,7 +152,7 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
   .poster b { left: var(--space-sm); bottom: var(--space-sm); padding: var(--space-2xs) var(--space-sm); font-size: var(--text-md); }
   .nav .container { min-height: 64px; padding-block: var(--space-xs); }
   .hero { min-height: 100svh; } /* the first screen ends with the band */
-  .hero > .container { padding-block: var(--space-3xl) var(--space-lg); }
+  .hero > .container { justify-content: flex-end; padding-block: var(--space-3xl) var(--space-lg); }
   .strip .container { gap: var(--space-sm); padding-block: var(--space-md); }
   .countdown { align-items: flex-start; gap: var(--space-lg); }
   .countdown > span { flex-basis: 100%; }
