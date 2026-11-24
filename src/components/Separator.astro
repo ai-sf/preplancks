@@ -1,0 +1,6 @@
+---
+import { u } from "../lib/url";
+const { src } = Astro.props;
+---
+
+{src && <div class="sep" aria-hidden="true"><img src={u(src)} alt="" loading="lazy" /></div>}

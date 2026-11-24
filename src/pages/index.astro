@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import Banner from "../components/Banner.astro";
+import Separator from "../components/Separator.astro";
 import EditionWall from "../components/EditionWall.astro";
 import { getEditions, getArchive, getSite } from "../lib/editions";
 import { season, strip, action, previewNow, longDate, hours, withArticle } from "../lib/season";
@@ -68,6 +69,7 @@ const logos = [...d.logos, ...site.logos];
     )}
 
     <section class="about" id="plancks">
+      <Separator src={art?.separator} />
       <div class="container">
         <h2>{d.host ? `Una gara di problem solving di fisica, poi ${d.host}` : "Una gara di problem solving di fisica"}</h2>
         <div>
@@ -79,6 +81,7 @@ const logos = [...d.logos, ...site.logos];
     </section>
 
     <section class="join" id="iscrizione" data-join hidden={!showJoin}>
+      <Separator src={art?.separator} />
         <div class="container">
           <h2>Come iscrivere una squadra</h2>
           <div>
@@ -96,6 +99,7 @@ const logos = [...d.logos, ...site.logos];
       </section>
 
     <section class="wall" id="edizioni">
+      <Separator src={art?.separator} />
       <div class="container">
         <header>
           <h2>Le edizioni precedenti</h2>
@@ -107,6 +111,7 @@ const logos = [...d.logos, ...site.logos];
     </section>
 
     <section class="contacts" id="contatti">
+      <Separator src={art?.separator} />
       <div class="container">
         <h2>Contatti</h2>
         <ul>
@@ -142,6 +147,10 @@ const logos = [...d.logos, ...site.logos];
     document.querySelector<HTMLElement>("[data-form]")?.toggleAttribute("hidden", s !== "open");
     document.querySelector("[data-aisf]")!.className = `btn ${s === "open" && data.registration_url ? "btn-ghost" : "btn-primary"}`;
   }
+
+  // Separators grow in when they reach the screen (the CSS hides them only when scripting is on).
+  const io = new IntersectionObserver((es) => es.forEach((x) => x.isIntersecting && (x.target.classList.add("in"), io.unobserve(x.target))), { threshold: 0.6 });
+  document.querySelectorAll(".sep").forEach((x) => io.observe(x));
 
   // Hours to seconds need the script; without it the band shows the days computed at build.
   const pad = (n: number) => String(n).padStart(2, "0");

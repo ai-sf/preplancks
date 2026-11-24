@@ -122,6 +122,7 @@ content:
           - { name: banner_mobile, label: Banner con titolo e loghi (verticale), type: image, options: { media: editions } }
           - { name: background, label: Sfondo senza testo (desktop), type: image, options: { media: editions } }
           - { name: background_mobile, label: Sfondo senza testo (verticale), type: image, options: { media: editions } }
+          - { name: separator, label: Separatore tra le sezioni (una sola immagine larga, per desktop e telefono), type: image, options: { media: editions } }
           - { name: alt, label: Descrizione del banner (accessibilità), type: string }
       - name: documents
         label: Testi e soluzioni

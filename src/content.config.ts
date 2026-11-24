@@ -48,6 +48,7 @@ const editions = defineCollection({
         banner_mobile: str,
         background: str,
         background_mobile: str,
+        separator: str,
         alt: str,
       })
       .optional(),
