@@ -2,13 +2,13 @@
 import Base from "../layouts/Base.astro";
 import Banner from "../components/Banner.astro";
 import EditionWall from "../components/EditionWall.astro";
-import { getEditions, getSite } from "../lib/editions";
+import { getEditions, getArchive, getSite } from "../lib/editions";
 import { season, strip, action, previewNow, when, withArticle } from "../lib/season";
 import { stripHtml } from "../lib/strip";
 import { u } from "../lib/url";
 
-const editions = await getEditions();
-const e = editions[0];
+const e = (await getEditions())[0];
+const archive = await getArchive();
 const d = e.data;
 const site = await getSite();
 const s = season(d);
@@ -101,8 +101,8 @@ const logos = [...d.logos, ...site.logos];
           <h2>Le edizioni precedenti</h2>
           <p style="color: var(--color-ink-2); max-width: 40ch">{site.archive_intro}</p>
         </header>
-        <EditionWall editions={editions} posters={4} />
-        <p style="margin-top: var(--space-xl)"><a class="link" href={u("/edizioni/")}>Tutte le edizioni dal {editions.at(-1)!.data.year}</a></p>
+        <EditionWall editions={archive} posters={4} />
+        <p style="margin-top: var(--space-xl)"><a class="link" href={u("/edizioni/")}>Tutte le edizioni dal {archive.at(-1)!.data.year}</a></p>
       </div>
     </section>
 

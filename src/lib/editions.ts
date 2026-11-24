@@ -1,4 +1,5 @@
 import { getCollection, getEntry } from "astro:content";
+import { season } from "./season";
 
 export async function getEditions() {
   return (await getCollection("editions")).sort((a, b) => b.data.year.localeCompare(a.data.year));
@@ -7,6 +8,12 @@ export async function getEditions() {
 // The newest edition is the current one.
 export async function getCurrent() {
   return (await getEditions())[0];
+}
+
+// The past editions: the current one joins them only once it is done.
+export async function getArchive() {
+  const [current, ...past] = await getEditions();
+  return season(current.data) === "done" ? [current, ...past] : past;
 }
 
 export async function getSite() {

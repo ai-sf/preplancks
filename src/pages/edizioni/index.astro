@@ -1,16 +1,17 @@
 ---
 import Base from "../../layouts/Base.astro";
 import EditionWall from "../../components/EditionWall.astro";
-import { getEditions, getSite } from "../../lib/editions";
+import { getEditions, getArchive, getSite } from "../../lib/editions";
 
-const editions = await getEditions();
+const current = (await getEditions())[0];
+const archive = await getArchive();
 const site = await getSite();
 ---
 
 <Base
   title="Tutte le edizioni di prePLANCKS"
   description="I testi, le soluzioni e le foto di tutte le edizioni di prePLANCKS, le preselezioni italiane per PLANCKS."
-  theme={editions[0].data.theme}
+  theme={current.data.theme}
 >
   <main>
     <section class="archive-head">
@@ -20,7 +21,7 @@ const site = await getSite();
       </div>
     </section>
     <section class="archive-list">
-      <div class="container"><EditionWall editions={editions} /></div>
+      <div class="container"><EditionWall editions={archive} /></div>
     </section>
   </main>
 </Base>
