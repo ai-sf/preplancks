@@ -14,8 +14,10 @@ interface Props {
   description: string;
   theme?: { paper: string; accent: string; accent_ink: string };
   overNav?: boolean;
+  image?: string;
 }
-const { title, description, theme, overNav = false } = Astro.props;
+const { title, description, theme, overNav = false, image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 const site = await getSite();
 // The registration section exists only while the current edition is not over.
 const showJoin = season((await getCurrent()).data) !== "done";
@@ -29,6 +31,12 @@ const showJoin = season((await getCurrent()).data) !== "done";
     <meta name="generator" content={Astro.generator} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    {image && <meta property="og:image" content={new URL(u(image), Astro.site)} />}
+    <meta name="twitter:card" content={image ? "summary_large_image" : "summary"} />
     <link rel="icon" type="image/svg+xml" href={u("/favicon.svg")} />
     <title>{title}</title>
   </head>

@@ -82,9 +82,9 @@ content:
         type: string
         description: "Il form (per esempio Google Forms). Il pulsante \"Iscrivi la squadra\" compare solo se c'è."
       - name: host
-        label: Città di PLANCKS
+        label: Città e paese di PLANCKS
         type: string
-        description: "Dove si terrà la competizione internazionale."
+        description: "Dove si terrà la competizione internazionale, con il paese (per esempio \"San Pedro Sula, Honduras\"): compare nei titoli e nei link."
       - name: host_url
         label: Sito di PLANCKS
         type: string
@@ -123,6 +123,7 @@ content:
           - { name: background, label: Sfondo senza testo (desktop), type: image, options: { media: editions } }
           - { name: background_mobile, label: Sfondo senza testo (verticale), type: image, options: { media: editions } }
           - { name: separator, label: Separatore tra le sezioni (una sola immagine larga, per desktop e telefono), type: image, options: { media: editions } }
+          - { name: share, label: Immagine per le anteprime (WhatsApp, social; 1200x630 JPG o PNG), type: image, options: { media: editions } }
           - { name: alt, label: Descrizione del banner (accessibilità), type: string }
       - name: documents
         label: Testi e soluzioni

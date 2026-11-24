@@ -84,7 +84,8 @@ a { text-decoration: none; }
 .countdown { display: flex; align-items: baseline; gap: var(--space-lg); flex-wrap: wrap; }
 .countdown > span, .strip .side { color: var(--color-ink-2); font-size: var(--text-sm); }
 .countdown div { display: flex; align-items: baseline; gap: var(--space-2xs); }
-.countdown b { font-family: var(--font-display); font-weight: 400; font-size: var(--text-2xl); line-height: 1; letter-spacing: var(--tracking-display); }
+.countdown b { font-family: var(--font-display); font-variant-numeric: proportional-nums; font-weight: 400; font-size: var(--text-2xl); line-height: 1; letter-spacing: var(--tracking-display); }
+.countdown b[data-h], .countdown b[data-m], .countdown b[data-s] { min-width: 2ch; text-align: right; } /* proportional digits (a tabular 1 reads "1 1"), same width every second */
 .countdown .headline { color: var(--color-accent); }
 .countdown small { font-size: var(--text-sm); color: var(--color-ink-2); }
 .strip .side { margin: 0; }
