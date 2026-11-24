@@ -175,12 +175,11 @@ footer p { width: 100%; color: var(--color-muted); font-size: var(--text-sm); ma
 .sep img { display: block; height: 3rem; width: auto; max-width: none; flex: none; }
 @property --p { syntax: "<percentage>"; inherits: false; initial-value: 100%; }
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
-  .sep img { --p: -22%; mask-image: linear-gradient(90deg, #000 var(--p), transparent calc(var(--p) + 22%)); opacity: 0; }
-  .sep.in img { opacity: 1; animation: sep-grow 1.7s cubic-bezier(0.3, 0.55, 0.2, 1) forwards, sep-settle 1.7s cubic-bezier(0.2, 0.7, 0.2, 1) both, sep-sway 8s ease-in-out 1.7s infinite alternate; }
+  .sep img { --p: -16%; mask-image: linear-gradient(90deg, #000 var(--p), transparent calc(var(--p) + 16%)); opacity: 0; }
+  .sep.in img { opacity: 1; animation: sep-grow 3.2s cubic-bezier(0.45, 0.05, 0.35, 1) forwards, sep-rise 1.6s ease-out both; }
 }
 @keyframes sep-grow { to { --p: 100%; } }
-@keyframes sep-settle { from { transform: translate(-3%, 6px); } }
-@keyframes sep-sway { from { rotate: -0.35deg; } to { rotate: 0.35deg; } }
+@keyframes sep-rise { from { transform: translateY(10px); } }
 @media (max-width: 40rem) { .sep img { height: 2.5rem; } }
 
 .showcase .container.no-banner { grid-template-columns: minmax(0, 1fr); }
